@@ -12,7 +12,7 @@
             public $que;
             private $servername='localhost';
             private $username='root';
-            private $password='1234';
+            private $password='root';
             private $dbname='';
             private $result=array();
             private $mysqli='';
