@@ -162,6 +162,12 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
+<<<<<<< HEAD:crearEmpleado.php
+                      <!--Inicio de Form-->
+                      <form class="user", action="SqlTools\Insert_Employee.php", method="post">
+                      <?php include 'formEmpleado.php';?>
+                        <!--Submit-->
+=======
                       <form class="user", action="sql_tools.php", method="post">
                         <div class="sidebar-heading">
                           Numero de Identidad
@@ -302,16 +308,19 @@
                         <div class="form-group">
                           <input type="email" class="form-control form-control-user" id="cuentaBInput" placeholder="">
                         </div>
+>>>>>>> master:crearEmpleado.html
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar">
                           </div>
+                          <!--Limpiar-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <a href="index.html" class="btn btn-primary btn-user btn-block">
                               Limpiar
                             </a>
                           </div>
                         </div>
+                        <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
                           <a href="index.html" class="btn btn-primary btn-user btn-block">
                             Cancelar
@@ -323,13 +332,9 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
