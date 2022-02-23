@@ -162,78 +162,77 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <form class="user", action="sql_tools.php", method="post">
+                      <!--Inicio de Form-->
+                      <form class="user", action="SqlTools\Insert_Employee.php", method="post">
+                        <!--Numero de Identidad-->
                         <div class="sidebar-heading">
                           Numero de Identidad
                         </div>
                         <div class="form-group">
-                          <input type="" class="form-control form-control-user" id="numIdInput"
+                          <input type="" name="Cedula" class="form-control form-control-user"
                             aria-describedby="emailHelp" placeholder="">
                         </div>
-
-
-
+                        <!--Primer Nombre-->
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Primer Nombre
                             </div>
                             <div class="form-group">
-                              <input type="" class="form-control form-control-user" id="PriNomInput" placeholder="">
+                              <input type="text" name="PrimerNombre" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
+                          <!--Segundo Nombre-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Segundo Nombre
                             </div>
                             <div class="form-group">
-                              <input type="" class="form-control form-control-user" id="SegNomInput" placeholder="">
+                              <input type="text" name="SegundoNombre" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
                         </div>
-
-
-
-
+                        <!--Primer Apellido-->
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Primer Apellido
                             </div>
                             <div class="form-group">
-                              <input type="" class="form-control form-control-user" id="PriApeInput" placeholder="">
+                              <input type="text" name="PrimerApellido" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
+                          <!--Segundo Apellido-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Segundo Apellido
                             </div>
                             <div class="form-group">
-                              <input type="" class="form-control form-control-user" id="SegApedoInput" placeholder="">
+                              <input type="text" name="SegundoApellido" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
                         </div>
-
+                        <!--Telefono-->
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
-                              Telefono
+                              Numero Telefonico
                             </div>
                             <div class="form-group">
-                              <input type="tel" class="form-control form-control-user" id="telInput" placeholder="">
+                              <input type="tel" name="Telefono" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
+                          <!--Direccion-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Direccion
                             </div>
                             <div class="form-group">
-                              <input type="" class="form-control form-control-user" id="direccionInput" placeholder="">
+                              <input type="text" name="Direccion" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
                         </div>
-
-
+                        <!--Departamento-->
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
@@ -241,67 +240,73 @@
                             </div>
                             <div class="form-group">
                               <div>
-                                <select class="custom-select form-control" name="selectDep" SelectedItem="null">
-                                  <option value="value0">Seleccione un departamento...</option>
-                                  <option value="value1">Departemento 1</option>
-                                  <option value="value2">Departemento 2</option>
-                                  <option value="value3">Departemento 3</option>
-                                  <option value="value4">Departemento 4</option>
-                                  <option value="value5">Departemento 5</option>
-                                  <option value="value6">Departemento 6</option>
+                                <select class="custom-select form-control" name="Departamentos_idDepartamentos" SelectedItem="null">
+                                  <option value="0">Seleccione un departamento...</option>
+                                  <option value="1">Departemento 1</option>
+                                  <option value="2">Departemento 2</option>
+                                  <option value="3">Departemento 3</option>
+                                  <option value="4">Departemento 4</option>
+                                  <option value="5">Departemento 5</option>
+                                  <option value="6">Departemento 6</option>
+                                  <option value="7">Departemento 7</option>
+                                  <option value="8">Departemento 8</option>
+                                  <option value="9">Departemento 9</option>
                                 </select>
                               </div>
                             </div>
                           </div>
+                          <!--Sexo-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Sexo
                             </div>
                             <div class="form-group row">
                               <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="radio" id="sexM" name="sexo" value="masculino">
+                                <input type="radio" name="Sexos_idSexo" value="1">
                                 <label for="contactChoice1">Masculino</label>
                               </div>
                               <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="radio" id="sexF" name="sexo" value="femenino">
+                                <input type="radio" name="Sexos_idSexo" value="2">
                                 <label for="contactChoice2">Femenino</label>
                               </div>
                             </div>
                           </div>
                         </div>
-
-
+                        <!--Fecha Nacimiento-->
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Fecha de Nacimiento
                             </div>
                             <div class="form-group">
-                              <input type="date" class="form-control form-control-user" id="fechaNac" placeholder="">
+                              <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
+                          <!--Fecha Ingreso-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
                               Fecha de Ingreso
                             </div>
                             <div class="form-group">
-                              <input type="date" class="form-control form-control-user" id="fechaIng" placeholder="">
+                              <input type="date" name="FechaIngreso"class="form-control form-control-user" placeholder="">
                             </div>
                           </div>
                         </div>
-
+                        <!--Correo electronico-->
                         <div class="sidebar-heading">
                           Correo Electronico
                         </div>
                         <div class="form-group">
-                          <input type="email" class="form-control form-control-user" id="emailInput" placeholder="">
+                          <input type="email" name = "Correo" class="form-control form-control-user" placeholder="">
                         </div>
+                        <!--Numero de cuenta bancaria-->
                         <div class="sidebar-heading">
                           Numero de cuenta bancaria
                         </div>
                         <div class="form-group">
-                          <input type="email" class="form-control form-control-user" id="cuentaBInput" placeholder="">
+                          <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder="">
                         </div>
+                        <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
                             <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar">
@@ -323,13 +328,9 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
