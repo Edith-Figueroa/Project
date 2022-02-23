@@ -18,13 +18,11 @@
         $Ciudades_idCiudades = $_POST['Ciudades_idCiudades'];
 
         $a = new database();
-        $a->insert('empleados',['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,
-                    'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
-                    'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,
-                    'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
-                    'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,
-                    'Sexos_idSexo'=>$Sexos_idSexo,'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos,
-                    'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo]);
+        $a->insert('empleados',['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
+                    'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
+                    'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo,
+                    'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos,'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
+                    'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
         if ($a == true) {
             header('/.../crearEmpleado.php');
         }
