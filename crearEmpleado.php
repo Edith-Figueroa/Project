@@ -30,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -39,7 +39,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <span>Menu</span></a>
       </li>
 
@@ -55,8 +55,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="crearEmpleado.html">Crear Empleado</a>
-            <a class="collapse-item" href="tablas.html">Mostrar Empleados</a>
+            <a class="collapse-item" href="crearEmpleado.php">Crear Empleado</a>
+            <a class="collapse-item" href="tablas.php">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -69,7 +69,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.html">Registro</a>
+            <a class="collapse-item" href="historialPlanillas.php">Registro</a>
 
           </div>
         </div>
