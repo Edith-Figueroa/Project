@@ -55,7 +55,7 @@
                     </div>
                   </div>
                   <div class=" col-sm-6 mb-3 mb-sm-0">
-                    <a href="login.html" class="btn btn-primary btn-user btn-block">
+                    <a href="login.php" class="btn btn-primary btn-user btn-block">
                       Restablecer contraseña
                     </a>
 
@@ -65,12 +65,12 @@
                 <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
                   <div class=" col-sm-6 mb-3 mb-sm-0">
 
-                    <a class="small" href="nuevoUsuario.html">¡Crea un nuevo usuario!</a>
+                    <a class="small" href="nuevoUsuario.php">¡Crea un nuevo usuario!</a>
                   </div>
                 </div>
                 <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
                   <div class=" col-sm-6 mb-3 mb-sm-0">
-                    <a class="small" href="login.html">¿Ya tienes un cuenta? Inicia sesion</a>
+                    <a class="small" href="login.php">¿Ya tienes un cuenta? Inicia sesion</a>
 
                   </div>
                 </div>

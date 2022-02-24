@@ -62,16 +62,16 @@
                     placeholder="Repetir contraseña">
                 </div>
               </div>
-              <a href="login.html" class="btn btn-primary btn-user btn-block">
+              <a href="login.php" class="btn btn-primary btn-user btn-block">
                 Registrar nuevo usuario
               </a>
             </form>
             <hr>
             <div class="text-center">
-              <a class="small" href="contraOlvidada.html">¿Olvido su contraseña?</a>
+              <a class="small" href="contraOlvidada.php">¿Olvido su contraseña?</a>
             </div>
             <div class="text-center">
-              <a class="small" href="login.html">¿Ya tienes un usuario? Inicia sesion</a>
+              <a class="small" href="login.php">¿Ya tienes un usuario? Inicia sesion</a>
             </div>
           </div>
         </div>

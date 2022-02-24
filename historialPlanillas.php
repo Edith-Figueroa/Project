@@ -203,7 +203,7 @@
             actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="login.html">Cerrar Sesion</a>
+            <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
           </div>
         </div>
       </div>

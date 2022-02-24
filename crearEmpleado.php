@@ -172,14 +172,14 @@
                           </div>
                           <!--Limpiar-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="index.html" class="btn btn-primary btn-user btn-block">
+                            <a href="index.php" class="btn btn-primary btn-user btn-block">
                               Limpiar
                             </a>
                           </div>
                         </div>
                         <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="index.html" class="btn btn-primary btn-user btn-block">
+                          <a href="index.php" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
                         </div>
@@ -229,7 +229,7 @@
           actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="login.html">Cerrar Sesion</a>
+          <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
         </div>
       </div>
     </div>

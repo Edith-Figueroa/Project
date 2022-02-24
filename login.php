@@ -62,7 +62,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <a href="index.html" class="btn btn-primary btn-user btn-block">
+                  <a href="index.php" class="btn btn-primary btn-user btn-block">
                     Iniciar Sesion
                   </a>
                 </div>
@@ -70,13 +70,13 @@
               <hr>
               <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
-                  <a class="small" href="contraOlvidada.html">¿Has olvidado tu contraseña?</a>
+                  <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
 
                 </div>
               </div>
               <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <a class="small" href="nuevoUsuario.html">Crear un nuevo usuario</a>
+                  <a class="small" href="nuevoUsuario.php">Crear un nuevo usuario</a>
                 </div>
               </div>
             </div>
