@@ -21,6 +21,8 @@
 
 </head>
 
+<script src="SqlTools/confirmationInsert.js"></script>
+
 <body id="page-top">
 
   <!-- Envoltura de pagina -->
@@ -168,12 +170,11 @@
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar">
+                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick = "return Confirmation()">
                           </div>
                           <!--Limpiar-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="index.php" class="btn btn-primary btn-user btn-block">
-                              Limpiar
+                            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
                             </a>
                           </div>
                         </div>

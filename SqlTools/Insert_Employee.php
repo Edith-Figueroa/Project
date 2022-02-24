@@ -24,7 +24,7 @@
                     'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos,'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
                     'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
         if ($a == true) {
-            header('location:\...\crearEmpleado.php');
+            header('location:../index.php');
         }
     }
 ?>
