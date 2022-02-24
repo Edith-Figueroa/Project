@@ -70,7 +70,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.html">Registro</a>
+            <a class="collapse-item" href="historialPlanillas.php">Registro</a>
 
           </div>
         </div>
