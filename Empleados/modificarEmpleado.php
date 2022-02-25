@@ -21,7 +21,7 @@
 
 </head>
 
-<script src="SqlTools/confirmationInsert.js"></script>
+<script src="../SqlTools/confirmationInsert.js"></script>
 
 <body id="page-top">
 
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="../index.php">
           <span>Menu</span></a>
       </li>
 
@@ -57,8 +57,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -71,7 +71,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.php">Registro</a>
+            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
 
           </div>
         </div>
@@ -119,7 +119,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Denis Garcia</span>
-                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -176,7 +176,8 @@
                         $row = mysqli_fetch_assoc($result);
                       ?>
                       <!--Inicio de Form-->
-                      <form class="user", action="#", method="post">
+                      <form class="user", action="../SqlTools/Update_Employee.php", method="post">
+                      <input type="hidden" name="idEmpleados" value="<?php echo $id; ?>">
                       <?php include '../formEmpleado.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
@@ -191,7 +192,7 @@
                         </div>
                         <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="index.php" class="btn btn-primary btn-user btn-block">
+                          <a href="../index.php" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
                         </div>
@@ -241,28 +242,28 @@
           actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
+          <a class="btn btn-primary" href="../login.php">Cerrar Sesion</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- JavaScript básico de Bootstrap-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Complemento principal de JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Scripts personalizados para todas las páginas-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="../js/sb-admin-2.min.js"></script>
 
   <!-- Complementos de nivel de página -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="../vendor/chart.js/Chart.min.js"></script>
 
   <!-- Scripts personalizados a nivel de página -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
 

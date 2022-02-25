@@ -82,7 +82,7 @@
     <div class="form-group">
         <div>
         <select class="custom-select form-control" name="Departamentos_idDepartamentos" 
-        value="<?php if(isset($row)) { echo $row['Departamentos_idDepartamentos']; } ?>">
+        selectedIndex="<?php if(isset($row)) { echo $row['Departamentos_idDepartamentos']; } ?>">
             <option value="0">Seleccione un departamento...</option>
             <option value="1">Departemento 1</option>
             <option value="2">Departemento 2</option>
