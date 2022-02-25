@@ -164,14 +164,14 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <!--Llamada de datos-->
+                    <!--Llamada de datos-->
                       <?php
-                        include '../SqlTools/database.php';
+                        include "../SqlTools/database.php";
                         $id = $_GET['idEmpleados'];
 
-                        $modify= new database();
-                        $modify->select("empleados","*","idEmpleados='$id'");
-                        $result = $modify->sql;
+                        $upd= new database();
+                        $upd->select("empleados","*","idEmpleados='$id'");
+                        $result = $upd->sql;
 
                         $row = mysqli_fetch_assoc($result);
                       ?>
@@ -182,7 +182,7 @@
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar" onclick = "return Confirmation()">
+                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar" onclick = "return ConfirmationUpd()">
                           </div>
                           <!--Limpiar-->
                           <div class="col-sm-6 mb-3 mb-sm-0">

@@ -210,7 +210,7 @@
                             Telefono,FechaNacimiento,
                             if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
                             if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo', 'Estados_idEstado = 1');
-                    $table = $grid ->sql
+                    $table = $grid ->sql;
                     ?>
 
                     <?php while ($row = mysqli_fetch_assoc($table)) { ?>

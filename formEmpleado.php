@@ -1,12 +1,38 @@
 <!--Numero de Identidad-->
-<div class="sidebar-heading">
-    Numero de Identidad
+<div class="form-group row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="sidebar-heading">
+            Numero de Identidad
+        </div>
+        <div class="form-group">
+            <input type="" name="Cedula" class="form-control form-control-user"
+            aria-describedby="emailHelp" placeholder="" 
+            value="<?php if(isset($row)) { echo $row['Cedula']; } ?>" required>
+        </div>
+    </div>
+
+    <!--Sexo-->
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="sidebar-heading">
+            Sexo
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="radio" name="Sexos_idSexo" value= "1" 
+                <?php if(isset($row)) if ($row['Sexos_idSexo'] == 1): ?> checked = "checked"
+                <?php endif ?> required>
+            <label for="contactChoice1">Masculino</label>
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="radio" name="Sexos_idSexo" value="2"
+                <?php if(isset($row)) if ($row['Sexos_idSexo'] == 2): ?> checked = "checked"
+                <?php endif ?>>
+            <label for="contactChoice2">Femenino</label>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    <input type="" name="Cedula" class="form-control form-control-user"
-    aria-describedby="emailHelp" placeholder="" 
-    value="<?php if(isset($row)) { echo $row['Cedula']; } ?>">
-</div>
+
 <!--Primer Nombre-->
 <div class="form-group row">
     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -15,7 +41,7 @@
     </div>
     <div class="form-group">
         <input type="text" name="PrimerNombre" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['PrimerNombre']; } ?>">
+        value="<?php if(isset($row)) { echo $row['PrimerNombre']; } ?>" required>
     </div>
     </div>
     <!--Segundo Nombre-->
@@ -25,7 +51,7 @@
     </div>
     <div class="form-group">
         <input type="text" name="SegundoNombre" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['SegundoNombre']; } ?>">
+        value="<?php if(isset($row)) { echo $row['SegundoNombre']; } ?>" required>
     </div>
     </div>
 </div>
@@ -37,7 +63,7 @@
     </div>
     <div class="form-group">
         <input type="text" name="PrimerApellido" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['PrimerApellido']; } ?>">
+        value="<?php if(isset($row)) { echo $row['PrimerApellido']; } ?>" required>
     </div>
     </div>
     <!--Segundo Apellido-->
@@ -47,7 +73,7 @@
     </div>
     <div class="form-group">
         <input type="text" name="SegundoApellido" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['SegundoApellido']; } ?>">
+        value="<?php if(isset($row)) { echo $row['SegundoApellido']; } ?>" required>
     </div>
     </div>
 </div>
@@ -59,7 +85,7 @@
     </div>
     <div class="form-group">
         <input type="tel" name="Telefono" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['Telefono']; } ?>">
+        value="<?php if(isset($row)) { echo $row['Telefono']; } ?>" required>
     </div>
     </div>
     <!--Direccion-->
@@ -69,11 +95,16 @@
     </div>
     <div class="form-group">
         <input type="text" name="Direccion" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['Direccion']; } ?>">
+        value="<?php if(isset($row)) { echo $row['Direccion']; } ?>" required>
     </div>
     </div>
 </div>
 <!--Departamento-->
+<?php
+    $grid = new database();
+    $grid ->select('departamentos', '*');
+    $table = $grid ->sql;
+?>
 <div class="form-group row">
     <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="sidebar-heading">
@@ -82,43 +113,37 @@
     <div class="form-group">
         <div>
         <select class="custom-select form-control" name="Departamentos_idDepartamentos" 
-        selectedIndex="<?php if(isset($row)) { echo $row['Departamentos_idDepartamentos']; } ?>">
-            <option value="0">Seleccione un departamento...</option>
-            <option value="1">Departemento 1</option>
-            <option value="2">Departemento 2</option>
-            <option value="3">Departemento 3</option>
-            <option value="4">Departemento 4</option>
-            <option value="5">Departemento 5</option>
-            <option value="6">Departemento 6</option>
-            <option value="7">Departemento 7</option>
-            <option value="8">Departemento 8</option>
-            <option value="9">Departemento 9</option>
+        selectedIndex="<?php if(isset($row)) { echo $row['Departamentos_idDepartamentos']; } ?>" >
+            <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value=<?php echo $row['idDepartamentos']; ?>><?php echo $row['DescripcionDepto']; ?></option>
+            <?php }?>
         </select>
         </div>
     </div>
     </div>
-    <!--Sexo-->
+
+    <!--Cargos-->
     <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="sidebar-heading">
-        Sexo
+        Cargo
     </div>
-    <div class="form-group row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-        <input type="radio" name="Sexos_idSexo" value= "1" 
-            <?php if(isset($row)) if ($row['Sexos_idSexo'] == 1): ?> checked = "checked"
-            <?php endif ?>>
-        <label for="contactChoice1">Masculino</label>
-        </div>
-        <div class="col-sm-6 mb-3 mb-sm-0">
-        <input type="radio" name="Sexos_idSexo" value="2"
-            <?php if(isset($row)) if ($row['Sexos_idSexo'] == 2): ?> checked = "checked"
-            <?php endif ?>>
-        <label for="contactChoice2">Femenino</label>
+    <div class="form-group">
+        <div>
+        <select class="custom-select form-control" name="Cargos_idCargos" id="cargosid"
+        selectedIndex="<?php if(isset($row)) { echo $row['Cargos_idCargos']; } ?>" onchange="" required>
+            <option value="none" selected disabled hidden>Select an Option</option>
+        </select>
         </div>
     </div>
     </div>
 </div>
+    
 <!--Ciudades-->
+<?php
+    $grid ->select('ciudades', '*', );
+    $table = $grid ->sql;
+?>
 <div class="form-group row">
     <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="sidebar-heading">
@@ -127,21 +152,11 @@
     <div class="form-group">
         <div>
         <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null"
-        value="<?php if(isset($row)) { echo $row['Ciudades_idCiudades']; } ?>">
-            <option value="0">Seleccione una Ciudad...</option>
-            <option value="1">Ciudad 1</option>
-            <option value="2">Ciudad 2</option>
-            <option value="3">Ciudad 3</option>
-            <option value="4">Ciudad 4</option>
-            <option value="5">Ciudad 5</option>
-            <option value="6">Ciudad 6</option>
-            <option value="7">Ciudad 7</option>
-            <option value="8">Ciudad 8</option>
-            <option value="9">Ciudad 9</option>
-            <option value="10">Ciudad 10</option>
-            <option value="11">Ciudad 11</option>
-            <option value="12">Ciudad 12</option>
-            <option value="13">Ciudad 13</option>
+        value="<?php if(isset($row)) { echo $row['Ciudades_idCiudades']; } ?>" required>
+            <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value=<?php echo $row['idCiudades']; ?>><?php echo $row['DescripcionCiudad']; ?></option>
+            <?php }?>
         </select>
         </div>
     </div>
@@ -155,7 +170,7 @@
         <div class="col-sm-6 mb-3 mb-sm-0">
         <input type="radio" name="Estados_idEstado" value="1"
         <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
-        <?php endif?>>
+        <?php endif?> required>
         <label for="contactChoice1">Activo</label>
         </div>
         <div class="col-sm-6 mb-3 mb-sm-0">
@@ -175,7 +190,7 @@
     </div>
     <div class="form-group">
         <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } ?>">
+        value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } ?>" required>
     </div>
     </div>
     <!--Fecha Ingreso-->
@@ -185,7 +200,7 @@
     </div>
     <div class="form-group">
         <input type="date" name="FechaIngreso"class="form-control form-control-user" placeholder=""
-        value="<?php if(isset($row)) { echo $row['FechaIngreso']; } ?>">
+        value="<?php if(isset($row)) { echo $row['FechaIngreso']; } ?>" required>
     </div>
     </div>
 </div>
@@ -195,7 +210,7 @@
 </div>
 <div class="form-group">
     <input type="email" name = "Correo" class="form-control form-control-user" placeholder=""
-    value="<?php if(isset($row)) { echo $row['Correo']; } ?>">
+    value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required>
 </div>
 <!--Numero de cuenta bancaria-->
 <div class="sidebar-heading">
@@ -203,5 +218,5 @@
 </div>
 <div class="form-group">
     <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder=""
-    value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>">
+    value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>" required>
 </div>

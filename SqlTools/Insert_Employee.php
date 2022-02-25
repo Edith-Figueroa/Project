@@ -13,6 +13,7 @@
         $CuentaBancaria = $_POST['CuentaBancaria'];
         $Sexos_idSexo = $_POST['Sexos_idSexo'];
         $Departamentos_idDepartamentos = $_POST['Departamentos_idDepartamentos'];
+        $Cargos_idCargos = $_POST['Cargos_idCargos'];
         $Estados_idEstado = $_POST['Estados_idEstado'];
         $Correo = $_POST['Correo'];
         $Ciudades_idCiudades = $_POST['Ciudades_idCiudades'];

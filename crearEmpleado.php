@@ -164,6 +164,7 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
+                      <?php include 'SqlTools/database.php'?>
                       <!--Inicio de Form-->
                       <form class="user", action="SqlTools\Insert_Employee.php", method="post">
                       <?php include 'formEmpleado.php';?>

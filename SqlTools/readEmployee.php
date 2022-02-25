@@ -166,10 +166,10 @@
                     <div class="p-5">
                       <!--Llamada de datos-->
                       <?php
-                        include '../SqlTools/database.php';
+                        include_once 'database.php';
                         $id = $_GET['idEmpleados'];
 
-                        $modify= new database();
+                        $modify = new database();
                         $modify->select("empleados","*","idEmpleados='$id'");
                         $result = $modify->sql;
 
