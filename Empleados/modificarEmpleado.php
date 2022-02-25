@@ -10,21 +10,22 @@
   <meta name="author" content="">
 
   <title>Planilla de Pagos</title>
-
   <!-- FUENTES-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-  
+
   <!-- CSS-->
-  <link href="css/estilo.css" rel="stylesheet">
+  <link href="../css/estilo.css" rel="stylesheet">
 
 </head>
 
+<script src="SqlTools/confirmationInsert.js"></script>
+
 <body id="page-top">
 
-  <!-- Envoltura de páginar -->
+  <!-- Envoltura de pagina -->
   <div id="wrapper">
 
     <!-- barra lateral -->
@@ -99,19 +100,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Búsqueda en la barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -162,88 +150,61 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
+          <h1 class="h3 mb-1 text-gray-800">Modificacion de Empleado</h1>
+        </div>
+        <div class="container">
 
-          <!-- Encabezado de página -->
-          <h1 class="h3 mb-2 text-gray-800">Empleados</h1>
+          <!-- Fila exterior -->
+          <div class="row justify-content-center">
 
+            <div class="col-xl-20 col-lg-12 col-md-9">
 
-          <!-- Tablas-->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Planillas de Empleados</h6>
-            </div>
-            <div class="table-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>Num. id</th>
-                      <th>Nombre</th>
-                      <th>Telefono</th>
-                      <th>Nacimiento</th>
-                      <th>Edad</th>
-                      <th>Sexo</th>
-                      <th scope="col" colspan="3">Action</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>id</th>
-                      <th>Num. id</th>
-                      <th>Nombre</th>
-                      <th>Telefono</th>
-                      <th>Nacimiento</th>
-                      <th>Edad</th>
-                      <th>Sexo</th>
-                      <th scope="col" colspan="3">Action</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <?php include 'SqlTools/database.php';
-                    $grid = new database();
-                    $grid ->select('empleados', 'idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
-                            PrimerApellido, SegundoApellido, Telefono, Direccion,
-                            FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
-                            Departamentos_idDepartamentos, Estados_idEstado, Correo,
-                            Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
-                            Telefono,FechaNacimiento,
-                            if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
-                            if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo');
-                    $table = $grid ->sql
-                    ?>
+              <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                  <!-- Fila anidada dentro del cuerpo de la tarjeta -->
+                  <div class="">
+                    <div class="p-5">
+                      <!--Llamada de datos-->
+                      <?php
+                        include '../SqlTools/database.php';
+                        $id = $_GET['idEmpleados'];
 
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
-                      <tr>
-                        <td><?php echo $row['idEmpleados']; ?></td>
-                        <td><?php echo $row['Cedula']; ?></td>
-                        <td><?php echo $row['Nombre']; ?></td>
-                        <td><?php echo $row['Telefono']; ?></td>
-                        <td><?php echo $row['FechaNacimiento']; ?></td>
-                        <td><?php echo $row['EDAD']; ?></td>
-                        <td><?php echo $row['Sexo']; ?></td>
-                        <td>
-                            <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-success btn-sm">View</a>
-                        </td>
-                        <td>
-                            <a href="Empleados/modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Edit</a>
-                        </td>
-                        <td>
-                            <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-danger btn-sm">Inactivate</a>
-                        </td>
-                      </tr>
-                    <?php }?>
-                  </tbody>
-                </table>
+                        $modify= new database();
+                        $modify->select("empleados","*","idEmpleados='$id'");
+                        $result = $modify->sql;
+
+                        $row = mysqli_fetch_assoc($result);
+                      ?>
+                      <!--Inicio de Form-->
+                      <form class="user", action="#", method="post">
+                      <?php include '../formEmpleado.php';?>
+                        <!--Submit-->
+                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar" onclick = "return Confirmation()">
+                          </div>
+                          <!--Limpiar-->
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                            </a>
+                          </div>
+                        </div>
+                        <!--Cancelar-->
+                        <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
+                          <a href="index.php" class="btn btn-primary btn-user btn-block">
+                            Cancelar
+                          </a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-        <!-- /.container-fluid -->
-
       </div>
-      <!-- Fin del contenido principal -->
+
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -260,7 +221,7 @@
   </div>
   <!-- Envoltorio de fin de página -->
 
-  <!--Desplácese al botón superior-->
+  <!-- Desplácese al botón superiorn-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -276,8 +237,8 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.
-        </div>
+        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión
+          actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
           <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
