@@ -4857,6 +4857,12 @@ input[type="button"].btn-block {
   padding: 1.25rem;
 }
 
+.table-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
 .card-title {
   margin-bottom: 0.75rem;
 }

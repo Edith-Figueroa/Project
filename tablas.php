@@ -16,7 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-
+  
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
 
@@ -172,38 +172,67 @@
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Planillas de Empleados</h6>
             </div>
-            <div class="card-body">
+            <div class="table-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                      <th>id</th>
+                      <th>Num. id</th>
                       <th>Nombre</th>
-                      <th>Departamento</th>
-                      <th>Direccion</th>
+                      <th>Telefono</th>
+                      <th>Nacimiento</th>
                       <th>Edad</th>
-                      <th>Fecha de inicio</th>
-                      <th>Salario</th>
+                      <th>Sexo</th>
+                      <th scope="col" colspan="3">Action</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
+                      <th>id</th>
+                      <th>Num. id</th>
                       <th>Nombre</th>
-                      <th>Departamento</th>
-                      <th>Direccion</th>
+                      <th>Telefono</th>
+                      <th>Nacimiento</th>
                       <th>Edad</th>
-                      <th>Fecha de inicio</th>
-                      <th>Salario</th>
+                      <th>Sexo</th>
+                      <th scope="col" colspan="3">Action</th>
                     </tr>
                   </tfoot>
                   <tbody>
+                    <?php include 'SqlTools/database.php';
+                    $grid = new database();
+                    $grid ->select('empleados', 'idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
+                            PrimerApellido, SegundoApellido, Telefono, Direccion,
+                            FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
+                            Departamentos_idDepartamentos, Estados_idEstado, Correo,
+                            Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
+                            Telefono,FechaNacimiento,
+                            if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
+                            if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo');
+                    $table = $grid ->sql
+                    ?>
 
-                    <td>Denis Garcia</td>
-                    <td>Analista</td>
-                    <td>Tegucigalpa</td>
-                    <td>20</td>
-                    <td>2022/02/10</td>
-                    <td>$100,000</td>
-                    </tr>
+                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                      <tr>
+                        <td><?php echo $row['idEmpleados']; ?></td>
+                        <td><?php echo $row['Cedula']; ?></td>
+                        <td><?php echo $row['Nombre']; ?></td>
+                        <td><?php echo $row['Telefono']; ?></td>
+                        <td><?php echo $row['FechaNacimiento']; ?></td>
+                        <td><?php echo $row['EDAD']; ?></td>
+                        <td><?php echo $row['Sexo']; ?></td>
+                        <td>
+                            <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-success btn-sm">View</a>
+                        </td>
+                        <td>
+                            <a href="crearEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        </td>
+                        <td>
+                            <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-danger btn-sm">Inactivate</a>
+                        </td>
+                      </tr>
+                    <?php }?>
                   </tbody>
                 </table>
               </div>
