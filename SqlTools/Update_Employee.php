@@ -14,6 +14,7 @@
         $FechaIngreso = $_POST['FechaIngreso'];
         $CuentaBancaria = $_POST['CuentaBancaria'];
         $Sexos_idSexo = $_POST['Sexos_idSexo'];
+        $Cargos_idCargos = $_POST['Cargos_idCargos'];
         $Estados_idEstado = $_POST['Estados_idEstado'];
         $Correo = $_POST['Correo'];
         $Ciudades_idCiudades = $_POST['Ciudades_idCiudades'];
@@ -21,7 +22,7 @@
         $a = new database();
         $a->update('empleados',['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
                     'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
-                    'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo,
+                    'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo, 'Cargos_idCargos'=>$Cargos_idCargos,
                     'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
                     'Ciudades_idCiudades'=>$Ciudades_idCiudades], "idEmpleados = $id");
         if ($a == true) {

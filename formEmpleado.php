@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-1.12.1.js" type="text/javascript">
     </script>
+    <script src="js/jquery-1.12.1.js"></script>
 </head>
     <body>
         <!--Numero de Identidad-->
@@ -244,7 +245,7 @@
         var x = document.getElementById("Departamentos_idDepartamentos").value;
         $.ajax({
             type:"POST",
-            url: "datos.php",
+            url: "../datos.php",
             data:"dpto=" + x,
             success:function(r){
                 $('#Cargos_idCargos').html(r);

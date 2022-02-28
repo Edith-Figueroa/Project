@@ -205,7 +205,7 @@
                     $grid ->select('empleados', 'idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
                             PrimerApellido, SegundoApellido, Telefono, Direccion,
                             FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
-                            Departamentos_idDepartamentos, Estados_idEstado, Correo,
+                            Cargos_idCargos, Estados_idEstado, Correo,
                             Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
                             Telefono,FechaNacimiento,
                             if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
