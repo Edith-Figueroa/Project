@@ -19,6 +19,10 @@
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
 
+  <script
+    src="https://code.jquery.com/jquery-1.12.1.js">
+    type="text/javascript"
+  </script>
 </head>
 
 <script src="SqlTools/confirmationInsert.js"></script>
