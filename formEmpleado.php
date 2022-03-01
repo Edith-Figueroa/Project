@@ -245,7 +245,7 @@
         var x = document.getElementById("Departamentos_idDepartamentos").value;
         $.ajax({
             type:"POST",
-            url: "../datos.php",
+            url: "datos.php",
             data:"dpto=" + x,
             success:function(r){
                 $('#Cargos_idCargos').html(r);
