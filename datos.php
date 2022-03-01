@@ -6,7 +6,7 @@
 
     $result=mysqli_query($conexion, $sql);
 
-    while ($row = mysqli_fetch_assoc($result)){
-        echo'<option value='.$row['idCargo'].'>'.$row['DescripcionCargo'].'</option>';
+    while ($ex = mysqli_fetch_assoc($result)){
+        echo'<option value='.$ex['idCargo'].'>'.$ex['DescripcionCargo'].'</option>';
     }
 ?>

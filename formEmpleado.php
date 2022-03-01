@@ -126,9 +126,9 @@
             <div class="form-group">
                 <div>
                 <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" onchange="cambio()">
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                    <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
                         <option value="none" selected disabled hidden>Select an Option</option>
-                        <option value="<?php echo $row['idDepartamentos']; ?>"><?php echo $row['DescripcionDepto']; ?></option>
+                        <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>
                     <?php }?>
                 </select>
                 </div>
@@ -170,9 +170,9 @@
                 <div>
                 <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null"
                 value="<?php if(isset($row)) { echo $row['Ciudades_idCiudades']; } ?>" required>
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                    <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
                         <option value="none" selected disabled hidden>Select an Option</option>
-                        <option value=<?php echo $row['idCiudades']; ?>><?php echo $row['DescripcionCiudad']; ?></option>
+                        <option value=<?php echo $ex['idCiudades']; ?>><?php echo $ex['DescripcionCiudad']; ?></option>
                     <?php }?>
                 </select>
                 </div>
@@ -186,14 +186,14 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="radio" name="Estados_idEstado" value="1"
-                <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
+                <?php if(isset($row)) if ($row['Estados_idEstado'] !== 2): ?> checked = "checked"
                 <?php endif?> required>
                 <label for="contactChoice1">Activo</label>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="radio" name="Estados_idEstado" value="2"
-                <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
-                <?php endif ?>>
+                <?php if(isset($row)) if ($row['Estados_idEstado'] !== 1): ?> checked = "checked"
+                <?php endif;?>>
                 <label for="contactChoice2">Inactivo</label>
                 </div>
             </div>
