@@ -186,13 +186,13 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="radio" name="Estados_idEstado" value="1"
-                <?php if(isset($row)) if ($row['Estados_idEstado'] !== 2): ?> checked = "checked"
+                <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
                 <?php endif?> required>
                 <label for="contactChoice1">Activo</label>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="radio" name="Estados_idEstado" value="2"
-                <?php if(isset($row)) if ($row['Estados_idEstado'] !== 1): ?> checked = "checked"
+                <?php if(isset($row)) if ($row['Estados_idEstado'] == 2): ?> checked = "checked"
                 <?php endif;?>>
                 <label for="contactChoice2">Inactivo</label>
                 </div>
