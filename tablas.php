@@ -130,7 +130,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Denis Garcia</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -226,7 +226,7 @@
                             <a href="SqlTools/readEmployee.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-success btn-sm">View</a>
                         </td>
                         <td>
-                            <a href="Empleados/modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Edit</a>
                         </td>
                         <td>
                             <a href="SqlTools/inactivate.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-danger btn-sm">Inactivate</a>
