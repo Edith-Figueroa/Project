@@ -26,11 +26,11 @@
     $Ciudades_idCiudades = $data['Ciudades_idCiudades'];
 
     $a = new database();
-    $a->update('empleados',['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
+    $a->update('empleados',"idEmpleados = $id",['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
                 'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
                 'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo,
                 'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos,'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
-                'Ciudades_idCiudades'=>$Ciudades_idCiudades], "idEmpleados = $id");
+                'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
     if ($a == true) {
         header('location:../tablas.php');
     }
