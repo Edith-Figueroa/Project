@@ -11,13 +11,13 @@
 
   <title>Planilla de Pagos</title>
   <!-- FUENTES-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
 
   <!-- CSS-->
-  <link href="css/estilo.css" rel="stylesheet">
+  <link href="../css/estilo.css" rel="stylesheet">
 
   <!--JAVASCRIPT-->
   <script
@@ -27,7 +27,7 @@
   
 </head>
 
-<script src="SqlTools/confirmationInsert.js"></script>
+<script src="../SqlTools/confirmationInsert.js"></script>
 
 <body id="page-top">
 
@@ -47,7 +47,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="../index.php">
           <span>Menu</span></a>
       </li>
 
@@ -62,8 +62,8 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -76,7 +76,7 @@
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.php">Registro</a>
+            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
           </div>
         </div>
       </li>
@@ -89,8 +89,8 @@
         </a>
         <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Cargos/TablaCargos.php">Mostrar Cargos</a>
-            <a class="collapse-item" href="Cargos/CreacionCargos.php">Crear Cargo Nuevo</a>
+            <a class="collapse-item" href="../Cargos/TablaCargos.php">Mostrar Cargos</a>
+            <a class="collapse-item" href="../Cargos/CreacionCargos.php">Crear Cargo Nuevo</a>
           </div>
         </div>
       </li>
@@ -104,8 +104,8 @@
         </a>
         <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Ciudades/TablaCiudades.php">Mostrar Ciudades</a>
-            <a class="collapse-item" href="Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
+            <a class="collapse-item" href="../Ciudades/TablaCiudades.php">Mostrar Ciudades</a>
+            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
           </div>
       </li>
 
@@ -120,8 +120,8 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Departamentos/TablaDepartamentos.php">Mostrar Departamentos</a>
-            <a class="collapse-item" href="Departamentos/CreacionDepartamentos.php">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="TablaDepartamentos.php">Mostrar Departamentos</a>
+            <a class="collapse-item" href="CreacionDepartamentos.php">Crear Departamento Nuevo</a>
           </div>
       </li>
       <!-- Barra lateral cerrar (Barra lateral) -->
@@ -166,7 +166,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
-                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -197,7 +197,7 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800">Creacion de Empleado</h1>
+          <h1 class="h3 mb-1 text-gray-800">Creacion de Departamento</h1>
         </div>
         <div class="container">
 
@@ -211,10 +211,10 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <?php include 'SqlTools/database.php'?>
+                      <?php include '../SqlTools/database.php'?>
                       <!--Inicio de Form-->
-                      <form class="user", action="SqlTools\Insert_Employee.php", method="post">
-                      <?php include 'formEmpleado.php';?>
+                      <?php include 'formDepartamentos.php';?>
+                      <form class="user", action="..\SqlTools\#.php", method="post">
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
@@ -228,7 +228,7 @@
                         </div>
                         <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="index.php" class="btn btn-primary btn-user btn-block">
+                          <a href="../index.php" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
                         </div>
@@ -278,28 +278,28 @@
           actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
+          <a class="btn btn-primary" href="../login.php">Cerrar Sesion</a>
         </div>
       </div>
     </div>
-  </div>
+</div>
 
   <!-- JavaScript básico de Bootstrap-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Complemento principal de JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Scripts personalizados para todas las páginas-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="../js/sb-admin-2.min.js"></script>
 
   <!-- Complementos de nivel de página -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="../vendor/chart.js/Chart.min.js"></script>
 
   <!-- Scripts personalizados a nivel de página -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
 
