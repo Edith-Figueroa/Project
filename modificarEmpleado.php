@@ -126,10 +126,6 @@
           </div>
       </li>
 
-          </div>
-        </div>
-      </li>
-
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
