@@ -47,14 +47,13 @@
       <!-- Divisor -->
       <hr class="sidebar-divider">
 
-
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-          aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
+          aria-controls="collapseEmpleados">
           <span>Empleados</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
             <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
@@ -64,16 +63,59 @@
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-          aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+          aria-expanded="true" aria-controls="collapsePlanillas">
           <span>Planillas</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
-
           </div>
         </div>
+      </li>
+
+            <!-- Nav Item - Cargos Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos"
+          aria-expanded="true" aria-controls="collapseCargos">
+          <span>Cargos</span>
+        </a>
+        <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="TablaCargos.php">Mostrar Cargos</a>
+            <a class="collapse-item" href="CreacionCargos.php">Crear Cargo Nuevo</a>
+          </div>
+        </div>
+      </li>
+
+
+                  <!-- Nav Item - Ciudades Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
+          aria-expanded="true" aria-controls="collapseCiudades">
+          <span>Ciudades</span>
+        </a>
+        <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../Ciudades/TablaCiudades.php">Mostrar Ciudades</a>
+            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
+          </div>
+      </li>
+
+
+
+
+                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
+          aria-expanded="true" aria-controls="collapseDepartamentos">
+          <span>Departamentos</span>
+        </a>
+        <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php">Crear Departamento Nuevo</a>
+          </div>
       </li>
 
       <!-- Barra lateral cerrar (Barra lateral) -->
