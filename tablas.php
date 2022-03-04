@@ -184,7 +184,7 @@
                       <th>Nacimiento</th>
                       <th>Edad</th>
                       <th>Sexo</th>
-                      <th scope="col" colspan="3">Action</th>
+                      <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -196,7 +196,7 @@
                       <th>Nacimiento</th>
                       <th>Edad</th>
                       <th>Sexo</th>
-                      <th scope="col" colspan="3">Action</th>
+                      <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -223,13 +223,13 @@
                         <td><?php echo $row['EDAD']; ?></td>
                         <td><?php echo $row['Sexo']; ?></td>
                         <td>
-                            <a href="SqlTools/readEmployee.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-success btn-sm">View</a>
+                            <a href="SqlTools/readEmployee.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
-                            <a href="modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="SqlTools/inactivate.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-danger btn-sm">Inactivate</a>
+                            <a href="SqlTools/inactivate.php?idEmpleados=<?php echo $row['idEmpleados']; ?>" class="btn btn-danger btn-sm">Desactivar</a>
                         </td>
                       </tr>
                     <?php }?>

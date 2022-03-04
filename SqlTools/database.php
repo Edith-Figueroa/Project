@@ -21,13 +21,12 @@
             $result = $this->mysqli->query($sql);
         }
 
-        public function update($table,$para=array(),$id){
+        public function update($table,$id,$para=array()){
             $args = array();
 
             foreach ($para as $key => $value) {
                 $args[] = "$key = '$value'"; 
             }
-
             $sql="UPDATE  $table SET " . implode(',', $args);
 
             $sql .=" WHERE $id";

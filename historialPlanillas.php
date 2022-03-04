@@ -166,6 +166,11 @@
         <div class="container-fluid">
           <h1 class="h3 mb-1 text-gray-800">Historial de Planillas</h1>
         </div>
+        <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
+            <a href="index.php" class="btn btn-primary btn-user btn-block">
+                Regresar
+            </a>
+        </div>
 
         <!-- Footer -->
         <footer class="sticky-footer bg-white">

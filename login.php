@@ -74,11 +74,7 @@
 
                 </div>
               </div>
-              <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <a class="small" href="nuevoUsuario.php">Crear un nuevo usuario</a>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
