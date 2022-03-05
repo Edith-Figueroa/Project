@@ -181,8 +181,9 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
+                      <form class="user", action="SQLUpdate_Cargos.php", method="post">
+                      <input type="hidden" name="idCargo" value="<?php echo $id; ?>">
                       <?php include 'formCargos.php';?>
-                      <form class="user", action="..\SqlTools\#.php", method="post">
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
