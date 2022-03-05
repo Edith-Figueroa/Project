@@ -230,7 +230,7 @@
                   <tbody>
                     <?php include '../SqlTools/database.php';
                     $grid = new database();
-                    $grid ->select('ciudades', 'idCiudades, DescripcionCiudad');
+                    $grid ->select('ciudades', 'idCiudades, DescripcionCiudad', 'Estados_idEstado = 1');
                     $table = $grid -> sql;
                     ?>
 

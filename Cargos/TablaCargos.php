@@ -235,7 +235,7 @@
                   <tbody>
                     <?php include '../SqlTools/database.php';
                     $grid = new database();
-                    $grid ->select('cargos', 'idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos');
+                    $grid ->select('cargos', 'idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos', 'Estados_idEstado = 1');
                     $table = $grid -> sql;
                     ?>
 
@@ -246,13 +246,13 @@
                         <td><?php echo $row['Salario']; ?></td>
                         <td><?php echo $row['Departamentos_idDepartamentos']; ?></td>
                         <td>
-                            <a href="#<?php echo $row['idCargo']; ?>" class="btn btn-success btn-sm">Ver</a>
+                            <a href="SQLRead_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
                             <a href="ModificacionCargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="#<?php echo $row['idCargo']; ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="SQLInactive_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-danger btn-sm">Inactivar</a>
                         </td>
                       </tr>
                     <?php }?>
