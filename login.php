@@ -34,12 +34,12 @@
           <div class="card-body p-0">
             <!-- Fila anidada dentro del cuerpo de la tarjeta -->
             <div class="p-5">
-              <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
+              <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <h1 class="h4 text-gray-900 mb-4">¡Bienvenido!</h1>
                 </div>
               </div>
-              <form action="Login/validar.php" method="post" class="user" style=" width: 50vw; margin-left : 7vw;">
+              <form action="Login/validar.php" method="post" class="user" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" form-group">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" name="Usuario" placeholder="Nombre de usuario">
@@ -65,7 +65,7 @@
                 </div>
               </form>
               <hr>
-              <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
+              <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
 

@@ -34,19 +34,16 @@
           <div class="card-body p-0">
             <!-- Fila anidada dentro del cuerpo de la tarjeta -->
             <div class="p-5">
-              <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
+              <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
-                
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <button    class="btn btn-primary btn-user btn-block"><a href="../login.php"></a></button>
-                </div>
+
+                  <a href="../login.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
               </form>
               <hr>
-              <div class="text-center" style=" width: 50vw; margin-left : 7vw;">
-                <div class=" col-sm-6 mb-3 mb-sm-0">
+              <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
+                <div class=" col-sm-5 mb-5 mb-sm-0">
                   <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
-
                 </div>
               </div>
               
