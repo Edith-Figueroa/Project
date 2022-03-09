@@ -240,13 +240,13 @@
                         <td><?php echo $row['DescripcionCiudad']; ?></td>
                         
                         <td>
-                            <a href="#<?php echo $row['idCiudades']; ?>" class="btn btn-success btn-sm">Ver</a>
+                            <a href="SQLRead_Ciudades.php?idCiudades=<?php echo $row['idCiudades']; ?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
                             <a href="ModificacionCiudades.php?idCiudades=<?php echo $row['idCiudades']; ?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="#<?php echo $row['idCiudades']; ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="SQLInactive_Ciudades.php?idCiudades=<?php echo $row['idCiudades']; ?>" class="btn btn-danger btn-sm">Desactivar</a>
                         </td>
                       </tr>
                     <?php }?>

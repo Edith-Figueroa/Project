@@ -214,7 +214,7 @@
                       <?php include '../SqlTools/database.php'?>
                       <!--Inicio de Form-->
                       <?php include 'formDepartamentos.php';?>
-                      <form class="user", action="..\SqlTools\#.php", method="post">
+                      <form class="user", action="SQLInsert_Departamentos.php", method="post">
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">

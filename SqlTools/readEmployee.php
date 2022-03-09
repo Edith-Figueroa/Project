@@ -150,7 +150,7 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800">Modificacion de Empleado</h1>
+          <h1 class="h3 mb-1 text-gray-800">Vista de Empleado</h1>
         </div>
         <div class="container">
 
