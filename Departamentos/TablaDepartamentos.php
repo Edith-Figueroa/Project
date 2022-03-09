@@ -240,13 +240,13 @@
                         <td><?php echo $row['DescripcionDepto']; ?></td>
                         
                         <td>
-                            <a href="#<?php echo $row['idDepartamentos']; ?>" class="btn btn-success btn-sm">Ver</a>
+                            <a href="SQLRead_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
                             <a href="ModificacionDepartamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="#<?php echo $row['idDepartamentos']; ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="SQLInactive_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>" class="btn btn-danger btn-sm">Desactivar</a>
                         </td>
                       </tr>
                     <?php }?>
