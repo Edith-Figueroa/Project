@@ -109,10 +109,7 @@
           </div>
       </li>
 
-
-
-
-                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -131,7 +128,6 @@
 
     </ul>
     <!-- Fin de la barra lateral -->
-
 
     <!-- Envoltorio de contenido -->
     <div id="content-wrapper" class="d-flex flex-column">

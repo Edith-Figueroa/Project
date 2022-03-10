@@ -95,7 +95,6 @@
         </div>
       </li>
 
-
                   <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
@@ -108,9 +107,6 @@
             <a class="collapse-item" href="../Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
           </div>
       </li>
-
-
-
 
                         <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
@@ -131,7 +127,6 @@
 
     </ul>
     <!-- Fin de la barra lateral -->
-
 
     <!-- Envoltorio de contenido -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -213,8 +208,8 @@
                     <div class="p-5">
                       <?php include '../SqlTools/database.php'?>
                       <!--Inicio de Form-->
-                      <?php include 'formDepartamentos.php';?>
                       <form class="user", action="SQLInsert_Departamentos.php", method="post">
+                      <?php include 'formDepartamentos.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">

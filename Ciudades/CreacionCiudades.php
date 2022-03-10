@@ -95,7 +95,6 @@
         </div>
       </li>
 
-
                   <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
@@ -109,10 +108,7 @@
           </div>
       </li>
 
-
-
-
-                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -214,8 +210,8 @@
                       <?php include '../SqlTools/database.php';?>
                       
                       <!--Inicio de Form-->
-                      <?php include 'formCiudades.php';?>
                       <form class="user", action="SQLInsert_Ciudades.php", method="post">
+                        <?php include 'formCiudades.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">

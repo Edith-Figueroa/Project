@@ -48,6 +48,19 @@
       <hr class="sidebar-divider">
 
 
+      <!-- Nav Item - Planillas Plegar Menú -->
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="historialPlanillas.php">Registro</a>
+            </div>
+          </div>
+        </li>
+
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
@@ -58,19 +71,6 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="crearEmpleado.php">Crear Empleado</a>
             <a class="collapse-item" href="tablas.php">Mostrar Empleados</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Planillas Plegar Menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span>Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.php">Registro</a>
           </div>
         </div>
       </li>
@@ -89,8 +89,7 @@
         </div>
       </li>
 
-
-                  <!-- Nav Item - Ciudades Plegar Menú -->
+      <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
           aria-expanded="true" aria-controls="collapseCiudades">
@@ -102,9 +101,6 @@
             <a class="collapse-item" href="Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
           </div>
       </li>
-
-
-
 
                         <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">

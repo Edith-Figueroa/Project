@@ -181,8 +181,8 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <?php include 'formCiudades.php';?>
                       <form class="user", action="SQLUpdate_Ciudades.php", method="post">
+                      <?php include 'formCiudades.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
