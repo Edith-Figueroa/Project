@@ -18,10 +18,3 @@ function ConfirmationDel() {
   if (ans == true) return true;
   else return false;
 }
-
-function ErrorAutentication() {
-  var ans = confirm("Error de autenticacion");
-
-  if (ans == true) return true;
-  else return false;
-}
