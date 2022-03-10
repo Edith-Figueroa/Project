@@ -10,6 +10,7 @@
     <script src="js/jquery-1.12.1.js"></script>
 </head>
     <body>
+      
         <!--Descripcion de Ciudades-->
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -17,7 +18,7 @@
                     Nombre de la ciudad
                 </div>
                 <div class="form-group">
-                    <input type="" name="DescripcionCiudad" class="form-control form-control-user"
+                    <input id="DescripcionCiudad" type="" name="DescripcionCiudad" class="form-control form-control-user"
                     aria-describedby="emailHelp" placeholder="" 
                     value="<?php if(isset($row)) { echo $row['DescripcionCiudad']; } ?>" required>
                 </div>
