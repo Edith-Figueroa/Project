@@ -59,6 +59,7 @@ CREATE TABLE `usuarios` (
   `Usuario` varchar(45) NOT NULL,
   `Contrasenia` varchar(45) NOT NULL,
   `Empleados_idEmpleados` int NOT NULL,
+  `Estados_idEstado` int NOT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `Empleados_idEmpleados_UNIQUE` (`Empleados_idEmpleados`),
   CONSTRAINT `fk_Usuarios_Empleados1` FOREIGN KEY (`Empleados_idEmpleados`) REFERENCES `empleados` (`idEmpleados`)
@@ -71,7 +72,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'OJAO','alquimista1999',1),(2,'EFZR','Emerson2000',7),(3,'DJGM','DJ2001',9),(4,'DYCS','DULCHI2001',10),(5,'DIMF','DIEMO1998',11);
+INSERT INTO `usuarios` VALUES (1,'OJAO','alquimista1999',1,1),(2,'EFZR','Emerson2000',7,1),(3,'DJGM','DJ2001',9,1),(4,'DYCS','DULCHI2001',10,1),(5,'DIMF','DIEMO1998',11,1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
