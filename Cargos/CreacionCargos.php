@@ -214,7 +214,10 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <?php include '../SqlTools/database.php'?>
+                      <?php 
+                        include '../SqlTools/database.php';
+                        include 'ValidacionCargo.php';
+                      ?>
                       <!--Inicio de Form-->
                       <form class="user", action="SQLInsert_Cargos.php", method="post">
                         <?php include 'formCargos.php';?>

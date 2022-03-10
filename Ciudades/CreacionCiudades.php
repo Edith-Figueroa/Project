@@ -211,7 +211,8 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <?php include '../SqlTools/database.php'?>
+                      <?php include '../SqlTools/database.php';?>
+                      
                       <!--Inicio de Form-->
                       <?php include 'formCiudades.php';?>
                       <form class="user", action="SQLInsert_Ciudades.php", method="post">

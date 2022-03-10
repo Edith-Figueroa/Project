@@ -10,6 +10,7 @@
     <script src="js/jquery-1.12.1.js"></script>
 </head>
     <body>
+      <form id="formularioEmp">
         <!--Numero de Identidad-->
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -22,7 +23,7 @@
                     value="<?php if(isset($row)) { echo $row['Cedula']; } ?>" required>
                 </div>
             </div>
-
+  
             <!--Sexo-->
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="sidebar-heading">
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </div>
-
+  
         <!--Primer Nombre-->
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -52,7 +53,7 @@
                 Primer Nombre
             </div>
             <div class="form-group">
-                <input type="text" name="PrimerNombre" class="form-control form-control-user" placeholder=""
+                <input id="" type="text" name="PrimerNombre" class="form-control form-control-user" placeholder=""
                 value="<?php if(isset($row)) { echo $row['PrimerNombre']; } ?>" required>
             </div>
             </div>
@@ -117,7 +118,6 @@
             $grid ->select('departamentos', '*');
             $table = $grid ->sql;
         ?>
-
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="sidebar-heading">
@@ -134,14 +134,12 @@
                 </div>
             </div>
             </div>
-
             <!--Cargos-->
             <?php
             $grid = new database();
             $grid ->select('cargos', '*');
             $table = $grid ->sql;
             ?>
-
             <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="sidebar-heading">
                 Cargo
@@ -155,7 +153,7 @@
             </div>
             </div>
         </div>    
-
+  
         <!--Ciudades-->
         <?php
             $grid ->select('ciudades', '*');
@@ -237,6 +235,9 @@
             <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder=""
             value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>" required>
         </div>
+
+      </form>
+        
     </body>
 </html>
 
