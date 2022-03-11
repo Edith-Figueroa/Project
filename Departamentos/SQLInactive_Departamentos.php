@@ -1,4 +1,6 @@
-<?php 
+<?php
+    $Usuario = $_GET['idUsuario'];
+    $Empresa = $_GET['Empresas_idEmpresas'];
     include '../SqlTools/database.php';
 
     $id = $_GET['idDepartamentos'];
@@ -15,6 +17,6 @@
     $del->update('departamentos', "idDepartamentos = '$id'", ['DescripcionDepto'=>$DescripcionDepto,'Estados_idEstado'=>$Estados_idEstado]);
 
     if ($del == true) {
-        header('location: TablaDepartamentos.php');
+        header("location: TablaDepartamentos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
 ?>

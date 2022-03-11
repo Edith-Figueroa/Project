@@ -31,6 +31,8 @@
 
 <body id="page-top">
 
+<?php $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];?>
   <!-- Envoltura de pagina -->
   <div id="wrapper">
 
@@ -38,7 +40,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -47,7 +49,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">
+        <a class="nav-link" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
           <span>Menu</span></a>
       </li>
 
@@ -63,8 +65,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -77,7 +79,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
+            <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
 
           </div>
         </div>
@@ -182,6 +184,9 @@
                     <div class="p-5">
                       <!--Inicio de Form-->
                       <form class="user", action="SQLUpdate_Ciudades.php", method="post">
+                      <input type="hidden" name="idCiudades" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                       <?php include 'formCiudades.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">

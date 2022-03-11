@@ -2,6 +2,8 @@
     include '../SqlTools/database.php';
 
     $id = $_GET['idCiudades'];
+    $Usuario = $_GET['idUsuario'];
+    $Empresa = $_GET['Empresas_idEmpresas'];
 
     $del = new database();
     $del->select('ciudades','*', "idCiudades='$id'");
@@ -15,6 +17,6 @@
     $del->update('ciudades', "idCiudades = '$id'", ['DescripcionCiudad'=>$DescripcionCiuds,'Estados_idEstado'=>$Estados_idEstado]);
 
     if ($del == true) {
-        header('location: TablaCiudades.php');
+        header("location: TablaCiudades.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
 ?>
