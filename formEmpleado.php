@@ -10,7 +10,6 @@
     <script src="js/jquery-1.12.1.js"></script>
 </head>
     <body>
-      <form id="formularioEmp">
         <!--Numero de Identidad-->
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -205,7 +204,7 @@
             </div>
             <div class="form-group">
                 <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder=""
-                value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } ?>" required>
+                value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } else{echo '2000-01-01';} ?>" required>
             </div>
             </div>
             <!--Fecha Ingreso-->
@@ -235,9 +234,6 @@
             <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder=""
             value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>" required>
         </div>
-
-    </form>
-        
     </body>
 </html>
 

@@ -247,7 +247,7 @@ CREATE TABLE `cargos` (
   `DescripcionCargo` varchar(45) NOT NULL,
   `Salario` int NOT NULL,
   `Departamentos_idDepartamentos` int NOT NULL,
-   `Estados_idEstado` int NOT NULL,
+  `Estados_idEstado` int NOT NULL,
   PRIMARY KEY (`idCargo`),
   KEY `fk_Cargos_Departamentos1_idx` (`Departamentos_idDepartamentos`),
   CONSTRAINT `fk_Cargos_Departamentos1` FOREIGN KEY (`Departamentos_idDepartamentos`) REFERENCES `departamentos` (`idDepartamentos`)
