@@ -31,7 +31,8 @@ DROP TABLE IF EXISTS `planillas`;
 CREATE TABLE `planillas` (
   `idPlanillas` int NOT NULL AUTO_INCREMENT,
   `NumeroPlanilla` int NOT NULL,
-  `FechaEmision` datetime NOT NULL,
+  `FechaInicio` datetime NOT NULL,
+  `FechaFin` datetime NOT NULL,
   PRIMARY KEY (`idPlanillas`),
   UNIQUE KEY `NumeroPlanilla` (`NumeroPlanilla`)
 ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb3;
@@ -43,8 +44,32 @@ CREATE TABLE `planillas` (
 
 LOCK TABLES `planillas` WRITE;
 /*!40000 ALTER TABLE `planillas` DISABLE KEYS */;
-INSERT INTO `planillas` VALUES (51,3,'2022-02-18 00:00:00'),(52,1,'2022-02-18 00:00:00'),(53,2,'2022-02-18 00:00:00'),(54,4,'2022-02-18 00:00:00'),(55,5,'2022-02-18 00:00:00'),(56,6,'2022-02-18 19:19:12'),(57,7,'2022-02-21 22:46:13'),(58,8,'2022-02-21 22:46:23'),(59,9,'2022-02-21 23:02:59'),(60,10,'2022-02-21 23:02:59'),(61,11,'2022-02-21 23:02:59'),(62,12,'2022-02-21 23:02:59'),(63,13,'2022-02-21 23:02:59'),(64,14,'2022-02-21 23:02:59'),(65,15,'2022-02-21 23:02:59');
 /*!40000 ALTER TABLE `planillas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cargos`
+--
+
+DROP TABLE IF EXISTS `empresas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `empresas` (
+  `idEmpresa` int NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(45) NOT NULL,
+  `Estados_idEstado` int NOT NULL,
+  PRIMARY KEY (`idEmpresa`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cargos`
+--
+
+LOCK TABLES `cargos` WRITE;
+/*!40000 ALTER TABLE `cargos` DISABLE KEYS */;
+INSERT INTO `cargos` VALUES (1,'VENDEDOR',8000,1,1),(2,'JEFE DE BODEGA',5000,2,1),(3,'RECEPCIONISTA',8000,3,1),(4,'ASESOR FINANCIERO',10000,4,1),(5,'EXPEDITOR',8000,5,1),(6,'DIRECTOR DE RECURSOS HUMANOS',21000,6,1),(7,'GERENTE GENERAL',65000,7,1),(8,'AUDITOR DE SISTEMAS',15000,8,1),(9,'DIRECTOR DE PLANTA',28000,9,1),(10,'SUPERVISOR DE VENTAS',20000,1,1),(11,'CARGUERO',8000,2,1),(12,'SUPERVISOR DE ATENCION AL CLIENTE',18000,3,1),(13,'ASESOR FISCAL',15000,4,1),(14,'DESARROLLADOR DE PROVEEDORES',24000,5,1),(15,'TECNICO DE SELECCION DE PERSONAL',23000,6,1),(16,'SUBGERENTE ADMINISTRATIVO',45000,7,1),(17,'ADMINISTRADOR DE BASE DE DATOS',20000,8,1),(18,'SUPERVISOR DE PLANTA',22000,9,1),(19,'GERENTE DE VENTAS',36000,1,1),(20,'DESPACHADOR',10000,2,1),(21,'TELEVENDEDOR',18000,3,1),(22,'ANALISTA',15000,4,1),(23,'LIDER DE COMPRAS',20000,5,1),(24,'RECLUTADOR',15000,6,1),(25,'ANALISTA DE CALIDAD',12000,7,1),(26,'DESARROLLADOR',15000,8,1),(27,'OPERARIOS',22000,9,1);
+/*!40000 ALTER TABLE `cargos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -321,14 +346,19 @@ DROP TABLE IF EXISTS `detalleplanillas`;
 CREATE TABLE `detalleplanillas` (
   `Planillas_idPlanilla` int NOT NULL,
   `Empleados_idEmpleados` int NOT NULL,
-  `Total` decimal(20,6) NOT NULL,
-  `Pagos_idPagos` int NOT NULL,
+  `Salario_Base` decimal(20,6) NOT NULL,
+  `IHSS` decimal(20,6) NOT NULL,
+  `RAP` decimal(20,6) NOT NULL,
+  `ISR` decimal(20,6) NOT NULL,
+  `Total_Deducciones` decimal(20,6) NOT NULL,
+  `14vo` decimal(20,6) NOT NULL,
+  `13vo` decimal(20,6) NOT NULL,
+  `Total_Bonificaciones` decimal(20,6) NOT NULL,
+  `Sueldo_Neto` decimal(20,6) NOT NULL,
   PRIMARY KEY (`Planillas_idPlanilla`,`Empleados_idEmpleados`),
   KEY `fk_DetallePlanillas_Planillas_idx` (`Planillas_idPlanilla`),
   KEY `fk_DetallePlanillas_Empleados1_idx` (`Empleados_idEmpleados`),
-  KEY `fk_DetallePlanillas_Pagos1_idx` (`Pagos_idPagos`),
   CONSTRAINT `fk_DetallePlanillas_Empleados1` FOREIGN KEY (`Empleados_idEmpleados`) REFERENCES `empleados` (`idEmpleados`),
-  CONSTRAINT `fk_DetallePlanillas_Pagos1` FOREIGN KEY (`Pagos_idPagos`) REFERENCES `pagos` (`idPagos`),
   CONSTRAINT `fk_DetallePlanillas_Planillas` FOREIGN KEY (`Planillas_idPlanilla`) REFERENCES `planillas` (`idPlanillas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
