@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-
+<?php $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +31,8 @@
 <script src="../SqlTools/confirmationInsert.js"></script>
 
 <body id="page-top">
-
+<?php $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];?>
   <!-- Envoltura de pagina -->
   <div id="wrapper">
 
@@ -47,7 +49,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">
+        <a class="nav-link" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">
           <span>Menu</span></a>
       </li>
 
@@ -63,8 +65,8 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -77,7 +79,7 @@
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
+            <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Registro</a>
           </div>
         </div>
       </li>
@@ -90,8 +92,8 @@
         </a>
         <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="TablaCargos.php">Mostrar Cargos</a>
-            <a class="collapse-item" href="CreacionCargos.php">Crear Cargo Nuevo</a>
+            <a class="collapse-item" href="TablaCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Mostrar Cargos</a>
+            <a class="collapse-item" href="CreacionCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Crear Cargo Nuevo</a>
           </div>
         </div>
       </li>
@@ -105,8 +107,8 @@
         </a>
         <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Ciudades/TablaCiudades.php">Mostrar Ciudades</a>
-            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
+            <a class="collapse-item" href="../Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Mostrar Ciudades</a>
+            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Crear Ciudad Nueva</a>
           </div>
       </li>
 
@@ -121,8 +123,8 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php">Mostrar Departamentos</a>
-            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
 
@@ -220,6 +222,8 @@
                       ?>
                       <!--Inicio de Form-->
                       <form class="user", action="SQLInsert_Cargos.php", method="post">
+                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                         <?php include 'formCargos.php';?>
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">

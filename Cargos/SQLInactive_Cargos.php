@@ -1,4 +1,7 @@
-<?php 
+<?php
+    $Usuario = $_GET['idUsuario'];
+    $Empresa = $_GET['Empresas_idEmpresas'];
+    
     include '../SqlTools/database.php';
 
     $id = $_GET['idCargo'];
@@ -18,6 +21,6 @@
     'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos, 'Estados_idEstado'=>$Estados_idEstado]);
 
     if ($del == true) {
-        header('location: TablaCargos.php');
+        header("location: TablaCargos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
 ?>

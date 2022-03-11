@@ -153,7 +153,7 @@
             </div>
             </div>
         </div>    
-  
+
         <!--Ciudades-->
         <?php
             $grid ->select('ciudades', '*');
@@ -236,7 +236,7 @@
             value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>" required>
         </div>
 
-      </form>
+    </form>
         
     </body>
 </html>

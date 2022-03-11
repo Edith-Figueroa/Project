@@ -1,6 +1,9 @@
-<?php 
+<?php
     include 'database.php';
     if (isset($_POST['submit'])) {
+        $Usuario = $_POST['Usuario'];
+        $Empresa = $_POST['Empresa'];
+        $Empresas_idEmpresas = $Empresa;
         $Cedula = $_POST['Cedula'];
         $PrimerNombre = $_POST['PrimerNombre'];
         $SegundoNombre = $_POST['SegundoNombre'];
@@ -18,13 +21,13 @@
         $Ciudades_idCiudades = $_POST['Ciudades_idCiudades'];
 
         $a = new database();
-        $a->insert('empleados',['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
+        $a->insert('empleados',['Empresas_idEmpresas'=>$Empresas_idEmpresas,'Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
                     'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
                     'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo ,'Cargos_idCargos'=>$Cargos_idCargos,
                     'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
                     'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
         if ($a == true) {
-            header('location:../index.php');
+            header("location:../index.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
         }
     }
 ?>
