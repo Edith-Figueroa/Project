@@ -237,6 +237,24 @@
             <input type="email" name = "NumeroPlanilla" class="form-control form-control-user" placeholder=""
             value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required readonly>
         </div>
+
+        <!--Submit-->
+        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar">
+          </div>
+          <!--Limpiar-->
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+            </a>
+          </div>
+        </div>
+        <!--Cancelar-->
+        <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
+          <a href="tablas.php" class="btn btn-primary btn-user btn-block">
+            Cancelar
+          </a>
+        </div>
     </form>
 
         <!-- Footer -->
