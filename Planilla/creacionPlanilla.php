@@ -271,6 +271,50 @@
                 </div>
               </div>
 
+        <form action="SQLInsert_Planilla.php" class="user" method = "post">
+        <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+        <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
+        <!--Fecha Inicio-->
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="sidebar-heading">
+                Fecha de Inicio
+            </div>
+            <div class="form-group">
+                <input type="date" name="FechaInicio" class="form-control form-control-user" placeholder="" 
+                required>
+            </div>
+            </div>
+            <!--Fecha Fin-->
+            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="sidebar-heading">
+                Fecha de Fin
+            </div>
+            <div class="form-group">
+                <input type="date" name="FechaFin"class="form-control form-control-user" placeholder=""
+                value="<?php if(isset($row)) { echo $row['FechaIngreso']; } ?>" required>
+            </div>
+            </div>
+        </div>
+        <!--Numero Planilla-->
+        <div class="sidebar-heading">
+            Numero Planilla
+        </div>
+        <div class="form-group">
+            <input type="" name = "NumeroPlanilla" class="form-control form-control-user" placeholder=""
+            value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required>
+        </div>
+
+        <!--Submit-->
+        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Crear">
+          </div>
+          <!--Limpiar-->
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+            </a>
+          </div>
         </div>
 
         <!-- Footer -->
