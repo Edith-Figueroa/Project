@@ -19,7 +19,7 @@
 
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
-
+  <link rel="icon" href="img/Moneda.png">
 </head>
 
 <body id="page-top">
@@ -34,7 +34,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -59,24 +60,25 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span>Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+              <a class="collapse-item" href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
