@@ -18,6 +18,7 @@
 
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
+  <link rel="icon" href="../img/Moneda.png">
 
   <!--JAVASCRIPT-->
   <script
@@ -31,7 +32,13 @@
 
 <body id="page-top">
 <?php $Usuario = $_GET['idUsuario'];
-  $Empresa = $_GET['Empresas_idEmpresas'];?>
+  $Empresa = $_GET['Empresas_idEmpresas'];
+
+  include '../SqlTools/database.php';
+  $auxiliar = new database();
+  $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+  $nombre = $auxiliar->sql;
+  $name = mysqli_fetch_assoc($nombre);?>
   <!-- Envoltura de pagina -->
   <div id="wrapper">
 
@@ -39,7 +46,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="../img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -63,24 +71,25 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span>Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+              <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
@@ -161,7 +170,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -207,7 +216,6 @@
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <?php include '../SqlTools/database.php'?>
                       <!--Inicio de Form-->
                       <form class="user", action="SQLInsert_Departamentos.php", method="post">
                       <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
@@ -226,7 +234,7 @@
                         </div>
                         <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="../index.php" class="btn btn-primary btn-user btn-block">
+                          <a href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
                         </div>

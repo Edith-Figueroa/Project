@@ -17,8 +17,7 @@
 
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
-  <link rel="icon" href="icon.png">
-
+  <link rel="icon" href="img/Moneda.png">
 </head>
 
 <body id="page-top">
@@ -39,7 +38,8 @@
 
       <!-- Barra lateral - Marca -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
-        <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
+        <i class="fas "><img class="fas" style="width: 2rem;" src="img/Pago.png"></i>
+        <div class="sidebar-brand-text mx-3" >Planilla de Pago</div>
       </a>
 
       <!-- Divisor -->
@@ -55,30 +55,30 @@
       <hr class="sidebar-divider">
 
 
-      <!-- Nav Item - Planillas Plegar Menú -->
-      <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-            aria-expanded="true" aria-controls="collapsePlanillas">
-            <span>Planillas</span>
-          </a>
-          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
-              <a class="collapse-item" href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
-            </div>
-          </div>
-        </li>
-
+      
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
-          aria-controls="collapseEmpleados">
-          <span>Empleados</span>
+        aria-controls="collapseEmpleados">
+        <span>Empleados</span>
+      </a>
+      <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+          <a class="collapse-item" href="Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+        </div>
+      </div>
+    </li>
+    <!-- Nav Item - Planillas Plegar Menú -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+          aria-expanded="true" aria-controls="collapsePlanillas">
+          <span>Planillas</span>
         </a>
-        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
+        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+            <a class="collapse-item" href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
           </div>
         </div>
       </li>
@@ -146,18 +146,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Búsqueda en la barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
 
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -207,7 +195,19 @@
         </nav>
         <!-- Fin de la barra superior -->
 
-
+<!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">En mantenimiento aun...</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;"
+                                            src="img/mantenimiento-web.png" alt="...">
+                                    </div>
+                                    <p>Aun seguimos trabajando en el sistema.</p>
+                                </div>
+                            </div>
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">

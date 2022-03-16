@@ -1,7 +1,7 @@
 <?php
     $Usuario = $_GET['idUsuario'];
     $Empresa = $_GET['Empresas_idEmpresas'];
-    include 'database.php';
+    include '../SqlTools/database.php';
     $id=$_GET['idEmpleados'];
 
     $modify= new database();
@@ -32,6 +32,6 @@
                 'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo,
                 'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo, 'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
     if ($a == true) {
-        header("location:../tablas.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
+        header("location:tablas.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
 ?>

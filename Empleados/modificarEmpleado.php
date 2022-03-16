@@ -10,31 +10,45 @@
   <meta name="author" content="">
 
   <title>Planilla de Pagos</title>
-
   <!-- FUENTES-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-  
+
   <!-- CSS-->
-  <link href="css/estilo.css" rel="stylesheet">
+  <link href="../css/estilo.css" rel="stylesheet">
+  <link rel="icon" href="../img/Moneda.png">
+  <!-- JAVASCRIPT-->
+  <script
+    src="https://code.jquery.com/jquery-1.12.1.js">
+    type="text/javascript"
+  </script>
 
 </head>
+
+<script src="../SqlTools/confirmationInsert.js"></script>
 
 <body id="page-top">
 
 <?php $Usuario = $_GET['idUsuario'];
-  $Empresa = $_GET['Empresas_idEmpresas'];?>
+  $Empresa = $_GET['Empresas_idEmpresas'];
 
-  <!-- Envoltura de páginar -->
+  include '../SqlTools/database.php';
+  $auxiliar = new database();
+  $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+  $nombre = $auxiliar->sql;
+  $name = mysqli_fetch_assoc($nombre);?>
+  
+  <!-- Envoltura de pagina -->
   <div id="wrapper">
 
     <!-- barra lateral -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="../img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -43,7 +57,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+        <a class="nav-link" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
           <span>Menu</span></a>
       </li>
 
@@ -67,16 +81,17 @@
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span>Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+              <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
@@ -86,8 +101,8 @@
         </a>
         <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Cargos</a>
-            <a class="collapse-item" href="Cargos/CreacionCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Cargo Nuevo</a>
+            <a class="collapse-item" href="../Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Cargos</a>
+            <a class="collapse-item" href="../Cargos/CreacionCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Cargo Nuevo</a>
           </div>
         </div>
       </li>
@@ -101,12 +116,15 @@
         </a>
         <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Ciudades</a>
-            <a class="collapse-item" href="Ciudades/CreacionCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Ciudad Nueva</a>
+            <a class="collapse-item" href="../Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Ciudades</a>
+            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Ciudad Nueva</a>
           </div>
       </li>
 
-      <!-- Nav Item - Departamentos Plegar Menú -->
+
+
+
+                        <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -114,8 +132,8 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
-            <a class="collapse-item" href="Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href=../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
 
@@ -142,19 +160,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Búsqueda en la barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -173,8 +178,8 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
-                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
+                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -205,88 +210,63 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
+          <h1 class="h3 mb-1 text-gray-800">Modificacion de Empleado</h1>
+        </div>
+        <div class="container">
 
-          <!-- Encabezado de página -->
-          <h1 class="h3 mb-2 text-gray-800">Empleados</h1>
+          <!-- Fila exterior -->
+          <div class="row justify-content-center">
 
+            <div class="col-xl-20 col-lg-12 col-md-9">
 
-          <!-- Tablas-->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Planillas de Empleados</h6>
-            </div>
-            <div class="table-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>Num. id</th>
-                      <th>Nombre</th>
-                      <th>Telefono</th>
-                      <th>Nacimiento</th>
-                      <th>Edad</th>
-                      <th>Sexo</th>
-                      <th scope="col" colspan="3">Accion</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>id</th>
-                      <th>Num. id</th>
-                      <th>Nombre</th>
-                      <th>Telefono</th>
-                      <th>Nacimiento</th>
-                      <th>Edad</th>
-                      <th>Sexo</th>
-                      <th scope="col" colspan="3">Accion</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <?php include 'SqlTools/database.php';
-                    $grid = new database();
-                    $grid ->select('empleados', 'idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
-                            PrimerApellido, SegundoApellido, Telefono, Direccion,
-                            FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
-                            Cargos_idCargos, Estados_idEstado, Correo,
-                            Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
-                            Telefono,FechaNacimiento,
-                            if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
-                            if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo', "Estados_idEstado = 1 AND Empresas_idEmpresas='$Empresa'");
-                    $table = $grid ->sql;
-                    ?>
+              <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                  <!-- Fila anidada dentro del cuerpo de la tarjeta -->
+                  <div class="">
+                    <div class="p-5">
+                    <!--Llamada de datos-->
+                      <?php
+                        $id = $_GET['idEmpleados'];
 
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
-                      <tr>
-                        <td><?php echo $row['idEmpleados']; ?></td>
-                        <td><?php echo $row['Cedula']; ?></td>
-                        <td><?php echo $row['Nombre']; ?></td>
-                        <td><?php echo $row['Telefono']; ?></td>
-                        <td><?php echo $row['FechaNacimiento']; ?></td>
-                        <td><?php echo $row['EDAD']; ?></td>
-                        <td><?php echo $row['Sexo']; ?></td>
-                        <td>
-                            <a href="SqlTools/readEmployee.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
-                        </td>
-                        <td>
-                            <a href="modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
-                        </td>
-                        <td>
-                            <a href="SqlTools/inactivate.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Desactivar</a>
-                        </td>
-                      </tr>
-                    <?php }?>
-                  </tbody>
-                </table>
+                        $upd= new database();
+                        $upd->select("empleados","*","idEmpleados='$id'");
+                        $result = $upd->sql;
+
+                        $row = mysqli_fetch_assoc($result);
+                      ?>
+                      <!--Inicio de Form-->
+                      <form class="user", action="Update_Employee.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>", method="post">
+                      <input type="hidden" name="idEmpleados" value="<?php echo $id; ?>">
+                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
+                      <?php include 'formEmpleado.php';?>
+                        <!--Submit-->
+                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar" onclick = "return ConfirmationUpd()">
+                          </div>
+                          <!--Limpiar-->
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                            </a>
+                          </div>
+                        </div>
+                        <!--Cancelar-->
+                        <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
+                          <a href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
+                            Cancelar
+                          </a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-        <!-- /.container-fluid -->
-
       </div>
-      <!-- Fin del contenido principal -->
+
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -303,7 +283,7 @@
   </div>
   <!-- Envoltorio de fin de página -->
 
-  <!--Desplácese al botón superior-->
+  <!-- Desplácese al botón superiorn-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -319,32 +299,32 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.
-        </div>
+        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión
+          actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
+          <a class="btn btn-primary" href="../login.php">Cerrar Sesion</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- JavaScript básico de Bootstrap-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Complemento principal de JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Scripts personalizados para todas las páginas-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="../js/sb-admin-2.min.js"></script>
 
   <!-- Complementos de nivel de página -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="../vendor/chart.js/Chart.min.js"></script>
 
   <!-- Scripts personalizados a nivel de página -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
 

@@ -23,6 +23,7 @@
 </head>
 
 <body id="page-top">
+
 <?php $Usuario = $_GET['idUsuario'];
   $Empresa = $_GET['Empresas_idEmpresas'];
 
@@ -31,6 +32,7 @@
   $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
   $nombre = $auxiliar->sql;
   $name = mysqli_fetch_assoc($nombre);?>
+
   <!-- Envoltura de páginar -->
   <div id="wrapper">
 
@@ -55,6 +57,7 @@
       <!-- Divisor -->
       <hr class="sidebar-divider">
 
+
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
@@ -63,8 +66,8 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -97,6 +100,7 @@
         </div>
       </li>
 
+
                   <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
@@ -110,7 +114,7 @@
           </div>
       </li>
 
-                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -118,10 +122,11 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
-            <a class="collapse-item" href="CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
+
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -210,48 +215,70 @@
         <div class="container-fluid">
 
           <!-- Encabezado de página -->
-          <h1 class="h3 mb-2 text-gray-800">Departamentos</h1>
+          <h1 class="h3 mb-2 text-gray-800">Empleados</h1>
 
 
           <!-- Tablas-->
           <div class="card shadow mb-4">
+            
             <div class="table-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>id</th>
-                      <th>Departamentos</th>
+                      <th>Num. id</th>
+                      <th>Nombre</th>
+                      <th>Telefono</th>
+                      <th>Nacimiento</th>
+                      <th>Edad</th>
+                      <th>Sexo</th>
                       <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                        <th>id</th>
-                        <th>Departamentos</th>
-                        <th scope="col" colspan="3">Accion</th>
+                      <th>id</th>
+                      <th>Num. id</th>
+                      <th>Nombre</th>
+                      <th>Telefono</th>
+                      <th>Nacimiento</th>
+                      <th>Edad</th>
+                      <th>Sexo</th>
+                      <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </tfoot>
                   <tbody>
                     <?php
                     $grid = new database();
-                    $grid ->select('departamentos', 'idDepartamentos, DescripcionDepto');
-                    $table = $grid -> sql;
+                    $grid ->select('empleados', 'idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
+                            PrimerApellido, SegundoApellido, Telefono, Direccion,
+                            FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
+                            Cargos_idCargos, Estados_idEstado, Correo,
+                            Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
+                            Telefono,FechaNacimiento,
+                            if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
+                            if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo', "Estados_idEstado = 1 AND Empresas_idEmpresas='$Empresa'");
+                    $table = $grid ->sql;
                     ?>
 
                     <?php while ($row = mysqli_fetch_assoc($table)) { ?>
                       <tr>
-                        <td><?php echo $row['idDepartamentos']; ?></td>
-                        <td><?php echo $row['DescripcionDepto']; ?></td>
-                        
+                        <td><?php echo $row['idEmpleados']; ?></td>
+                        <td><?php echo $row['Cedula']; ?></td>
+                        <td><?php echo $row['Nombre']; ?></td>
+                        <td><?php echo $row['Telefono']; ?></td>
+                        <td><?php echo $row['FechaNacimiento']; ?></td>
+                        <td><?php echo $row['EDAD']; ?></td>
+                        <td><?php echo $row['Sexo']; ?></td>
                         <td>
-                            <a href="SQLRead_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
+                            <a href="readEmployee.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
-                            <a href="ModificacionDepartamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
+                            <a href="modificarEmpleado.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="SQLInactive_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Desactivar</a>
+                            <a href="inactivate.php?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Desactivar</a>
                         </td>
                       </tr>
                     <?php }?>
