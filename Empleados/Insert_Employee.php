@@ -1,5 +1,5 @@
 <?php
-    include 'database.php';
+    include '../SqlTools/database.php';
     if (isset($_POST['submit'])) {
         $Usuario = $_POST['Usuario'];
         $Empresa = $_POST['Empresa'];

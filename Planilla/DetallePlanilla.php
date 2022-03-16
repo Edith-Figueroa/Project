@@ -19,7 +19,7 @@
   
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
-
+  <link rel="icon" href="img/Moneda.png">
 </head>
 
 <body id="page-top">
@@ -33,6 +33,7 @@
 
       <!-- Barra lateral - Marca -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="../img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
