@@ -18,6 +18,7 @@
 
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
+  <link rel="icon" href="../img/Moneda.png">
 
   <!--JAVASCRIPT-->
   <script
@@ -31,6 +32,14 @@
 
 <body id="page-top">
 
+<?php $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];
+
+  include '../SqlTools/database.php';
+  $auxiliar = new database();
+  $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+  $nombre = $auxiliar->sql;
+  $name = mysqli_fetch_assoc($nombre);?>
   <!-- Envoltura de pagina -->
   <div id="wrapper">
 
@@ -38,7 +47,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="../img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -47,7 +57,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">
+        <a class="nav-link" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
           <span>Menu</span></a>
       </li>
 
@@ -57,32 +67,71 @@
 
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-          aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
+          aria-controls="collapseEmpleados">
           <span>Empleados</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-          aria-expanded="true" aria-controls="collapseUtilities">
-          <span>Planillas</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+              <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
+            </div>
+          </div>
+        </li>
 
+            <!-- Nav Item - Cargos Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos"
+          aria-expanded="true" aria-controls="collapseCargos">
+          <span>Cargos</span>
+        </a>
+        <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Cargos</a>
+            <a class="collapse-item" href="../Cargos/CreacionCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Cargo Nuevo</a>
           </div>
         </div>
       </li>
 
+                  <!-- Nav Item - Ciudades Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
+          aria-expanded="true" aria-controls="collapseCiudades">
+          <span>Ciudades</span>
+        </a>
+        <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Ciudades</a>
+            <a class="collapse-item" href="CreacionCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Ciudad Nueva</a>
+          </div>
+      </li>
+
+      <!-- Nav Item - Departamentos Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
+          aria-expanded="true" aria-controls="collapseDepartamentos">
+          <span>Departamentos</span>
+        </a>
+        <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+          </div>
+      </li>
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -124,7 +173,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -168,7 +217,7 @@
               <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                 <?php
-                    include "../SqlTools/database.php";
+                    
                     $id = $_GET['idCiudades'];
 
                     $upd= new database();
@@ -181,8 +230,11 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
+                      <form class="user", action="SQLUpdate_Ciudades.php", method="post">
+                      <input type="hidden" name="idCiudades" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                       <?php include 'formCiudades.php';?>
-                      <form class="user", action="..\SqlTools\#.php", method="post">
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
@@ -196,7 +248,7 @@
                         </div>
                         <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="TablaCiudades.php" class="btn btn-primary btn-user btn-block">
+                          <a href="TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
                         </div>

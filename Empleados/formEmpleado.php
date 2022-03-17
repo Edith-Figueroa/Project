@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-1.12.1.js" type="text/javascript">
     </script>
-    <script src="js/jquery-1.12.1.js"></script>
+    <script src="../js/jquery-1.12.1.js"></script>
 </head>
     <body>
         <!--Numero de Identidad-->
@@ -22,7 +22,7 @@
                     value="<?php if(isset($row)) { echo $row['Cedula']; } ?>" required>
                 </div>
             </div>
-
+  
             <!--Sexo-->
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="sidebar-heading">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-
+  
         <!--Primer Nombre-->
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -52,7 +52,7 @@
                 Primer Nombre
             </div>
             <div class="form-group">
-                <input type="text" name="PrimerNombre" class="form-control form-control-user" placeholder=""
+                <input id="" type="text" name="PrimerNombre" class="form-control form-control-user" placeholder=""
                 value="<?php if(isset($row)) { echo $row['PrimerNombre']; } ?>" required>
             </div>
             </div>
@@ -117,7 +117,6 @@
             $grid ->select('departamentos', '*');
             $table = $grid ->sql;
         ?>
-
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="sidebar-heading">
@@ -134,14 +133,12 @@
                 </div>
             </div>
             </div>
-
             <!--Cargos-->
             <?php
             $grid = new database();
             $grid ->select('cargos', '*');
             $table = $grid ->sql;
             ?>
-
             <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="sidebar-heading">
                 Cargo
@@ -171,7 +168,7 @@
                 <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null"
                 value="<?php if(isset($row)) { echo $row['Ciudades_idCiudades']; } ?>" required>
                     <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
-                        <option value="none" selected disabled hidden>Select an Option</option>
+                        <option value="none" selected disabled hidden>Selecciona una opcion</option>
                         <option value=<?php echo $ex['idCiudades']; ?>><?php echo $ex['DescripcionCiudad']; ?></option>
                     <?php }?>
                 </select>
@@ -207,7 +204,7 @@
             </div>
             <div class="form-group">
                 <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder=""
-                value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } ?>" required>
+                value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } else{echo '2000-01-01';} ?>" required>
             </div>
             </div>
             <!--Fecha Ingreso-->
@@ -245,7 +242,7 @@
         var x = document.getElementById("Departamentos_idDepartamentos").value;
         $.ajax({
             type:"POST",
-            url: "datos.php",
+            url: "../datos.php",
             data:"dpto=" + x,
             success:function(r){
                 $('#Cargos_idCargos').html(r);

@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Planilla de Pagos</title>
-  <!-- FUENTES-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+    <title>Planilla de Pagos</title>
+    <!-- FUENTES-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
-  <!-- CSS-->
-  <link href="../css/estilo.css" rel="stylesheet">
-  <link rel="icon" href="../img/Moneda.png">
+    <!-- CSS-->
+    <link href="../css/estilo.css" rel="stylesheet">
+    <link rel="icon" href="img/Moneda.png">
 
-  <!--JAVASCRIPT-->
-  <script
-    src="https://code.jquery.com/jquery-1.12.1.js">
-    type="text/javascript"
-  </script>
-  
 </head>
-
-<script src="../SqlTools/confirmationInsert.js"></script>
-
-<body id="page-top">
+<body>
 <?php $Usuario = $_GET['idUsuario'];
   $Empresa = $_GET['Empresas_idEmpresas'];
 
@@ -39,7 +29,8 @@
   $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
   $nombre = $auxiliar->sql;
   $name = mysqli_fetch_assoc($nombre);?>
-  <!-- Envoltura de pagina -->
+
+  <!-- Envoltura de páginar -->
   <div id="wrapper">
 
     <!-- barra lateral -->
@@ -63,19 +54,6 @@
       <!-- Divisor -->
       <hr class="sidebar-divider">
 
-      <!-- Nav Item -Empleados Cerrar menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
-          aria-controls="collapseEmpleados">
-          <span>Empleados</span>
-        </a>
-        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
-          </div>
-        </div>
-      </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
@@ -91,6 +69,20 @@
           </div>
         </li>
 
+      <!-- Nav Item -Empleados Cerrar menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true"
+          aria-controls="collapseEmpleados">
+          <span>Empleados</span>
+        </a>
+        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+          </div>
+        </div>
+      </li>
+
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos"
@@ -105,7 +97,7 @@
         </div>
       </li>
 
-                  <!-- Nav Item - Ciudades Plegar Menú -->
+      <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
           aria-expanded="true" aria-controls="collapseCiudades">
@@ -118,7 +110,7 @@
           </div>
       </li>
 
-                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -126,10 +118,11 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
-            <a class="collapse-item" href="CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
+
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -137,6 +130,7 @@
 
     </ul>
     <!-- Fin de la barra lateral -->
+
 
     <!-- Envoltorio de contenido -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -151,6 +145,19 @@
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
+
+          <!-- Búsqueda en la barra superior -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
+                aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
 
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -179,9 +186,9 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Perfil
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../nuevoUsuario.php">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Opciones
+                  Crear usuario
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -199,32 +206,55 @@
 
         </nav>
         <!-- Fin de la barra superior -->
-
-        <!-- Contenido de la página de inicio -->
-        <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800">Creacion de Departamento</h1>
-        </div>
         <div class="container">
-
-          <!-- Fila exterior -->
           <div class="row justify-content-center">
-
             <div class="col-xl-20 col-lg-12 col-md-9">
-
               <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                   <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-                      <!--Inicio de Form-->
-                      <form class="user", action="SQLInsert_Departamentos.php", method="post">
-                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
-                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
-                      <?php include 'formDepartamentos.php';?>
+
+                      <form action="SQLInsert_Planilla.php" class="user" method = "post">
+                        <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                        <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
+                        <!--Fecha Inicio-->
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="sidebar-heading">
+                                Fecha de Inicio
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="FechaInicio" class="form-control form-control-user" placeholder="" 
+                                required>
+                            </div>
+                            </div>
+                            
+                            <!--Fecha Fin-->
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="sidebar-heading">
+                                Fecha de Fin
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="FechaFin"class="form-control form-control-user" placeholder=""
+                                value="<?php if(isset($row)) { echo $row['FechaIngreso']; } ?>" required>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!--Numero Planilla-->
+                        <div class="sidebar-heading">
+                            Numero Planilla
+                        </div>
+                        <div class="form-group">
+                            <input type="" name = "NumeroPlanilla" class="form-control form-control-user" placeholder=""
+                            value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required>
+                        </div>
+
                         <!--Submit-->
                         <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick = "return Confirmation()">
+                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Crear">
                           </div>
                           <!--Limpiar-->
                           <div class="col-sm-6 mb-3 mb-sm-0">
@@ -232,81 +262,91 @@
                             </a>
                           </div>
                         </div>
-                        <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
-                            Cancelar
-                          </a>
-                        </div>
+                        <a href="tablas.php" class="btn btn-primary btn-user btn-block">
+                          Cancelar
+                        </a>
+                      </div>
                       </form>
+
+                  </form>
+
                     </div>
                   </div>
                 </div>
               </div>
+
+
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Bandersnatch 2022</span>
             </div>
           </div>
-        </div>
-      </div>
+        </footer>
+        <!-- Fin del Footer -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Bandersnatch 2022 </span>
+      </div>
+      <!-- Envoltorio de fin de contenido -->
+
+    </div>
+    <!-- Envoltorio de fin de página -->
+
+    <!-- Desplácese al botón superior-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Cierre de sesión modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión
+            actual.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="login.php">Cerrar Sesion</a>
           </div>
         </div>
-      </footer>
-      <!-- Fin del Footer -->
-
-    </div>
-    <!-- Envoltorio de fin de contenido -->
-
-  </div>
-  <!-- Envoltorio de fin de página -->
-
-  <!-- Desplácese al botón superiorn-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Cierre de sesión modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión
-          actual.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="../login.php">Cerrar Sesion</a>
-        </div>
       </div>
     </div>
-</div>
 
-  <!-- JavaScript básico de Bootstrap-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript básico de Bootstrap-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Complemento principal de JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Complemento principal de JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Scripts personalizados para todas las páginas-->
-  <script src="../js/sb-admin-2.min.js"></script>
+    <!-- Scripts personalizados para todas las páginas-->
+    <script src="../js/sb-admin-2.min.js"></script>
 
-  <!-- Complementos de nivel de página -->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
+    <!-- Complementos de nivel de página -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Scripts personalizados a nivel de página -->
-  <script src="../js/demo/chart-area-demo.js"></script>
-  <script src="../js/demo/chart-pie-demo.js"></script>
-
+    <!-- Scripts personalizados a nivel de página -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/chart-pie-demo.js"></script>
 </body>
-
 </html>
+
+<script type="text/javascript">
+    function onchange(){
+        var x = document.getElementByName("Departamentos_idDepartamentos").value;
+        var y = document.getElementByName("FechaFin").value;
+        element.setAttribute(FechaFin, x);
+        element.setAttribute(NumeroPlanilla, x+y);
+    }
+</script>

@@ -14,16 +14,25 @@
   <!-- FUENTES-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
-    href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
   
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
+  <link rel="icon" href="../img/Moneda.png">
 
 </head>
 
 <body id="page-top">
 
+<?php $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];
+
+  include '../SqlTools/database.php';
+  $auxiliar = new database();
+  $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+  $nombre = $auxiliar->sql;
+  $name = mysqli_fetch_assoc($nombre);?>
   <!-- Envoltura de páginar -->
   <div id="wrapper">
 
@@ -31,7 +40,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
+      <i class="fas "><img class="fas" style="width: 2rem;" src="../img/Pago.png"></i>
         <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
       </a>
 
@@ -40,7 +50,7 @@
 
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">
+        <a class="nav-link" href="../index.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">
           <span>Menu</span></a>
       </li>
 
@@ -55,24 +65,25 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php">Mostrar Empleados</a>
+            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span>Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+            aria-expanded="true" aria-controls="collapsePlanillas">
+            <span>Planillas</span>
+          </a>
+          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+              <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
@@ -82,8 +93,8 @@
         </a>
         <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="TablaCargos.php">Mostrar Cargos</a>
-            <a class="collapse-item" href="CreacionCargos.php">Crear Cargo Nuevo</a>
+            <a class="collapse-item" href="TablaCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Cargos</a>
+            <a class="collapse-item" href="CreacionCargos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Cargo Nuevo</a>
           </div>
         </div>
       </li>
@@ -97,8 +108,8 @@
         </a>
         <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Ciudades/TablaCiudades.php">Mostrar Ciudades</a>
-            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php">Crear Ciudad Nueva</a>
+            <a class="collapse-item" href="../Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Ciudades</a>
+            <a class="collapse-item" href="../Ciudades/CreacionCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Ciudad Nueva</a>
           </div>
       </li>
 
@@ -113,10 +124,12 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php">Mostrar Departamentos</a>
-            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
+
+
 
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
@@ -172,7 +185,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -233,7 +246,7 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <?php include '../SqlTools/database.php';
+                    <?php 
                     $grid = new database();
                     $grid ->select('cargos', 'idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos', 'Estados_idEstado = 1');
                     $table = $grid -> sql;
@@ -246,13 +259,13 @@
                         <td><?php echo $row['Salario']; ?></td>
                         <td><?php echo $row['Departamentos_idDepartamentos']; ?></td>
                         <td>
-                            <a href="SQLRead_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-success btn-sm">Ver</a>
+                            <a href="SQLRead_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
                         </td>
                         <td>
-                            <a href="ModificacionCargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-primary btn-sm">Modificar</a>
+                            <a href="ModificacionCargos.php?idCargo=<?php echo $row['idCargo']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
                         </td>
                         <td>
-                            <a href="SQLInactive_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>" class="btn btn-danger btn-sm">Inactivar</a>
+                            <a href="SQLInactive_Cargos.php?idCargo=<?php echo $row['idCargo']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Inactivar</a>
                         </td>
                       </tr>
                     <?php }?>

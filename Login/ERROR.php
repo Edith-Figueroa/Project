@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>COPAP</title>
+  <title>Planilla de Pagos</title>
 
   <!-- FUENTES-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
     rel="stylesheet">
 
   <!-- CSS-->
-  <link href="css/estilo.css" rel="stylesheet">
+  <link href="../css/estilo.css" rel="stylesheet">
 
 </head>
 
@@ -36,39 +36,14 @@
             <div class="p-5">
               <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
-                  <h1 class="h4 text-gray-900 mb-4">¡Bienvenido!</h1>
-                </div>
-              </div>
-              <form action="Login/validar.php" method="post" class="user" style=" width: 60vw; margin-left : 7vw;">
-                <div class=" form-group">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" name="Usuario" placeholder="Nombre de usuario">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" name="Contrasenia"
-                      placeholder="Contraseña">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <div class="custom-control custom-checkbox small">
-                      <input type="checkbox" class="custom-control-input" id="customCheck">
-                      <label class="custom-control-label" for="customCheck">Recuerdame</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input name= "submit" class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar Sesion ">
-                  
-                </div>
+                  <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
+
+                  <a href="../login.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
               </form>
               <hr>
-              <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
-                <div class=" col-sm-6 mb-3 mb-sm-0">
+              <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
+                <div class=" col-sm-5 mb-5 mb-sm-0">
                   <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
-
                 </div>
               </div>
               

@@ -1,5 +1,7 @@
 <?php
-    include 'database.php';
+    $Usuario = $_GET['idUsuario'];
+    $Empresa = $_GET['Empresas_idEmpresas'];
+    include '../SqlTools/database.php';
     $id=$_GET['idEmpleados'];
 
     $modify= new database();
@@ -20,7 +22,6 @@
     $FechaIngreso = $data['FechaIngreso'];
     $CuentaBancaria = $data['CuentaBancaria'];
     $Sexos_idSexo = $data['Sexos_idSexo'];
-    $Departamentos_idDepartamentos = $data['Departamentos_idDepartamentos'];
     $Estados_idEstado = '2';
     $Correo = $data['Correo'];
     $Ciudades_idCiudades = $data['Ciudades_idCiudades'];
@@ -29,9 +30,8 @@
     $a->update('empleados',"idEmpleados = $id",['Cedula'=>$Cedula,'PrimerNombre'=>$PrimerNombre,'SegundoNombre'=>$SegundoNombre,'PrimerApellido'=>$PrimerApellido,
                 'SegundoApellido'=>$SegundoApellido,'Telefono'=>$Telefono,'Direccion'=>$Direccion,'FechaNacimiento'=>$FechaNacimiento,
                 'FechaIngreso'=>$FechaIngreso,'CuentaBancaria'=>$CuentaBancaria,'Sexos_idSexo'=>$Sexos_idSexo,
-                'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos,'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
-                'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
+                'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo, 'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
     if ($a == true) {
-        header('location:../tablas.php');
+        header("location:tablas.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
 ?>

@@ -19,18 +19,12 @@
   
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
-  <link rel="icon" href="../img/Moneda.png">
+  <link rel="icon" href="img/Moneda.png">
 </head>
 
 <body id="page-top">
 <?php $Usuario = $_GET['idUsuario'];
-  $Empresa = $_GET['Empresas_idEmpresas'];
-
-  include '../SqlTools/database.php';
-  $auxiliar = new database();
-  $auxiliar ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
-  $nombre = $auxiliar->sql;
-  $name = mysqli_fetch_assoc($nombre);?>
+  $Empresa = $_GET['Empresas_idEmpresas'];?>
   <!-- Envoltura de páginar -->
   <div id="wrapper">
 
@@ -63,25 +57,24 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-            aria-expanded="true" aria-controls="collapsePlanillas">
-            <span>Planillas</span>
-          </a>
-          <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
-              <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
-            </div>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
+          aria-expanded="true" aria-controls="collapsePlanillas">
+          <span>Planillas</span>
+        </a>
+        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
           </div>
-        </li>
+        </div>
+      </li>
 
             <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
@@ -96,6 +89,7 @@
           </div>
         </div>
       </li>
+
 
                   <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
@@ -118,8 +112,8 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
-            <a class="collapse-item" href="CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
       <!-- Barra lateral cerrar (Barra lateral) -->
@@ -176,7 +170,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -220,41 +214,41 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>Departamentos</th>
-                      <th scope="col" colspan="3">Accion</th>
+                        <th>id_Empleado</th>
+                        <th>Nombre</th>
+                        <th>Salario base</th>
+                        <th>IHSS</th>
+                        <th>RAP</th>
+                        <th>ISR</th>
+                        <th>Total Deducciones</th>
+                        <th>Catorciavo</th>
+                        <th>Treciavo</th>
+                        <th>Total Bonificaciones</th>
+                        <th>Sueldo Neto</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                        <th>id</th>
-                        <th>Departamentos</th>
-                        <th scope="col" colspan="3">Accion</th>
+                        <th>id_Empleado</th>
+                        <th>Nombre</th>
+                        <th>Salario base</th>
+                        <th>IHSS</th>
+                        <th>RAP</th>
+                        <th>ISR</th>
+                        <th>Total Deducciones</th>
+                        <th>Catorciavo</th>
+                        <th>Treciavo</th>
+                        <th>Total Bonificaciones</th>
+                        <th>Sueldo Neto</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    <?php
+                    <?php include '../SqlTools/database.php';
                     $grid = new database();
-                    $grid ->select('departamentos', 'idDepartamentos, DescripcionDepto');
+                    $grid ->select('detalleplanillas', '*');
                     $table = $grid -> sql;
                     ?>
 
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
-                      <tr>
-                        <td><?php echo $row['idDepartamentos']; ?></td>
-                        <td><?php echo $row['DescripcionDepto']; ?></td>
-                        
-                        <td>
-                            <a href="SQLRead_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
-                        </td>
-                        <td>
-                            <a href="ModificacionDepartamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
-                        </td>
-                        <td>
-                            <a href="SQLInactive_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Desactivar</a>
-                        </td>
-                      </tr>
-                    <?php }?>
                   </tbody>
                 </table>
               </div>
