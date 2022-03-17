@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2? family= Redressed & display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Redressed', cursiva;
+}
+
+.header{
+width: 100%;
+height: 75px;
+background: #FF8008;
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+box-sizing: 0px 1px 10px
+rgba(0,0,0,0.4) 
+}
+
+.container{
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.logo
+{
+float: left;
+line-height: 75px;	
+}
+
+.logo h1
+{
+Color:rgba(245, 121, 4, 0.925);
+font-weight: 400;
+font-size: 26px;
+cursor: default;
+}
+
+.menu{
+	float: right;
+	line-height: 75px;
+
+}
+
+.menu a{
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 15px;
+	line-height: normal;
+	font-size: 14px;
+	transition: all 500ms ease;
+	border-bottom: 4px solid transparent;
+}
+
+.menu a:hover{
+	color:#f7aa77;
+    border-bottom: 4px solid;
+    border-bottom: 4px solid transparent;
+}
