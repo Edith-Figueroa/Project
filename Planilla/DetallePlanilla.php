@@ -19,12 +19,18 @@
   
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
-  <link rel="icon" href="img/Moneda.png">
+  <link rel="icon" href="../img/Moneda.png">
 </head>
 
 <body id="page-top">
 <?php $Usuario = $_GET['idUsuario'];
-  $Empresa = $_GET['Empresas_idEmpresas'];?>
+      $Empresa = $_GET['Empresas_idEmpresas'];
+      $idPlanillas = $_GET['idPlanillas'];
+      include '../SqlTools/database.php';
+      $grid = new database();
+      $grid ->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+      $nombre = $grid->sql;
+      $name = mysqli_fetch_assoc($nombre);?>
   <!-- Envoltura de páginar -->
   <div id="wrapper">
 
@@ -57,8 +63,8 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -71,7 +77,8 @@
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php">Registro</a>
+          <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Registro</a>
+          <a class="collapse-item" href="creacionPlanilla.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Planilla</a>
           </div>
         </div>
       </li>
@@ -91,7 +98,7 @@
       </li>
 
 
-                  <!-- Nav Item - Ciudades Plegar Menú -->
+      <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
           aria-expanded="true" aria-controls="collapseCiudades">
@@ -104,7 +111,7 @@
           </div>
       </li>
 
-                        <!-- Nav Item - Departamentos Plegar Menú -->
+      <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
           aria-expanded="true" aria-controls="collapseDepartamentos">
@@ -112,10 +119,11 @@
         </a>
         <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
-            <a class="collapse-item" href="../CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
+            <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Departamentos</a>
+            <a class="collapse-item" href="../Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Departamento Nuevo</a>
           </div>
       </li>
+
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -170,7 +178,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']?></span>
                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
@@ -204,7 +212,12 @@
         <div class="container-fluid">
 
           <!-- Encabezado de página -->
-          <h1 class="h3 mb-2 text-gray-800">Departamentos</h1>
+          <h1 class="h3 mb-2 text-gray-800">Planilla de Pagos</h1>
+
+          <div>
+            <button class="btn btn-danger btn-sm">PDF</button>
+            <button class="btn btn-success btn-sm" onclick="exportTableToExcel('dataTable', 'planilla #<?php echo $idPlanillas?>')">Excel</button>
+          </div>
 
 
           <!-- Tablas-->
@@ -214,51 +227,62 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                        <th>id_Empleado</th>
-                        <th>Nombre</th>
-                        <th>Salario base</th>
-                        <th>IHSS</th>
-                        <th>RAP</th>
-                        <th>ISR</th>
-                        <th>Total Deducciones</th>
-                        <th>Catorciavo</th>
-                        <th>Treciavo</th>
-                        <th>Total Bonificaciones</th>
-                        <th>Sueldo Neto</th>
+                      <th>id_Empleado</th>
+                      <th>Nombre</th>
+                      <th>Salario</th>
+                      <th>IHSS</th>
+                      <th>RAP</th>
+                      <th>ISR</th>
+                      <th>Deducciones</th>
+                      <th>Catorciavo</th>
+                      <th>Treciavo</th>
+                      <th>Bonificaciones</th>
+                      <th>Sueldo Neto</th>
+                      <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                        <th>id_Empleado</th>
-                        <th>Nombre</th>
-                        <th>Salario base</th>
-                        <th>IHSS</th>
-                        <th>RAP</th>
-                        <th>ISR</th>
-                        <th>Total Deducciones</th>
-                        <th>Catorciavo</th>
-                        <th>Treciavo</th>
-                        <th>Total Bonificaciones</th>
-                        <th>Sueldo Neto</th>
-                    </tr>
-                  </tfoot>
                   <tbody>
-                    <?php include '../SqlTools/database.php';
-                    $grid = new database();
-                    $grid ->select('detalleplanillas', '*');
-                    $table = $grid -> sql;
+                    <?php
+                          $grid ->specialSelect("SELECT idEmpleados,concat(PrimerNombre, ' ', PrimerApellido) as Nombre,
+                                  Salario,IHSS,RAP,ISR,Total_Deducciones,14vo,13vo,Total_Bonificaciones,Sueldo_Neto
+                                  FROM sistema_planilla.empleados 
+                                  inner join sistema_planilla.cargos on sistema_planilla.cargos.idCargo = sistema_planilla.empleados.Cargos_idCargos
+                                  inner join sistema_planilla.detalleplanillas on sistema_planilla.detalleplanillas.Empleados_idEmpleados = sistema_planilla.empleados.idEmpleados
+                                  where Planillas_idPlanilla = $idPlanillas
+                                  order by 	idEmpleados;");
+                          $table = $grid -> sql;
                     ?>
 
+                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+                    <tr>
+                      <td><?php echo $row['idEmpleados'];?></td>
+                      <td><?php echo $row['Nombre'];?></td>
+                      <td><?php echo $row['Salario'];?></td>
+                      <td><?php echo $row['IHSS'];?></td>
+                      <td><?php echo $row['RAP'];?></td>
+                      <td><?php echo $row['ISR'];?></td>
+                      <td><?php echo $row['Total_Deducciones'];?></td>
+                      <td><?php echo $row['14vo'];?></td>
+                      <td><?php echo $row['13vo'];?></td>
+                      <td><?php echo $row['Total_Bonificaciones'];?></td>
+                      <td><?php echo $row['Sueldo_Neto'];?></td>
+                      <td>
+                          <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
+                      </td>
+                      <td>
+                          <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Enviar</a>
+                      </td>
+                      <?php }?>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-
         </div>
-        <!-- /.container-fluid -->
-
       </div>
+
+      <!-- /.container-fluid -->
       <!-- Fin del contenido principal -->
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -320,5 +344,37 @@
   <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
-
 </html>
+
+<script>
+  function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+  }
+</script>

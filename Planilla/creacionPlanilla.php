@@ -17,8 +17,10 @@
 
     <!-- CSS-->
     <link href="../css/estilo.css" rel="stylesheet">
-    <link rel="icon" href="img/Moneda.png">
+    <link rel="icon" href="../img/Moneda.png">
 
+    <!-- JQUERY-->
+    <script src="../js/jquery.min.js"></script>
 </head>
 <body>
 <?php $Usuario = $_GET['idUsuario'];
@@ -77,8 +79,8 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
-            <a class="collapse-item" href="../tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
+            <a class="collapse-item" href="../Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Crear Empleado</a>
+            <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Mostrar Empleados</a>
           </div>
         </div>
       </li>
@@ -146,19 +148,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Búsqueda en la barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -211,10 +200,10 @@
             <div class="col-xl-20 col-lg-12 col-md-9">
               <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
-                  <!-- Fila anidada dentro del cuerpo de la tarjeta -->
+                <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                   <div class="">
                     <div class="p-5">
-
+                    <!-- Inicio de Form -->
                       <form action="SQLInsert_Planilla.php" class="user" method = "post">
                         <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                         <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
@@ -225,7 +214,7 @@
                                 Fecha de Inicio
                             </div>
                             <div class="form-group">
-                                <input type="date" name="FechaInicio" class="form-control form-control-user" placeholder="" 
+                                <input type="date" name="FechaInicio" id="FechaInicio" class="form-control form-control-user" placeholder="" 
                                 required>
                             </div>
                             </div>
@@ -233,11 +222,10 @@
                             <!--Fecha Fin-->
                             <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="sidebar-heading">
-                                Fecha de Fin
+                                Fecha Fin
                             </div>
                             <div class="form-group">
-                                <input type="date" name="FechaFin"class="form-control form-control-user" placeholder=""
-                                value="<?php if(isset($row)) { echo $row['FechaIngreso']; } ?>" required>
+                                <input type="date" name="FechaFin" id="FechaFin" class="form-control form-control-user" placeholder=""  required>
                             </div>
                             </div>
                         </div>
@@ -247,7 +235,7 @@
                             Numero Planilla
                         </div>
                         <div class="form-group">
-                            <input type="" name = "NumeroPlanilla" class="form-control form-control-user" placeholder=""
+                            <input type="" name = "NumeroPlanilla" id = "NumeroPlanilla" class="form-control form-control-user" placeholder=""
                             value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required>
                         </div>
 
@@ -268,16 +256,12 @@
                         </a>
                       </div>
                       </form>
-
-                  </form>
-
                     </div>
-                  </div>
+                  </div>      
                 </div>
               </div>
-
-
-
+            </div>
+          </div>
         </div>
 
 
@@ -342,11 +326,38 @@
 </body>
 </html>
 
-<script type="text/javascript">
-    function onchange(){
-        var x = document.getElementByName("Departamentos_idDepartamentos").value;
-        var y = document.getElementByName("FechaFin").value;
-        element.setAttribute(FechaFin, x);
-        element.setAttribute(NumeroPlanilla, x+y);
-    }
+<script>
+
+  function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+  }
+
+  function name(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('');
+  }
+
+    $("#FechaInicio").on("change", function(){
+      var fecha = new Date($("#FechaInicio").val());
+      var nombreP = new Date($("#FechaInicio").val());
+      fecha.setDate(fecha.getDate() + 30);
+      $("#FechaFin").val(formatDate(fecha));
+      $("#NumeroPlanilla").val(name(nombreP)+name(fecha));
+    });
+    
 </script>
