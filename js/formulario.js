@@ -26,36 +26,36 @@ const campos = {
 
 const validarFormulario = (e) => {
   switch (e.target.name) {
-    case "identidad":
+    case "Cedula":
       validarCampo(expresiones.identidad, e.target, "identidad");
       break;
-    case "primerNombre":
+    case "PrimerNombre":
       validarCampo(expresiones.nombre, e.target, "primerNombre");
       break;
 
-    case "segundoNombre":
+    case "SegundoNombre":
       validarCampo(expresiones.nombre, e.target, "segundoNombre");
       break;
 
-    case "primerApellido":
+    case "PrimerApellido":
       validarCampo(expresiones.apellido, e.target, "primerApellido");
       break;
 
-    case "segundoApellido":
+    case "SegundoApellido":
       validarCampo(expresiones.apellido, e.target, "segundoApellido");
       break;
 
-    case "correo":
+    case "Correo":
       validarCampo(expresiones.correo, e.target, "correo");
       break;
 
-    case "telefono":
+    case "Telefono":
       validarCampo(expresiones.telefono, e.target, "telefono");
       break;
-    case "direccion":
+    case "Direccion":
       validarCampo(expresiones.direccion, e.target, "direccion");
       break;
-    case "cuentaBan":
+    case "CuentaBancaria":
       validarCampo(expresiones.cuentaBan, e.target, "cuentaBan");
       break;
   }
@@ -86,19 +86,4 @@ const validarCampo = (expresion, input, campo) => {
 input.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
-});
-
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (
-    campos.primerNombre &&
-    campos.segundoNombre &&
-    campos.primerApellido &&
-    campos.segundoApellido &&
-    campos.correo &&
-    campos.telefono
-  ) {
-    formulario.reset();
-  }
 });

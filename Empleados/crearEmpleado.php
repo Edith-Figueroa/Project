@@ -24,7 +24,7 @@
     src="https://code.jquery.com/jquery-1.12.1.js">
     type="text/javascript"
   </script>
-  
+  <link rel="stylesheet" href="../css/estilosValidacion.css">
 </head>
 
 <script src="../SqlTools/confirmationInsert.js"></script>
@@ -185,19 +185,19 @@
             </li>
 
           </ul>
-
+          
         </nav>
         <!-- Fin de la barra superior -->
-
+        
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
           <h1 class="h3 mb-1 text-gray-800">Creacion de Empleado</h1>
         </div>
         <div class="container">
-
+          
           <!-- Fila exterior -->
           <div class="row justify-content-center">
-
+            
             <div class="col-xl-20 col-lg-12 col-md-9">
 
               <div class="card o-hidden border-0 shadow-lg my-5">
@@ -206,28 +206,223 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <form class="user", action="Insert_Employee.php", method="post">
-                      <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
-                      <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
-                      <?php include 'formEmpleado.php';?>
-                        <!--Submit-->
-                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
-                          <div class="col-sm-4 mb-3 mb-sm-0">
-                            <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick = "return Confirmation()">
+                      <form class="formulario", action="Insert_Employee.php",  id="formulario", method="post">
+                        
+                        <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
+                        <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
+                        <!--Grupo: Identidad-->
+                        <div class="formulario__grupo" id="grupo__identidad">
+                          <label for="identidad" class="formulario__label">Identidad</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="Cedula" id="Cedula" placeholder="Identidad" value="<?php if(isset($row)) { echo $row['Cedula']; } ?>" required>
+                          
                           </div>
-                          <!--Limpiar-->
-                          <div class="col-sm-4 mb-3 mb-sm-0">
-                            <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
-                            </a>
+                          <p class="formulario__input-error">El numero de identidad solo puede contener numeros y el maximo son 8.</p>
+                        </div>
+                        <!--Grupo: Sexo-->
+                        <div class="formulario__grupo" id="grupo__sexo">
+                          <label for="sexo" class="formulario__label">Sexo</label>
+                          <div class="formulario__grupo-input">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="radio" name="Sexos_idSexo" value= "1" 
+                                  <?php if(isset($row)) if ($row['Sexos_idSexo'] == 1): ?> checked = "checked"
+                                  <?php endif ?> required>
+                              <label for="contactChoice1">Masculino</label>
+                              </div>
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="radio" name="Sexos_idSexo" value="2"
+                                  <?php if(isset($row)) if ($row['Sexos_idSexo'] == 2): ?> checked = "checked"
+                                  <?php endif ?>>
+                              <label for="contactChoice2">Femenino</label>
+                              </div>
                           </div>
                         </div>
-                        <!--Cancelar-->
-                        <div class="col-sm-4 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
+                        <!--Grupo: Primer Nombre-->
+                        <div class="formulario__grupo" id="grupo__primerNombre">
+                          <label for="primerNombre" class="formulario__label">Primer Nombre</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="PrimerNombre" id="PrimerNombre"
+                              placeholder="Primer Nombre" value="<?php if(isset($row)) { echo $row['PrimerNombre']; } ?>" required>
+                          </div>
+                          <p class="formulario__input-error">EL primer nombre tiene que ser de 3 a 10 digitos y solo puede contener
+                            letras.</p>
+                        </div>
+
+                        <!--Grupo: Segundo Nombre-->
+                        <div class="formulario__grupo" id="grupo__segundoNombre">
+                          <label for="segundoNombre" class="formulario__label">Segundo Nombre</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="SegundoNombre" id="SegundoNombre"
+                              placeholder="Segundo Nombre" value="<?php if(isset($row)) { echo $row['SegundoNombre']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">EL segundo nombre tiene que ser de 3 a 10 digitos y solo puede contener
+                            letras.</p>
+                        </div>
+
+                        <!--Grupo: Primer Apellido-->
+                        <div class="formulario__grupo" id="grupo__primerApellido">
+                          <label for="primerApellido" class="formulario__label">Primer Apellido</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="PrimerApellido" id="PrimerApellido"
+                              placeholder="Primer Apellido" value="<?php if(isset($row)) { echo $row['PrimerApellido']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">EL primer apellido tiene que ser de 3 a 10 digitos y solo puede contener
+                            letras.</p>
+                        </div>
+
+                        <!--Grupo: Segundo Apellido-->
+                        <div class="formulario__grupo" id="grupo__segundoApellido">
+                          <label for="segundoApellido" class="formulario__label">Segundo Apellido</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="SegundoApellido" id="SegundoApellido"
+                              placeholder="Segundo Apellido" value="<?php if(isset($row)) { echo $row['SegundoApellido']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">EL segundo apellido tiene que ser de 3 a 10 digitos y solo puede contener
+                            letras.</p>
+                        </div>
+                        <!--Grupo: Telefono-->
+                        <div class="formulario__grupo" id="grupo__telefono">
+                          <label for="telefono" class="formulario__label">Telefono</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="Telefono" id="Telefono" placeholder="Telefono" value="<?php if(isset($row)) { echo $row['Telefono']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 8.</p>
+                        </div>
+
+                        
+                        <!--Grupo: Direccion-->
+                        <div class="formulario__grupo" id="grupo__direccion">
+                          <label for="direccion" class="formulario__label">Direccion</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text"  class=" formulario__input" name="Direccion" id="Direccion"
+                              placeholder="Direccion" value="<?php if(isset($row)) { echo $row['Direccion']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">La direccion tiene que ser de 3 a 20 digitos y solo puede contener
+                            letras.</p>
+                        </div>
+
+
+                      <!--Grupo: Departamento-->
+                        <?php
+                        $grid = new database();
+                        $grid ->select('departamentos', '*');
+                        $table = $grid ->sql;
+                        ?>
+                        <div class="formulario__grupo" id="grupo__direccion">
+                          <label for="departamento" class="formulario__label">Departamento</label>
+                          <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" onchange="cambio()">
+                              <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
+                                  <option value="none" selected disabled hidden>Seleccione un departamento </option>
+                                  <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>
+                              <?php }?>
+                          </select>
+                        </div>
+
+                        <!--Grupo: Cargo-->
+                        <?php
+                        $grid = new database();
+                        $grid ->select('cargos', '*');
+                        $table = $grid ->sql;
+                        ?>
+                        <div class="formulario__grupo" id="grupo__direccion">
+                          <label for="direccion" class="formulario__label">Cargo</label>
+                          <select class="custom-select form-control" name="Cargos_idCargos" id="Cargos_idCargos">
+                            <option value="none">Seleccione una opcion</option>
+                          </select>
+                        </div>
+                        <!--Grupo: Ciudad-->
+                        <?php
+                        $grid ->select('ciudades', '*');
+                        $table = $grid ->sql;
+                        ?>
+                        <div class="formulario__grupo" id="grupo__ciudad">
+                          <label for="ciudad" class="formulario__label">Ciudades</label>
+                          <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null" value="<?php if(isset($row)){ echo $row['Ciudades_idCiudades']; } ?>" required>
+                            <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
+                                <option value="none" selected disabled hidden>Selecciona una opcion</option>
+                                <option value=<?php echo $ex['idCiudades']; ?>><?php echo $ex['DescripcionCiudad']; ?></option>
+                            <?php }?>
+                          </select>
+                        </div>
+
+                        <!--Grupo: Estado-->
+                        <div class="formulario__grupo" id="grupo__estado">
+                          <label for="estado" class="formulario__label">Estado</label>
+                          <div class="formulario__grupo" >
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="radio" name="Estados_idEstado" value="1"
+                              <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
+                              <?php endif?> required>
+                              <label for="contactChoice1">Activo</label>
+                              </div>
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="radio" name="Estados_idEstado" value="2"
+                              <?php if(isset($row)) if ($row['Estados_idEstado'] == 2): ?> checked = "checked"
+                              <?php endif;?>>
+                              <label for="contactChoice2">Inactivo</label>
+                              </div>
+                          </div>
+                        </div>
+                        <!--Grupo: Fecha de Nacimiento-->
+                        <div class="formulario__grupo" id="grupo__fechaNacimiento">
+                          <label for="fechaNacimiento" class="formulario__label">Fecha de Nacimiento</label>
+                          <div class="formulario__grupo-input">
+                            <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder=""
+                            value="<?php if(isset($row)) { echo $row['FechaNacimiento']; } else{echo '2000-01-01';} ?>" required>
+                          </div>
+                          
+                        </div>
+                        <!--Grupo: Fecha de Ingreso-->
+                        <div class="formulario__grupo" id="grupo__fechaIngreso">
+                          <label for="fechaIngreso" class="formulario__label">Fecha de Ingreso</label>
+                          <div class="formulario__grupo-input">
+                            <input type="date" name="FechaIngreso" class="form-control form-control-user" placeholder=""
+                            value="<?php if(isset($row)) { echo $row['FechaIngreso']; } else{echo '2000-01-01';} ?>" required>
+                          </div>
+                        </div>
+                        <!--Grupo: Correo Elecronico-->
+                          <div class="formulario__grupo" id="grupo__correo">
+                            <label for="correo" class="formulario__label">Correo Elecronico</label>
+                            <div class="formulario__grupo-input">
+                              <input type="email" class="formulario__input" name="Correo" id="Correo" placeholder="Correo Electronico" value="<?php if(isset($row)) { echo $row['Correo']; } ?>" required>
+                            
+                            </div>
+                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
+                            </p>
+                          </div>
+                          <!--Grupo: Cuenta Bancaria-->
+                        <div class="formulario__grupo" id="grupo__cuentaBan">
+                          <label for="cuentaBan" class="formulario__label">Cuenta Bancaria</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="CuentaBancaria" id="CuentaBancaria" placeholder="Cuenta Bancaria" value="<?php if(isset($row)) { echo $row['CuentaBancaria']; } ?>" required>
+                          
+                          </div>
+                          <p class="formulario__input-error">La cuenta bancaria solo puede contener numeros y el maximo son 15.</p>
+                        </div>
+                        <div class="formulario__grupo" id="grupo__cuentaBan">
+                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick = "return Confirmation()">
+                          
+                        </div>
+                        <div class="formulario__grupo" id="grupo__cuentaBan">
+                          <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                        </div>
+                        <div class="formulario__grupo formulario__grupo-btn-enviar">
                           <a href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
                             Cancelar
                           </a>
+
                         </div>
+                        
+                        
                       </form>
+
+                      
+                      
                     </div>
                   </div>
                 </div>
@@ -295,7 +490,25 @@
   <!-- Scripts personalizados a nivel de página -->
   <script src="../js/demo/chart-area-demo.js"></script>
   <script src="../js/demo/chart-pie-demo.js"></script>
-
+  <script src="../js/formulario.js"></script>
+  
 </body>
 
 </html>
+<script type="text/javascript">
+    function recargarLista(){
+        var x = document.getElementById("Departamentos_idDepartamentos").value;
+        $.ajax({
+            type:"POST",
+            url: "../datos.php",
+            data:"dpto=" + x,
+            success:function(r){
+                $('#Cargos_idCargos').html(r);
+            }
+        });
+    }
+
+    function cambio(){
+        recargarLista();
+    }
+</script>
