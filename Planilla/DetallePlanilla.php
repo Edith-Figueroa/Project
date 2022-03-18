@@ -20,6 +20,13 @@
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
   <link rel="icon" href="../img/Moneda.png">
+
+  <!-- JS-->
+  <script src="../js/tableexport.min.js"></script>
+  <script src="../js/xlsx.full.min.js"></script>
+  <script src="../js/FileSaver.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -215,8 +222,8 @@
           <h1 class="h3 mb-2 text-gray-800">Planilla de Pagos</h1>
 
           <div>
-            <button class="btn btn-danger btn-sm">PDF</button>
-            <button class="btn btn-success btn-sm" onclick="exportTableToExcel('dataTable', 'planilla #<?php echo $idPlanillas?>')">Excel</button>
+            <button class="btn btn-danger btn-sm" id="btnExportarPDF">PDF</button>
+            <button class="btn btn-success btn-sm" id="btnExportar" onclick="exceller()">Excel</button>
           </div>
 
 
@@ -254,6 +261,7 @@
                     ?>
 
                     <?php while ($row = mysqli_fetch_assoc($table)) { ?>
+
                     <tr>
                       <td><?php echo $row['idEmpleados'];?></td>
                       <td><?php echo $row['Nombre'];?></td>
@@ -272,8 +280,9 @@
                       <td>
                           <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Enviar</a>
                       </td>
-                      <?php }?>
                     </tr>
+                    <?php }?>
+
                   </tbody>
                 </table>
               </div>
@@ -347,34 +356,29 @@
 </html>
 
 <script>
-  function exportTableToExcel(tableID, filename = ''){
-    var downloadLink;
-    var dataType = 'application/vnd.ms-excel';
-    var tableSelect = document.getElementById(tableID);
-    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-    
-    // Specify file name
-    filename = filename?filename+'.xls':'excel_data.xls';
-    
-    // Create download link element
-    downloadLink = document.createElement("a");
-    
-    document.body.appendChild(downloadLink);
-    
-    if(navigator.msSaveOrOpenBlob){
-        var blob = new Blob(['ufeff', tableHTML], {
-            type: dataType
-        });
-        navigator.msSaveOrOpenBlob( blob, filename);
-    }else{
-        // Create a link to the file
-        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-    
-        // Setting the file name
-        downloadLink.download = filename;
-        
-        //triggering the function
-        downloadLink.click();
-    }
+  function exceller() {
+    var uri = 'data:application/vnd.ms-excel;base64,',
+      template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
+      base64 = function(s) {
+        return window.btoa(unescape(encodeURIComponent(s)))
+      },
+      format = function(s, c) {
+        return s.replace(/{(\w+)}/g, function(m, p) {
+          return c[p];
+        })
+      }
+    var toExcel = document.getElementById("dataTable").innerHTML;
+    var ctx = {
+      worksheet: name || '',
+      table: toExcel
+    };
+    var link = document.createElement("a");
+    link.download = "<?php echo "Planilla $idPlanillas Empresa $Empresa";?>.xls";
+    link.href = uri + base64(format(template, ctx))
+    link.click();
   }
+
+  $("#btnExportarPDF").on("click", function () {
+    
+  });
 </script>
