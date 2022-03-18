@@ -61,15 +61,13 @@
                   </div>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input name= "submit" class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar Sesion ">
-                  
+                  <input name= "submit" class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar Sesion ">  
                 </div>
               </form>
               <hr>
               <div class="text-center" style=" width: 60vw; margin-left : 7vw;">
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
-
                 </div>
               </div>
               
