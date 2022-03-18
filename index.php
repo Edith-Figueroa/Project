@@ -123,6 +123,17 @@
           </div>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseValidacion"
+          aria-expanded="true" aria-controls="collapseValidacion">
+          <span>Prueba Validacion</span>
+        </a>
+        <di id="collapseValidacion" class="collapse" aria-labelledby="headingValidacion" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="Empleados/CrearFor.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>">Validacion</a>
+          </div>
+      </li>
+
       <!-- Barra lateral cerrar (Barra lateral) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
