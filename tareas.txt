@@ -4,3 +4,4 @@
 4) Validaciones
 5) Ver datos de la planilla empleado por empleado
 6) investigar como mandar correos desde php
+7) ordenar el implemento estetico del sistema en una carpeta
