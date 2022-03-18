@@ -1,1 +1,6 @@
-1) poner el elemento de la creacion de la planilla en todos los menus
+1) Filtro de Busquedad con input text
+2) Filtro de Busquedad con de activos e inactivos
+3) Poner opcion de agregar dato como departamentos en los combobox
+4) Validaciones
+5) Ver datos de la planilla empleado por empleado
+6) investigar como mandar correos desde php

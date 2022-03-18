@@ -8,9 +8,18 @@
         $FechaFin=$_POST['FechaFin'];
 
         $a = new database();
-        $a->insert('planillas',['NumeroPlanilla'=>$NumeroPlanilla,'FechaInicio'=>$FechaInicio,'FechaFin'=>$FechaFin]);
+        $a->insert('planillas',['NumeroPlanilla'=>$NumeroPlanilla,'Empresas_idEmpresas'=>$Empresa,'FechaInicio'=>$FechaInicio,'FechaFin'=>$FechaFin]);
+        $a->specialSelect('select * from sistema_planilla.planillas order by idPlanillas desc limit 0, 1;');
+
+        $result = $a->sql;
+
+        $row = mysqli_fetch_assoc($result);
+        $idP = $row['idPlanillas'];
+
+        $a->ExecQuery("CALL plan_det($idP, $Empresa)");
+
         if ($a == true) {
-            header("location: DetallePlanilla.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
+            header("location: DetallePlanilla.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa&idPlanillas=$idP");
         }
     }
 ?>

@@ -22,33 +22,7 @@ CREATE DATABASE IF NOT EXISTS Sistema_Planilla;
 USE Sistema_Planilla;
 
 --
--- Table structure for table `planillas`
---
-
-DROP TABLE IF EXISTS `planillas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `planillas` (
-  `idPlanillas` int NOT NULL AUTO_INCREMENT,
-  `NumeroPlanilla` int NOT NULL,
-  `FechaInicio` datetime NOT NULL,
-  `FechaFin` datetime NOT NULL,
-  PRIMARY KEY (`idPlanillas`),
-  UNIQUE KEY `NumeroPlanilla` (`NumeroPlanilla`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `planillas`
---
-
-LOCK TABLES `planillas` WRITE;
-/*!40000 ALTER TABLE `planillas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `planillas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cargos`
+-- Table structure for table `empresas`
 --
 
 DROP TABLE IF EXISTS `empresas`;
@@ -70,6 +44,33 @@ LOCK TABLES `empresas` WRITE;
 /*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
 INSERT INTO `empresas` VALUES (1,'DULCES WILLY WONKA',1),(2,'ARMAS COD',1);
 /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `planillas`
+--
+
+DROP TABLE IF EXISTS `planillas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `planillas` (
+  `idPlanillas` int NOT NULL AUTO_INCREMENT,
+  `NumeroPlanilla` varchar (50),
+  `Empresas_idEmpresas` int NOT NULL,
+  `FechaInicio` datetime NOT NULL,
+  `FechaFin` datetime NOT NULL,
+  PRIMARY KEY (`idPlanillas`),
+  UNIQUE KEY `NumeroPlanilla` (`NumeroPlanilla`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `planillas`
+--
+
+LOCK TABLES `planillas` WRITE;
+/*!40000 ALTER TABLE `planillas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `planillas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -361,8 +362,6 @@ CREATE TABLE `detalleplanillas` (
   `Total_Bonificaciones` decimal(20,6) NOT NULL,
   `Sueldo_Neto` decimal(20,6) NOT NULL,
   PRIMARY KEY (`Planillas_idPlanilla`,`Empleados_idEmpleados`),
-  KEY `fk_DetallePlanillas_Planillas_idx` (`Planillas_idPlanilla`),
-  KEY `fk_DetallePlanillas_Empleados1_idx` (`Empleados_idEmpleados`),
   CONSTRAINT `fk_DetallePlanillas_Empleados1` FOREIGN KEY (`Empleados_idEmpleados`) REFERENCES `empleados` (`idEmpleados`),
   CONSTRAINT `fk_DetallePlanillas_Planillas` FOREIGN KEY (`Planillas_idPlanilla`) REFERENCES `planillas` (`idPlanillas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

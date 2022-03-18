@@ -19,6 +19,7 @@
 
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
+  <link rel="icon" href="img/Moneda.png">
 
 </head>
 

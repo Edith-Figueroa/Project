@@ -53,6 +53,14 @@
             $this->sql = $result = $this->mysqli->query($sql);
         }
 
+        public function specialSelect($queryL){
+            $this->sql = $result = $this->mysqli->query($queryL);
+        }
+
+        public function ExecQuery($queryL){
+            $this->mysqli->query($queryL);
+        }
+
         public function __destruct(){
             $this->mysqli->close();
         }
