@@ -23,4 +23,3 @@
     if ($del == true) {
         header("location: TablaCargos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
-?>

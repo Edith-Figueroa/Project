@@ -19,4 +19,3 @@
     if ($del == true) {
         header("location: TablaDepartamentos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
     }
-?>
