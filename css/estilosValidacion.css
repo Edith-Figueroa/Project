@@ -137,6 +137,6 @@
     grid-column: span 1;
   }
   .formulario__btn {
-    width: 100%;
+    width: 50%;
   }
 }
