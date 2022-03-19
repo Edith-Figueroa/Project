@@ -37,6 +37,7 @@
                   <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
 
                   <a href="../loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
+
                   </form>
                   <hr>
                   <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
@@ -44,6 +45,12 @@
                       <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
                     </div>
                   </div>
+
+              </form>
+              <hr>
+              <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
+                <div class=" col-sm-5 mb-5 mb-sm-0">
+                  <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
 
                 </div>
               </div>
