@@ -9,4 +9,3 @@
     while ($ex = mysqli_fetch_assoc($result)){
         echo'<option value='.$ex['idCargo'].'>'.$ex['DescripcionCargo'].'</option>';
     }
-?>

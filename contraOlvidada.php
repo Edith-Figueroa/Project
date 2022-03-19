@@ -13,9 +13,7 @@
 
   <!-- FUENTE-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
@@ -50,12 +48,11 @@
                 <form class="user" style=" width: 50vw; margin-left : 7vw;">
                   <div class="form-group">
                     <div class=" col-sm-6 mb-3 mb-sm-0">
-                      <input type="email" class="form-control form-control-user" id="emailInput"
-                        aria-describedby="emailHelp" placeholder="Ingresa tu correo...">
+                      <input type="email" class="form-control form-control-user" id="emailInput" aria-describedby="emailHelp" placeholder="Ingresa tu correo...">
                     </div>
                   </div>
                   <div class=" col-sm-6 mb-3 mb-sm-0">
-                    <a href="login.php" class="btn btn-primary btn-user btn-block">
+                    <a href="loginForm.php" class="btn btn-primary btn-user btn-block">
                       Restablecer contraseña
                     </a>
 

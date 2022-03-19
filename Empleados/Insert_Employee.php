@@ -30,4 +30,3 @@
             header("location:../index.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
         }
     }
-?>
