@@ -7,21 +7,14 @@ const expresiones = {
   apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   password: /^.{4,12}$/, // 4 a 12 digitos.
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{8,14}$/, // 7 a 14 numeros.
-  identidad: /^\d{8,14}$/, // 7 a 14 numeros.
-  direccion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  telefono: /^\d{8,8}$/, // 7 a 14 numeros.
+  identidad: /^\d{13,13}$/, // 7 a 14 numeros.
+  direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   cuentaBan: /^\d{8,14}$/, // 7 a 14 numeros.
-};
-
-const campos = {
-  idenetidad: false,
-  primerNombre: false,
-  segundoNombre: false,
-  primerApellido: false,
-  segundoApellido: false,
-  telefono: false,
-  correo: false,
-  cuentaBan: false,
+  DescripcionCargo: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
+  Salario: /^\d+$/,
+  DescripcionCiudad: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
+  DescripcionDepto: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
 };
 
 const validarFormulario = (e) => {
@@ -52,11 +45,33 @@ const validarFormulario = (e) => {
     case "Telefono":
       validarCampo(expresiones.telefono, e.target, "telefono");
       break;
+
     case "Direccion":
       validarCampo(expresiones.direccion, e.target, "direccion");
       break;
+
     case "CuentaBancaria":
       validarCampo(expresiones.cuentaBan, e.target, "cuentaBan");
+      break;
+
+    case "DescripcionCargo":
+      validarCampo(expresiones.DescripcionCargo, e.target, "DescripcionCargo");
+      break;
+
+    case "Salario":
+      validarCampo(expresiones.Salario, e.target, "Salario");
+      break;
+
+    case "DescripcionCiudad":
+      validarCampo(
+        expresiones.DescripcionCiudad,
+        e.target,
+        "DescripcionCiudad"
+      );
+      break;
+
+    case "DescripcionDepto":
+      validarCampo(expresiones.DescripcionDepto, e.target, "DescripcionDepto");
       break;
   }
 };

@@ -17,7 +17,7 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleT.css">
-
+    
 
 </head>
 
@@ -41,169 +41,169 @@
                             </div>
                             <div class="login-content">
                                 <a href="#"></a>
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                             
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
 
@@ -233,31 +233,31 @@
                                     <li><a href="inicio.php">Inicio</a></li>
                                     <li><a href="#">Contenido</a>
                                         <ul class="dropdown">
-
+                                            
                                             <li><a href="inicio.php">Inicio</a></li>
                                             <li><a href="about-us.php">¿Quienes Somos?</a></li>
                                             <li><a href="COPAP.php"></a></li>
                                             <li><a href="Modulos.php">Nuestro Sistema</a></li>
                                             <li><a href="pago.php">Planes de Pago</a></li>
                                             <li><a href="contact.php">Contactanos</a></li>
-
+                                        
                                         </ul>
                                     </li>
                                     <li><a href="#">Modulos o Servicios</a>
                                         <div class="megamenu">
                                             <ul class="single-mega cn-col-4">
-
+                                                
                                             </ul>
                                             <ul class="single-mega cn-col-4">
                                                 <ul class="single-mega cn-col-4">
                                                     <li><a href="#">Planllas</a></li>
                                                     <li><a href="#"> Empleados </a></li>
                                                     <li><a href="#"> </a></li>
-
-
-
-                                                </ul>
-
+                                                 
+                
+                                                   
+                                            </ul>
+                                            
                                             </ul>
                                             <div class="single-mega cn-col-4">
                                                 <img src="img/bg-img/modulos.jpg" alt="">
@@ -282,14 +282,14 @@
             </div>
         </div>
     </header>
-    <!-- Nav End -->
-
+                            <!-- Nav End -->
+                 
     <!-- ##### Header Area End ##### -->
 
 
 
     <!-- ##### INFO SOBRE COPAP ##### -->
-
+    
     <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
             <h2>COPAP ES TU MEJOR OPCION</h2>
@@ -331,271 +331,267 @@
 
     <!-- ##### Team Area Start ##### -->
     <section class="teachers-area section-padding-0-100">
-
-        <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
-            <div class="bradcumbContent">
-                <h2>NUESTROS DESARROLLADORES</h2>
-            </div>
+        
+    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="bradcumbContent">
+            <h2>NUESTROS DESARROLLADORES</h2>
         </div>
-    </section>
-    <br> </br>
-    <br> </br>
-    <br> </br>
-
-    <section id="fh5co-team" data-section="team">
+    </div>
+        </section>
         <br> </br>
         <br> </br>
         <br> </br>
-        <br> </br>
-        <div class="row">
-            <div class="col-md-4">
+        
+        <section id="fh5co-team" data-section="team">
+            <br> </br>
+            <br> </br>
+            <br> </br>
+            <br> </br>
+                    <div class="row">
+                        <div class="col-md-4">
 
-                <div class="team-box text-center to-animate-2">
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P2.jpg" alt="JARED GARCIA"></div>
-                    <h3>JARED GARCIA</h3>
-                    <span class="position">PROGRAMADOR PRINCIPAL</span>
-                    <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
-                    <ul class="social-media">
-                        <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-                        <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-                        <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="team-box text-center to-animate-2">
-                    <br></br>
-                    <br></br>
-                    <br></br>
-
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="EMERSON ZAPATA"></div>
-                    <h3>EMERSON ZAPATA</h3>
-                    <span class="position">CO-PROGRAMADOR</span>
-                    <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
-                    <ul class="social-media">
-                        <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-                        <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-                        <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-
-
-
-
-
-            <div class="col-md-4">
-                <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="ONAN AGUILERA"></div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <h3>ONAN AGUILERA</h3>
-                    <span class="position">ANALISTA DE BASE DE DATOS</span>
-                    <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
-                    <ul class="social-media">
-                        <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-                        <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-                        <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br></br>
-
-
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="col-md-4">
-                <div class="team-box text-center to-animate-2">
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/p1.jpg" alt="DULCE SANCHEZ"></div>
-                    <h3>DULCE SANCHEZ</h3>
-                    <span class="position">DISEÑADOR GRAFICO</span>
-                    <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
-                    <ul class="social-media">
-                        <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-                        <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-                        <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="DIEGO MOLINA"></div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <h3>DIEGO MOLINA</h3>
-                    <span class="position">Co-DISEÑADOR GRAFICO</span>
-                    <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
-                    <ul class="social-media">
-                        <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-                        <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-                        <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ##### Features Area Start ##### -->
+                            <div class="team-box text-center to-animate-2">
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="user"><img class="img-reponsive" src="img/bg-img/P2.jpg" alt="JARED GARCIA"></div>
+                                <h3>JARED GARCIA</h3>
+                                <span class="position">PROGRAMADOR PRINCIPAL</span>
+                                <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
+                                <ul class="social-media">
+                                    <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                                    <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                                    <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="col-md-4">
+                            <div class="team-box text-center to-animate-2">
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                  
+                                <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="EMERSON ZAPATA"></div>
+                                <h3>EMERSON ZAPATA</h3>
+                                <span class="position">CO-PROGRAMADOR</span>
+                                <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
+                                <ul class="social-media">
+                                    <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                                    <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                                    <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                       
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-md-4">
+                            <div class="team-box text-center to-animate-2">
+                                <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="ONAN AGUILERA"></div>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <h3>ONAN AGUILERA</h3>
+                                <span class="position">ANALISTA DE BASE DE DATOS</span>
+                                <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
+                                <ul class="social-media">
+                                    <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                                    <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                                    <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br> </br>
+                        <br></br>
+                        
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="col-md-4">
+                                    <div class="team-box text-center to-animate-2">
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <div class="user"><img class="img-reponsive" src="img/bg-img/p1.jpg" alt="DULCE SANCHEZ"></div>
+                                        <h3>DULCE SANCHEZ</h3>
+                                        <span class="position">DISEÑADOR GRAFICO</span>
+                                        <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
+                                        <ul class="social-media">
+                                            <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                                            <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                                            <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              
+                                
+                                <div class="col-md-4">
+                                    <div class="team-box text-center to-animate-2">
+                                        <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="DIEGO MOLINA"></div>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <h3>DIEGO MOLINA</h3>
+                                        <span class="position">Co-DISEÑADOR GRAFICO</span>
+                                        <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
+                                        <ul class="social-media">
+                                            <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                                            <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                                            <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                                              
+      <!-- ##### Features Area Start ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <!-- ##### INFO  ##### -->
-    <footer class="footer-area">
-        <div class="main-footer-area section-padding-100-0">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
-                            </div>
-                            <p>CONTROL DE PLANILAS DE PAGO COPAP</p>
-                            <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-github"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
+ <!-- ##### INFO  ##### -->
+<footer class="footer-area">
+    <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget mb-100">
+                        <div class="widget-title">
+                            <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
+                        </div>
+                        <p>CONTROL DE PLANILAS DE PAGO COPAP</p>
+                        <div class="footer-social-info">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
-                    <!-- Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <h6>DESARROLLADORES</h6>
-                            </div>
-                            <nav>
-                                <ul class="useful-links">
-                                    <li><a href="#">EMERSON ZAPATA</a></li>
-                                    <li><a href="#">DENIS GARCIA</a></li>
-                                    <li><a href="#">DULCE SANCHEZ</a></li>
-                                    <li><a href="#">ONAN AGUILERA</a></li>
-                                    <li><a href="#">DIEGO MOLINA</a></li>
-                                </ul>
-                            </nav>
+                </div>
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget mb-100">
+                        <div class="widget-title">
+                            <h6>DESARROLLADORES</h6>
+                        </div>
+                        <nav>
+                            <ul class="useful-links">
+                                <li><a href="#">EMERSON ZAPATA</a></li>
+                                <li><a href="#">DENIS GARCIA</a></li>
+                                <li><a href="#">DULCE SANCHEZ</a></li>
+                                <li><a href="#">ONAN  AGUILERA</a></li>
+                                <li><a href="#">DIEGO MOLINA</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget mb-100">
+                        <div class="widget-title">
+                        
+                        </div>
+                        <div class="gallery-list d-flex justify-content-between flex-wrap">
+                            <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
+                            <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
+                            <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
+                            <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
+                            <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
+                            <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
                         </div>
                     </div>
-                    <!-- Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-
-                            </div>
-                            <div class="gallery-list d-flex justify-content-between flex-wrap">
-                                <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
-                                <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
-                                <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
-                                <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
-                                <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
-                                <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
-                            </div>
+                </div>
+                <!-- contactos-->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget mb-100">
+                        <div class="widget-title">
+                            <h6>Contactanos</h6>
                         </div>
-                    </div>
-                    <!-- contactos-->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <h6>Contactanos</h6>
-                            </div>
-                            <div class="single-contact d-flex mb-30">
-                                <i class="icon-placeholder"></i>
-                                <p>Tegucigalpa,Honduras</p>
-                            </div>
-                            <div class="single-contact d-flex mb-30">
-                                <i class="icon-telephone-1"></i>
-                                <p>2446 6349</p>
-                            </div>
-                            <div class="single-contact d-flex">
-                                <i class="icon-email"></i>
-                                <p>copapoficial@gmail.com</p>
-                            </div>
+                        <div class="single-contact d-flex mb-30">
+                            <i class="icon-placeholder"></i>
+                            <p>Tegucigalpa,Honduras</p>
+                        </div>
+                        <div class="single-contact d-flex mb-30">
+                            <i class="icon-telephone-1"></i>
+                            <p>2446 6349</p>
+                        </div>
+                        <div class="single-contact d-flex">
+                            <i class="icon-email"></i>
+                            <p>copapoficial@gmail.com</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bottom-footer-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">COPAP</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
+    </div>
+    <div class="bottom-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">COPAP</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
             </div>
         </div>
+    </div>
     </footer>
-
+   
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->

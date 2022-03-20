@@ -13,7 +13,9 @@
 
   <!-- FUENTES-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- CSS-->
   <link href="css/estilo.css" rel="stylesheet">
@@ -46,7 +48,8 @@
                 </div>
                 <div class="form-group">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" name="Contrasenia" placeholder="Contraseña">
+                    <input type="password" class="form-control form-control-user" name="Contrasenia"
+                      placeholder="Contraseña">
                   </div>
                 </div>
                 <div class="form-group">
@@ -58,7 +61,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input name="submit" class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar Sesion ">
+                  <input name= "submit" class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar Sesion ">  
                 </div>
               </form>
               <hr>
@@ -67,7 +70,7 @@
                   <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
                 </div>
               </div>
-
+              
             </div>
           </div>
         </div>

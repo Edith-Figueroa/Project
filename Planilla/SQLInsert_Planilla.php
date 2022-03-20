@@ -22,3 +22,4 @@
             header("location: DetallePlanilla.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa&idPlanillas=$idP");
         }
     }
+?>

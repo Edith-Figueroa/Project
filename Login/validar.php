@@ -1,14 +1,14 @@
 <?php
-$usuario = $_POST['Usuario'];
-$Contrasenia = $_POST['Contrasenia'];
+$usuario=$_POST['Usuario'];
+$Contrasenia=$_POST['Contrasenia'];
 session_start();
-$_SESSION['Usuario'] = $usuario;
+$_SESSION['Usuario']=$usuario;
 
 include('db.php');
 
-$consulta = "SELECT * FROM usuarios WHERE Usuario='$usuario' and Contrasenia='$Contrasenia'";
-$resultado = mysqli_query($conexion, $consulta);
-$filas = mysqli_num_rows($resultado);
+$consulta="SELECT * FROM usuarios WHERE Usuario='$usuario' and Contrasenia='$Contrasenia'";
+$resultado=mysqli_query($conexion,$consulta);
+$filas=mysqli_num_rows($resultado);
 
 include '../SqlTools/database.php';
 $a = new database();
@@ -20,10 +20,10 @@ $row = mysqli_fetch_assoc($data);
 $idUser = $row['idUsuario'];
 $idEnt = $row['Empresas_idEmpresas'];
 
-if ($filas) {
+if($filas){
   header("location:../index.php?idUsuario=$idUser&Empresas_idEmpresas=$idEnt");
-} else {
-?>
+}else{
+  ?>
   <?php
   include("ERROR.php");
   ?>
