@@ -19,6 +19,7 @@
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
   <link rel="icon" href="../img/Moneda.png">
+  <link rel="stylesheet" href="../css/estilosValidacion.css">
 
   <!--JAVASCRIPT-->
   <script
@@ -213,28 +214,61 @@
                       
                       
                       <!--Inicio de Form-->
-                      <form class="user", action="SQLInsert_Ciudades.php", method="post">
+                      <form class="formulario", action="SQLInsert_Ciudades.php", id="formulario", method="post">
                       <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                       <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
-                      <?php include 'formCiudades.php';?>
-                        <!--Submit-->
-                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
-                          <div class="col-sm-6 mb-3 mb-sm-0">
+                        <!--Grupo: Descripcion de Ciudades-->
+                        <div class="formulario__grupo" id="grupo__DescripcionCiudad">
+                          <label for="DescripcionCiudad" class="formulario__label">Nombre de la Ciudad</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="DescripcionCiudad" id="DescripcionCiudad" placeholder="Nombre de la Ciudad" value="<?php if(isset($row)) { echo $row['DescripcionCiudad']; } ?>" required>
+                          </div>
+                          <p class="formulario__input-error">La descripcion de la ciudad solo acepta letras.</p>
+                        </div>
+                        <!--Grupo: Estado-->
+                          <div class="formulario__grupo" id="grupo__estado">
+                            <label for="estado" class="formulario__label">Estado</label>
+                            <div class="formulario__grupo" >
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="radio" name="Estados_idEstado" value="1"
+                                <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
+                                <?php endif?> required>
+                                <label for="contactChoice1">Activo</label>
+                                </div>
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="radio" name="Estados_idEstado" value="2"
+                                <?php if(isset($row)) if ($row['Estados_idEstado'] == 2): ?> checked = "checked"
+                                <?php endif;?>>
+                                <label for="contactChoice2">Inactivo</label>
+                                </div>
+                            </div>
+                          </div>
+                          <!--Submit-->
+                          <div class="formulario__grupo" id="grupo__departamento">
                             <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick = "return Confirmation()">
                           </div>
                           <!--Limpiar-->
-                          <div class="col-sm-6 mb-3 mb-sm-0">
+                          <div class="formulario__grupo" id="grupo__departamento">
                             <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                          </div>
+                          <!--Cancelar-->
+                          <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
+                              <a href="TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
+                                Cancelar
+                              </a>
+                          </div>
+                          </div>
+                      </form>
+                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
                             </a>
                           </div>
                         </div>
-                        <!--Cancelar-->
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="TablaCiudades.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
-                            Cancelar
-                          </a>
                         </div>
-                      </form>
                     </div>
                   </div>
                 </div>
@@ -302,6 +336,8 @@
   <!-- Scripts personalizados a nivel de página -->
   <script src="../js/demo/chart-area-demo.js"></script>
   <script src="../js/demo/chart-pie-demo.js"></script>
+  <!-- Scripts Validacion de Formulario -->
+  <script src="../js/formulario.js"></script>
 
 </body>
 

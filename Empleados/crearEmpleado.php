@@ -217,7 +217,7 @@
                             <input type="text" class="formulario__input" name="Cedula" id="Cedula" placeholder="Identidad" value="<?php if(isset($row)) { echo $row['Cedula']; } ?>" required>
                           
                           </div>
-                          <p class="formulario__input-error">El numero de identidad solo puede contener numeros y el maximo son 8.</p>
+                          <p class="formulario__input-error">El numero de identidad solo puede contener numeros y el maximo son 13.</p>
                         </div>
                         <!--Grupo: Sexo-->
                         <div class="formulario__grupo" id="grupo__sexo">
@@ -412,9 +412,11 @@
                           <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
                         </div>
                         <div class="formulario__grupo formulario__grupo-btn-enviar">
-                          <a href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
-                            Cancelar
-                          </a>
+                          <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
+                            <a href="tablas.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
+                              Cancelar
+                            </a>
+                          </div>
 
                         </div>
                         
@@ -490,6 +492,7 @@
   <!-- Scripts personalizados a nivel de página -->
   <script src="../js/demo/chart-area-demo.js"></script>
   <script src="../js/demo/chart-pie-demo.js"></script>
+  <!-- Scripts Validacion de Formulario -->
   <script src="../js/formulario.js"></script>
   
 </body>
