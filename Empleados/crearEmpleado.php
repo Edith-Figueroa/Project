@@ -197,7 +197,7 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <form class="formulario" , action="Insert_Employee.php" , id="formulario" , method="post">
+                      <form class="formulario" action="Insert_Employee.php" id="formulario" method="post">
 
                         <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                         <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
