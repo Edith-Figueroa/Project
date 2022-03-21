@@ -19,6 +19,7 @@
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
   <link rel="icon" href="../img/Moneda.png">
+  <link rel="stylesheet" href="../css/estilosValidacion.css">
 
   <!--JAVASCRIPT-->
   <script
@@ -230,28 +231,52 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <form class="user", action="SQLUpdate_Departamentos.php", method="post">
+                      <form class="formulario", action="SQLUpdate_Departamentos.php", id="formulario", method="post">
                       <input type="hidden" name="idDepartamentos" value="<?php echo $id; ?>">
                       <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                       <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
-                      <?php include 'formDepartamentos.php';?>
-                        <!--Submit-->
-                        <div class="form-group row" style=" width: 50vw; margin-left : 7vw;">
-                          <div class="col-sm-6 mb-3 mb-sm-0">
+                        <!--Grupo: Descripcion de Ciudades-->
+                        <div class="formulario__grupo" id="grupo__DescripcionDepto">
+                          <label for="DescripcionDepto" class="formulario__label">Nombre del Departamento</label>
+                          <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="DescripcionDepto" id="DescripcionDepto" placeholder="Nombre del Departamento" value="<?php if(isset($row)) { echo $row['DescripcionDepto']; } ?>" required>
+                          </div>
+                          <p class="formulario__input-error">La descripcion del nombre del departamento solo acepta letras.</p>
+                        </div>
+                        <!--Grupo: Estado-->
+                          <div class="formulario__grupo" id="grupo__estado">
+                            <label for="estado" class="formulario__label">Estado</label>
+                            <div class="formulario__grupo" >
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="radio" name="Estados_idEstado" value="1"
+                                <?php if(isset($row)) if ($row['Estados_idEstado'] == 1): ?> checked = "checked"
+                                <?php endif?> required>
+                                <label for="contactChoice1">Activo</label>
+                                </div>
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="radio" name="Estados_idEstado" value="2"
+                                <?php if(isset($row)) if ($row['Estados_idEstado'] == 2): ?> checked = "checked"
+                                <?php endif;?>>
+                                <label for="contactChoice2">Inactivo</label>
+                                </div>
+                            </div>
+                          </div>
+                          <!--Submit-->
+                          <div class="formulario__grupo" id="grupo__departamento">
                             <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Modificar" onclick = "return Confirmation()">
                           </div>
                           <!--Limpiar-->
-                          <div class="col-sm-6 mb-3 mb-sm-0">
+                          <div class="formulario__grupo" id="grupo__departamento">
                             <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
-                            </a>
                           </div>
-                        </div>
-                        <!--Cancelar-->
-                        <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
-                            Cancelar
-                          </a>
-                        </div>
+                          <!--Cancelar-->
+                          <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
+                              <a href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-user btn-block">
+                                Cancelar
+                              </a>
+                            </div>
+                          </div>
                       </form>
                     </div>
                   </div>
@@ -320,6 +345,8 @@
   <!-- Scripts personalizados a nivel de página -->
   <script src="../js/demo/chart-area-demo.js"></script>
   <script src="../js/demo/chart-pie-demo.js"></script>
+  <!-- Scripts Validacion de Formulario -->
+  <script src="../js/formulario.js"></script>
 
 </body>
 
