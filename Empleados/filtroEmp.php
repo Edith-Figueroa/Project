@@ -88,7 +88,7 @@ if ($table->num_rows > 0) {
     }
     $salida .= '</tbody>';
 } else {
-    $salida .= "Errores tecnicos";
+    $salida .= "Busqueda no encontrada.";
 }
 
 echo $salida;
