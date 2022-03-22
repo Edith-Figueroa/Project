@@ -17,6 +17,10 @@ Begin
     DECLARE netSalary DEC (10,2) default 0.0;
     DECLARE isr DEC (10,2) default 0.0;
     DECLARE dedTot DEC (10,2) default 0.0;
+    DECLARE bonTot DEC (10,2) default 0.0;
+    DECLARE 14vo DEC (10,2) default 0.0;
+    DECLARE 13vo DEC (10,2) default 0.0;
+    DECLARE FechaIngreso int default 0;
     
     SET x = (SELECT COUNT(*) FROM sistema_planilla.empleados where Empresas_idEmpresas = emp and empleados.Estados_idEstado = 1);
     
@@ -37,6 +41,15 @@ Begin
 					where 		Empresas_idEmpresas = emp and empleados.Estados_idEstado = 1
 					order by 	idEmpleados
 					LIMIT j, 1);
+			
+		set FechaIngreso = ( SELECT	MONTH(fechaIngreso)
+							FROM		sistema_planilla.empleados inner join sistema_planilla.cargos on
+										sistema_planilla.cargos.idCargo = sistema_planilla.empleados.Cargos_idCargos
+							where 		Empresas_idEmpresas = emp and empleados.Estados_idEstado = 1
+							order by 	idEmpleados
+							LIMIT j, 1);
+                        
+		select FechaIngreso;
 		
         #Calculo de Datos independiente
         #Calculo de IHSS Seguro De prevision Social
@@ -77,14 +90,32 @@ Begin
         
         set netSalary = salary - dedTot;
         
+        IF (FechaIngreso > 2) THEN
+			IF(month(curdate()) = 6) THEN
+				set 13vo = salary + netSalary;
+			END IF;
+		END IF;
+        
+        IF (FechaIngreso < 2) THEN
+			IF(month(curdate()) = 12) THEN
+				set 14vo = salary + netSalary;
+			END IF;
+		END IF;
+        
+        set bonTot = 14vo + 13vo;
+        
         set i = i + 1;
         set j = j + 1;
         
         insert into `detalleplanillas`
-        values (planX, ID, salary, ihss, rap, isr, dedTot, 0, 0, 0, netSalary);
+        values (planX, ID, salary, ihss, rap, isr, dedTot, 14vo, 13vo, bonTot, netSalary);
         
 	end while;
     
     SET i = 0;
     
 End $$
+
+-- Call plan_det(69, 2);
+
+-- select * from sistema_planilla.detalleplanillas;
