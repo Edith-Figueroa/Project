@@ -20,6 +20,9 @@
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
   <link rel="icon" href="../img/Moneda.png">
+  <!-- JS-->
+  <script src="../js/jquery.min.js"></script>
+  <script src="filtroEmpleados.js" type=""></script>
 </head>
 
 <body id="page-top">
@@ -148,8 +151,7 @@
           <!-- Búsqueda en la barra superior -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder=" Buscar..." aria-label="Search" aria-describedby="basic-addon2" name="filtro" id="filtro">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -215,47 +217,10 @@
 
           <!-- Tablas-->
           <div class="card shadow mb-4">
-            <div class="table-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>Departamentos</th>
-                      <th scope="col" colspan="3">Accion</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                        <th>id</th>
-                        <th>Departamentos</th>
-                        <th scope="col" colspan="3">Accion</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <?php
-                    $grid = new database();
-                    $grid ->select('departamentos', 'idDepartamentos, DescripcionDepto');
-                    $table = $grid -> sql;
-                    ?>
 
-                    <?php while ($row = mysqli_fetch_assoc($table)) { ?>
-                      <tr>
-                        <td><?php echo $row['idDepartamentos']; ?></td>
-                        <td><?php echo $row['DescripcionDepto']; ?></td>
-                        
-                        <td>
-                            <a href="SQLRead_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-success btn-sm">Ver</a>
-                        </td>
-                        <td>
-                            <a href="ModificacionDepartamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-primary btn-sm">Modificar</a>
-                        </td>
-                        <td>
-                            <a href="SQLInactive_Departamentos.php?idDepartamentos=<?php echo $row['idDepartamentos']; ?>&idUsuario=<?php echo $Usuario?>&Empresas_idEmpresas=<?php echo $Empresa?>" class="btn btn-danger btn-sm">Desactivar</a>
-                        </td>
-                      </tr>
-                    <?php }?>
-                  </tbody>
+            <div class="table-body">
+              <div class="table-responsive" id="dataTable">
+                <table class="table table-bordered" id="TableInfo" width="100%" cellspacing="0">
                 </table>
               </div>
             </div>
@@ -328,3 +293,33 @@
 </body>
 
 </html>
+<script>
+  $(buscar_datos());
+
+  function buscar_datos(sql) {
+    $.ajax({
+        type: "POST",
+        url: "filtroDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>",
+        data: {
+          sql: sql
+        },
+        dataType: "html",
+      })
+      .done(function(ans) {
+        $("#TableInfo").html(ans);
+      })
+      .fail(function() {
+        console.log("Fail")
+      })
+  }
+
+  $("#filtro").on('keyup', function() {
+    var value = $(this).val();
+
+    if (value != "") {
+      buscar_datos(value);
+    } else {
+      buscar_datos();
+    }
+  });
+</script>
