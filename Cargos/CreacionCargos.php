@@ -239,7 +239,7 @@
                         ?>
                         <div class="formulario__grupo" id="grupo__departamento">
                           <label for="departamento" class="formulario__label">Departamentos</label>
-                          <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos">
+                          <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" value="" required>
                             <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
                               <option value="none" selected disabled hidden>Selcciona un departamento</option>
                               <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>
