@@ -10,16 +10,16 @@ Begin
     DECLARE i int default 1;
     DECLARE j int default 0;
     DECLARE ID int default 0;
-    DECLARE IngresoAnual DEC (8,2) default 0.0;
-    DECLARE ihss DEC (8,2) default 0.0;
-    DECLARE rap DEC (8,2) default 0.0;
-    DECLARE salary DEC (8,2) default 0.0;
-    DECLARE netSalary DEC (8,2) default 0.0;
-    DECLARE isr DEC (8,2) default 0.0;
-    DECLARE dedTot DEC (8,2) default 0.0;
-    DECLARE bonTot DEC (8,2) default 0.0;
-    DECLARE catorciavo DEC (8,2) default 0.0;
-    DECLARE treciavo DEC (8,2) default 0.0;
+    DECLARE IngresoAnual DEC (10,2) default 0.0;
+    DECLARE ihss DEC (10,2) default 0.0;
+    DECLARE rap DEC (10,2) default 0.0;
+    DECLARE salary DEC (10,2) default 0.0;
+    DECLARE netSalary DEC (10,2) default 0.0;
+    DECLARE isr DEC (10,2) default 0.0;
+    DECLARE dedTot DEC (10,2) default 0.0;
+    DECLARE bonTot DEC (10,2) default 0.0;
+    DECLARE catorciavo DEC (10,2) default 0.0;
+    DECLARE treciavo DEC (10,2) default 0.0;
     DECLARE FechaIngreso int default 0;
     DECLARE FechaPlanilla int default 0;
     
