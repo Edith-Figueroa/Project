@@ -15,7 +15,7 @@ Telefono,FechaNacimiento,
 if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
 if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo
 FROM empleados
-WHERE Estados_idEstado = 1';
+WHERE Estados_idEstado = 1 and Empresas_idEmpresas = ' . $Empresa . '';
 
 if (isset($_POST['sql'])) {
     $sql = $_POST['sql'];
@@ -28,7 +28,8 @@ if (isset($_POST['sql'])) {
     if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
     if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo
     FROM empleados
-    WHERE idEmpleados LIKE "%' . $sql . '%" or 
+    WHERE Estados_idEstado = 1 and  Empresas_idEmpresas = ' . $Empresa . ' and
+    idEmpleados LIKE "%' . $sql . '%" or 
     Cedula like "%' . $sql . '%" or
     concat(PrimerNombre," ",PrimerApellido) LIKE "%' . $sql . '%";';
 }
