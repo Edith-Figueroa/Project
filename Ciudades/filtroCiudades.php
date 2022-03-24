@@ -3,6 +3,8 @@ include '../SqlTools/database.php';
 
 $Usuario = $_GET['idUsuario'];
 $Empresa = $_GET['Empresas_idEmpresas'];
+if (isset($_GET['state']))
+    $state = $_GET['state'];
 
 $db = new database();
 $salida = "";
@@ -16,6 +18,13 @@ if (isset($_POST['sql'])) {
     FROM ciudades
     WHERE idCiudades LIKE "%' . $sql . '%" or 
     DescripcionCiudad like "%' . $sql . '%";';
+}
+
+if (isset($_POST['point'])) {
+    $sql = $_POST['point'];
+    $query = 'SELECT idCiudades, DescripcionCiudad, Estados_idEstado
+    FROM ciudades
+    WHERE Estados_idEstado = ' . $sql . ';';
 }
 
 $db->specialSelect($query);
@@ -40,6 +49,25 @@ if ($table->num_rows > 0) {
     </tfoot>';
 
     $salida .= '<tbody>';
+
+    if (isset($_POST['point']) && $_POST['point'] == 2) {
+        while ($fila = mysqli_fetch_assoc($table)) {
+            $salida .= '
+                <tr>
+                    <td>' . $fila['idCiudades'] . '</td>
+                    <td>' . $fila['DescripcionCiudad'] . '</td>
+                    <td>
+                    <a href="SQLRead_Ciudades.php?idCiudades=' . $fila['idCiudades'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                    </td>
+                    <td>
+                    <a href="ModificacionCiudadesphp?idCiudades=' . $fila['idCiudades'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                    </td>
+                    <td>
+                    <a href="SQLInactive_Ciudades.php?idCiudades=' . $fila['idCiudades'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
+                    </td>
+                </tr>';
+        }
+    }
 
     while ($fila = mysqli_fetch_assoc($table)) {
         $salida .= '

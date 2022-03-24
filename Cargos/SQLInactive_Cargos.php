@@ -1,26 +1,30 @@
 <?php
-    $Usuario = $_GET['idUsuario'];
-    $Empresa = $_GET['Empresas_idEmpresas'];
-    
-    include '../SqlTools/database.php';
+$Usuario = $_GET['idUsuario'];
+$Empresa = $_GET['Empresas_idEmpresas'];
+if (isset($_GET['state']))
+    $Estados_idEstado = $_GET['state'];
+else
+    $Estados_idEstado = 2;
 
-    $id = $_GET['idCargo'];
+include '../SqlTools/database.php';
 
-    $del = new database();
-    $del->select('cargos','*', "idCargo='$id'");
-    $result=$del->sql;
+$id = $_GET['idCargo'];
 
-    $data = mysqli_fetch_assoc($result);
+$del = new database();
+$del->select('cargos', '*', "idCargo='$id'");
+$result = $del->sql;
 
-    $DescripcionCargo=$data['DescripcionCargo'];
-    $Salario = $data['Salario'];
-    $Departamentos_idDepartamentos = $data['Departamentos_idDepartamentos'];
-    $Estados_idEstado= 2;
+$data = mysqli_fetch_assoc($result);
 
-    $del->update('cargos', "idCargo = '$id'", ['DescripcionCargo'=>$DescripcionCargo,'Salario'=>$Salario,
-    'Departamentos_idDepartamentos'=>$Departamentos_idDepartamentos, 'Estados_idEstado'=>$Estados_idEstado]);
+$DescripcionCargo = $data['DescripcionCargo'];
+$Salario = $data['Salario'];
+$Departamentos_idDepartamentos = $data['Departamentos_idDepartamentos'];
 
-    if ($del == true) {
-        header("location: TablaCargos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
-    }
-?>
+$del->update('cargos', "idCargo = '$id'", [
+    'DescripcionCargo' => $DescripcionCargo, 'Salario' => $Salario,
+    'Departamentos_idDepartamentos' => $Departamentos_idDepartamentos, 'Estados_idEstado' => $Estados_idEstado
+]);
+
+if ($del == true) {
+    header("location: TablaCargos.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
+}

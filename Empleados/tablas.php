@@ -208,7 +208,6 @@
         <div class="container-fluid">
           <!-- Encabezado de página -->
           <h1 class="h3 mb-2 text-gray-800">Empleados</h1>
-          <!-- Tablas-->
           <div class="card shadow mb-4">
             <!--Estado-->
             <div class="formulario__grupo" id="grupo__direccion">
@@ -218,6 +217,7 @@
                 <option value="2">Inactivos</option>
               </select>
             </div>
+            <!-- Tablas-->
             <div class="table-body">
               <div class="table-responsive" id="dataTable">
                 <table class="table table-bordered" id="TableInfo" width="100%" cellspacing="0">
@@ -312,16 +312,6 @@
       })
   }
 
-  $("#filtro").on('keyup', function() {
-    var value = $(this).val();
-
-    if (value != "") {
-      buscar_datos(value);
-    } else {
-      buscar_datos();
-    }
-  });
-
   function buscar_estado(point) {
     $.ajax({
         type: "POST",
@@ -338,6 +328,16 @@
         console.log("Fail")
       })
   }
+
+  $("#filtro").on('keyup', function() {
+    var value = $(this).val();
+
+    if (value != "") {
+      buscar_datos(value);
+    } else {
+      buscar_datos();
+    }
+  });
 
   $("#estado_Empleado").on("change", function() {
     var value = $(this).val();
