@@ -1,6 +1,6 @@
-1) Filtro de Busquedad con input text
-2) Filtro de Busquedad con de activos e inactivos
+1) Filtro de Busquedad con input text (x)
+2) Filtro de Busquedad con de activos e inactivos (x)
 3) Poner opcion de agregar dato como departamentos en los combobox
-4) Validaciones
+4) Validaciones(x)
 5) Ver datos de la planilla empleado por empleado
 6) investigar como mandar correos desde php

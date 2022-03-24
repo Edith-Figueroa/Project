@@ -79,7 +79,7 @@
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Registro</a>
+            <a class="collapse-item" href="../Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Registro</a>
             <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear Planilla</a>
           </div>
         </div>
@@ -271,7 +271,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="../login.php">Cerrar Sesion</a>
+          <a class="btn btn-primary" href="../loginForm.php">Cerrar Sesion</a>
         </div>
       </div>
     </div>
