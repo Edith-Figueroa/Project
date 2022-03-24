@@ -226,7 +226,7 @@
                       $row = mysqli_fetch_assoc($result);
                       ?>
                       <!--Inicio de Form-->
-                      <form class="formulario" id="formulario" action="Update_Employee.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" method="post">
+                      <form class="formulario" id="formulario" action="Update_Employee.php" method="post">
                         <input type="hidden" name="idEmpleados" value="<?php echo $id; ?>">
                         <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                         <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
@@ -327,7 +327,7 @@
                                                                                                                                           } ?>" required>
 
                           </div>
-                          <p class="formulario__input-error">La direccion tiene que ser de 3 a 20 digitos y solo puede contener
+                          <p class="formulario__input-error">La direccion tiene que ser de 3 a 40 digitos y solo puede contener
                             letras.</p>
                         </div>
                         <!--Grupo: Departamento-->

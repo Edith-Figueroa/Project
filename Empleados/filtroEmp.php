@@ -3,6 +3,8 @@ include '../SqlTools/database.php';
 
 $Usuario = $_GET['idUsuario'];
 $Empresa = $_GET['Empresas_idEmpresas'];
+if (isset($_GET['state']))
+    $state = $_GET['state'];
 
 $db = new database();
 $salida = "";
@@ -32,6 +34,20 @@ if (isset($_POST['sql'])) {
     idEmpleados LIKE "%' . $sql . '%" or 
     Cedula like "%' . $sql . '%" or
     concat(PrimerNombre," ",PrimerApellido) LIKE "%' . $sql . '%";';
+}
+
+if (isset($_POST['point'])) {
+    $sql = $_POST['point'];
+    $query = 'SELECT idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
+    PrimerApellido, SegundoApellido, Telefono, Direccion,
+    FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
+    Cargos_idCargos, Estados_idEstado, Correo,
+    Ciudades_idCiudades, Correo, concat(PrimerNombre," ",PrimerApellido) as Nombre,
+    Telefono,FechaNacimiento,
+    if(Month(now()) - Month(FechaNacimiento)>0, YEAR(now()) - YEAR(FechaNacimiento)+1, YEAR(now()) - YEAR(FechaNacimiento)) AS EDAD,
+    if(Sexos_idSexo = 1, "Masculino", "Femenino") as Sexo
+    FROM empleados
+    WHERE Estados_idEstado = ' . $sql . ' and  Empresas_idEmpresas = ' . $Empresa . ';';
 }
 
 $db->specialSelect($query);
@@ -65,6 +81,30 @@ if ($table->num_rows > 0) {
     </tfoot>';
 
     $salida .= '<tbody>';
+
+    if (isset($_POST['point']) && $_POST['point'] == 2) {
+        while ($fila = mysqli_fetch_assoc($table)) {
+            $salida .= '
+                <tr>
+                    <td>' . $fila['idEmpleados'] . '</td>
+                    <td>' . $fila['Cedula'] . '</td>
+                    <td>' . $fila['Nombre'] . '</td>
+                    <td>' . $fila['Telefono'] . '</td>
+                    <td>' . $fila['FechaNacimiento'] . '</td>
+                    <td>' . $fila['EDAD'] . '</td>
+                    <td>' . $fila['Sexo'] . '</td>
+                    <td>
+                    <a href="readEmployee.php?idEmpleados=' . $fila['idEmpleados'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                    </td>
+                    <td>
+                    <a href="modificarEmpleado.php?idEmpleados=' . $fila['idEmpleados'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                    </td>
+                    <td>
+                    <a href="inactivate.php?idEmpleados=' . $fila['idEmpleados'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
+                    </td>
+                </tr>';
+        }
+    }
 
     while ($fila = mysqli_fetch_assoc($table)) {
         $salida .= '

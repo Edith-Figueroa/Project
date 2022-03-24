@@ -149,10 +149,7 @@
           <!-- Búsqueda en la barra superior -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-
               <input type="text" class="form-control bg-light border-0 small" placeholder=" Buscar..." aria-label="Search" aria-describedby="basic-addon2" name="filtro" id="filtro">
-
-              <input type="text" class="form-control bg-light border-0 small" placeholder="..." aria-label="Search" aria-describedby="basic-addon2" name="filtro" id="filtro">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -209,14 +206,18 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-
           <!-- Encabezado de página -->
           <h1 class="h3 mb-2 text-gray-800">Empleados</h1>
-
-
           <!-- Tablas-->
           <div class="card shadow mb-4">
-
+            <!--Estado-->
+            <div class="formulario__grupo" id="grupo__direccion">
+              <label for="direccion" class="formulario__label">Estado</label>
+              <select class="custom-select form-control" name="estado_Empleado" id="estado_Empleado">
+                <option value="1" selected>Activos</option>
+                <option value="2">Inactivos</option>
+              </select>
+            </div>
             <div class="table-body">
               <div class="table-responsive" id="dataTable">
                 <table class="table table-bordered" id="TableInfo" width="100%" cellspacing="0">
@@ -320,4 +321,28 @@
       buscar_datos();
     }
   });
+
+  function buscar_estado(point) {
+    $.ajax({
+        type: "POST",
+        url: "filtroEmp.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&state=" + state + "",
+        data: {
+          point: point
+        },
+        dataType: "html"
+      })
+      .done(function(ans) {
+        $("#TableInfo").html(ans);
+      })
+      .fail(function() {
+        console.log("Fail")
+      })
+  }
+
+  $("#estado_Empleado").on("change", function() {
+    var value = $(this).val();
+    buscar_estado(value);
+  });
+
+  var state = $("#estado_Empleado").val();
 </script>
