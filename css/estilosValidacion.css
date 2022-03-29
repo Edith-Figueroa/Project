@@ -110,10 +110,6 @@
   display: block;
 }
 /* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
-  color: #1ed12d;
-  opacity: 1;
-}
 
 .formulario__grupo-incorrecto .formulario__label {
   color: #bb2929;
@@ -125,18 +121,4 @@
 
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929;
-}
-/* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-widht: 800px) {
-  .formulario {
-    grid-template-columns: 1fr;
-  }
-  .formulario__grupo-terminos,
-  .formulario__mensaje,
-  .formulario__grupo-btn-enviar {
-    grid-column: span 1;
-  }
-  .formulario__btn {
-    width: 50%;
-  }
 }
