@@ -162,7 +162,16 @@
               </div>
             </div>
           </form>
+          <!--Estado-->
+          <form class="d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="formulario__grupo" id="grupo__direccion">
+              <select class="custom-select form-control" name="estado_Cargos" id="estado_Cargos">
+                <option value="1" selected>Activos</option>
+                <option value="2">Inactivos</option>
+              </select>
+            </div>
 
+          </form>
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -213,15 +222,6 @@
           <!-- Encabezado de página -->
           <h1 class="h3 mb-2 text-gray-800">Cargos</h1>
           <div class="card shadow mb-4">
-
-            <!--Estado-->
-            <div class="formulario__grupo" id="grupo__direccion">
-              <label for="direccion" class="formulario__label">Estado</label>
-              <select class="custom-select form-control" name="estado_Cargos" id="estado_Cargos">
-                <option value="1" selected>Activos</option>
-                <option value="2">Inactivos</option>
-              </select>
-            </div>
 
             <!-- Tablas-->
             <div class="table-body">
