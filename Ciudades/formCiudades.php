@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <input type="" name="DescripcionCiudad" class="form-control form-control-user"
                     aria-describedby="emailHelp" placeholder="" 
-                    value="<?php if(isset($row)) { echo $row['DescripcionCiudad']; } ?>" required>
+                    value="<?php if(isset($row)) { echo $row['DescripcionCiudad']; } ?>" required readonly>
                 </div>
             </div>  
         </div>

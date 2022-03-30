@@ -1,11 +1,13 @@
 const formulario = document.getElementById("formulario"); //Accedemos al formulario
 const input = document.querySelectorAll("#formulario input"); //Almacenamos los inputs en una variable
+const select = document.querySelectorAll("#formulario select");
+const date = document.querySelectorAll("#formulario date");
 
 const expresiones = {
-  nombre: /^[a-zA-ZÀ-ÿ\s]{3,10}$/,
-  apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+  nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/,
+  apellido: /^[a-zA-ZÀ-ÿ\s]{1,15}$/,
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{8,8}$/, //
+  telefono: /^[2389]+\d{1,8}$/, //
   identidad: /^\d{13,13}$/,
   direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{1,50}$/,
   cuentaBan: /^\d{8,15}$/,
@@ -27,7 +29,7 @@ const validarFormulario = (e) => {
     case "PrimerApellido":
       validarCampo(expresiones.apellido, e.target, "primerApellido");
       break;
-      y;
+
     case "SegundoApellido":
       validarCampo(expresiones.apellido, e.target, "segundoApellido");
       break;
@@ -41,7 +43,7 @@ const validarFormulario = (e) => {
       break;
 
     case "Direccion":
-      validarCampo(expresiones.direccion, e.target, "direccion");
+      validarCampo(expresiones.direccion, e.target, "Direccion");
       break;
 
     case "CuentaBancaria":
@@ -67,6 +69,26 @@ const validarFormulario = (e) => {
     case "DescripcionDepto":
       validarCampo(expresiones.DescripcionDepto, e.target, "DescripcionDepto");
       break;
+
+    case "Departamentos_idDepartamentos":
+      validarSelect("Departamentos_idDepartamentos");
+      break;
+
+    case "Ciudades_idCiudades":
+      validarSelect("Ciudades_idCiudades");
+      break;
+
+    case "Cargos_idCargos":
+      validarSelect("Cargos_idCargos");
+      break;
+
+    case "FechaNacimiento":
+      validarFecha("FechaNacimiento");
+      break;
+
+    case "Departamentos_idDepartamentos":
+      validarSelect("Departamentos_idDepartamentos");
+      break;
   }
 };
 const validarCampo = (expresion, input, campo) => {
@@ -74,6 +96,9 @@ const validarCampo = (expresion, input, campo) => {
     document
       .getElementById(`grupo__${campo}`)
       .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${campo} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
   } else {
     document
       .getElementById(`grupo__${campo}`)
@@ -84,9 +109,55 @@ const validarCampo = (expresion, input, campo) => {
   }
 };
 
+const validarSelect = (select) => {
+  var seleccion = document.getElementById(`${select}`);
+  if (seleccion.value == 0 || seleccion == "") {
+    document
+      .getElementById(`grupo__${select}`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${select} .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+  } else {
+    document
+      .getElementById(`grupo__${select}`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${select} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
+  }
+};
+
+const validarFecha = (date) => {
+  var fecha = document.getElementById(`${date}`);
+  if (fecha == "") {
+    document
+      .getElementById(`grupo__${date}`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${date} .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+  } else {
+    document
+      .getElementById(`grupo__${date}`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`grupo__${date} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
+  }
+};
+
 input.forEach((input) => {
   input.addEventListener("keyup", validarFormulario); //Valida cada tecla apretada
   input.addEventListener("blur", validarFormulario);
+});
+
+select.forEach((select) => {
+  select.addEventListener("blur", validarFormulario);
+});
+
+date.forEach((date) => {
+  date.addEventListener("blur", validarFormulario);
 });
 
 function soloLetras(e) {

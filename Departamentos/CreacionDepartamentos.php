@@ -215,11 +215,9 @@
                         <div class="formulario__grupo" id="grupo__DescripcionDepto">
                           <label for="DescripcionDepto" class="formulario__label">Nombre del Departamento</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionDepto" id="DescripcionDepto" placeholder="Nombre del Departamento" value="<?php if (isset($row)) {
-                                                                                                                                                                      echo $row['DescripcionDepto'];
-                                                                                                                                                                    } ?>" required>
+                            <input type="text" class="formulario__input" name="DescripcionDepto" id="DescripcionDepto" onkeypress="return soloLetras(event)" placeholder="Nombre del Departamento" value="<?php if (isset($row)) {echo $row['DescripcionDepto'];} ?>" required maxlength="30">
                           </div>
-                          <p class="formulario__input-error">La descripcion del nombre del departamento solo acepta letras.</p>
+                          <p class="formulario__input-error">La descripcion del nombre del departamento solo acepta letras y el maximo son 30.</p>
                         </div>
                         <!--Grupo: Estado-->
                         <div class="formulario__grupo" id="grupo__estado">
@@ -237,7 +235,7 @@
                         </div>
                         <!--Submit-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" onclick="return Confirmation()">
+                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" >
                         </div>
                         <!--Limpiar-->
                         <div class="formulario__grupo" id="grupo__departamento">
