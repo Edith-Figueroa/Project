@@ -226,19 +226,15 @@
                         <div class="formulario__grupo" id="grupo__DescripcionCargo">
                           <label for="DescripcionCargo" class="formulario__label">Nombre del Cargo</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {
-                                                                                                                                                              echo $row['DescripcionCargo'];
-                                                                                                                                                            } ?>" required>
+                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" onkeypress="return soloLetras(event)" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {echo $row['DescripcionCargo'];} ?>" required maxlength="15">
                           </div>
-                          <p class="formulario__input-error">La descripcion de cargo solo acepta letras.</p>
+                          <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 15.</p>
                         </div>
                         <!--Grupo: Salario-->
                         <div class="formulario__grupo" id="grupo__Salario">
                           <label for="Salario" class="formulario__label">Salario</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="Salario" id="Salario" placeholder="Salario" value="<?php if (isset($row)) {
-                                                                                                                                    echo $row['Salario'];
-                                                                                                                                  } ?>" required>
+                            <input type="text" class="formulario__input" name="Salario" id="Salario" onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {echo $row['Salario'];} ?>" required maxlength="6">
                           </div>
                           <p class="formulario__input-error">El salario solo acepta numeros.</p>
                         </div>
@@ -248,11 +244,12 @@
                         $grid->select('departamentos', '*');
                         $table = $grid->sql;
                         ?>
-                        <div class="formulario__grupo" id="grupo__departamento">
+                        <div class="formulario__grupo" id="grupo__Departamentos_idDepartamentos">
                           <label for="departamento" class="formulario__label">Departamentos</label>
-                          <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos">
+                          <select class="formulario__input" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" required>
+                            <option value="" >Selcciona un departamento</option>
                             <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
-                              <option value="none" selected disabled hidden>Selcciona un departamento</option>
+                              <!-- <option value="none" selected disabled hidden>Selcciona un departamento</option> -->
                               <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>
                             <?php } ?>
                           </select>
@@ -273,7 +270,7 @@
                         </div>
                         <!--Submit-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Confirmar" onclick="return Confirmation()">
+                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Confirmar">
                         </div>
                         <!--Limpiar-->
                         <div class="formulario__grupo" id="grupo__departamento">
