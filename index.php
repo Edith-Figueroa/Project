@@ -53,8 +53,6 @@
       <!-- Divisor -->
       <hr class="sidebar-divider">
 
-
-
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true" aria-controls="collapseEmpleados">
