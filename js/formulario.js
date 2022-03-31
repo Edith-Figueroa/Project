@@ -30,10 +30,6 @@ const validarFormulario = (e) => {
       validarCampo(expresiones.apellido, e.target, "primerApellido");
       break;
 
-    case "SegundoApellido":
-      validarCampo(expresiones.apellido, e.target, "segundoApellido");
-      break;
-
     case "Correo":
       validarCampo(expresiones.correo, e.target, "correo");
       break;
@@ -130,7 +126,7 @@ const validarSelect = (select) => {
 
 const validarFecha = (date) => {
   var fecha = document.getElementById(`${date}`);
-  if (fecha == "") {
+  if (fecha != "FechaNacimiento") {
     document
       .getElementById(`grupo__${date}`)
       .classList.add("formulario__grupo-incorrecto");
