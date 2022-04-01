@@ -227,11 +227,11 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="inicio.php">Inicio</a></li>
+                                    <li><a href="../index.php">Inicio</a></li>
                                     <li><a href="#">Contenido</a>
                                         <ul class="dropdown">
 
-                                            <li><a href="inicio.php">Inicio</a></li>
+                                            <li><a href="../index.php">Inicio</a></li>
                                             <li><a href="about-us.php">¿Quienes Somos?</a></li>
                                             <li><a href="COPAP.php"></a></li>
                                             <li><a href="Modulos.php">Nuestro Sistema</a></li>

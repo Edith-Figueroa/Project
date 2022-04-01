@@ -2,261 +2,640 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Title -->
+    <title>CONTROL DE PLANILLA DE PAGO COPAP</title>
+    <link rel="icon" href="img/bg-img/logo.png">
 
-  <title>Planilla de Pagos</title>
-  <!-- FUENTES-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Logo -->
+    <link rel="icon" href="">
 
-  <!-- CSS-->
-  <link href="css/estilo.css" rel="stylesheet">
-  <link rel="icon" href="img/Moneda.png">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="menu/style.css">
+    <link rel="stylesheet" href="menu/styleT.css">
+
 </head>
 
-<body id="page-top">
-  <?php $Usuario = $_GET['idUsuario'];
-  $Empresa = $_GET['Empresas_idEmpresas'];
-
-  include 'SqlTools/database.php';
-  $auxiliar = new database();
-  $auxiliar->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
-  $nombre = $auxiliar->sql;
-  $name = mysqli_fetch_assoc($nombre); ?>
-
-  <!-- Envoltura de páginar -->
-  <div id="wrapper">
-
-    <!-- barra lateral -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-        <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><rect x="9" y="3" width="6" height="4" rx="2" /><path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M12 17v1m0 -8v1" /></svg></i>
-        <div class="sidebar-brand-text mx-3">Planilla de Pago</div>
-      </a>
-
-      <!-- Divisor -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Menu-->
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg> Menu</span></a>
-      </li>
-
-      <!-- Divisor -->
-      <hr class="sidebar-divider">
-
-      <!-- Nav Item -Empleados Cerrar menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true" aria-controls="collapseEmpleados">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="9" cy="7" r="4" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg> Empleados</span>
-        </a>
-        <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="9" y1="14" x2="15" y2="14" /></svg> Crear Empleado</a>
-            <a class="collapse-item" href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Empleados</a>
-          </div>
-        </div>
-      </li>
-      <!-- Nav Item - Planillas Plegar Menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas" aria-expanded="true" aria-controls="collapsePlanillas">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-list" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><rect x="9" y="3" width="6" height="4" rx="2" /><line x1="9" y1="12" x2="9.01" y2="12" /><line x1="13" y1="12" x2="15" y2="12" /><line x1="9" y1="16" x2="9.01" y2="16" /><line x1="13" y1="16" x2="15" y2="16" /></svg> Planillas</span>
-        </a>
-        <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="17" cy="17" r="4" /><path d="M17 13v4h4" /><path d="M12 3v4a1 1 0 0 0 1 1h4" /><path d="M11.5 21h-6.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v2m0 3v4" /></svg> Registro</a>
-            
-            <a class="collapse-item" href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="9" y1="14" x2="15" y2="14" /></svg> Crear Planilla</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Cargos Plegar Menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos" aria-expanded="true" aria-controls="collapseCargos">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" /><line x1="14.5" y1="5.5" x2="18.5" y2="9.5" /><polyline points="12 8 7 3 3 7 8 12" /><line x1="7" y1="8" x2="5.5" y2="9.5" /><polyline points="16 12 21 17 17 21 12 16" /><line x1="16" y1="17" x2="14.5" y2="18.5" /></svg> Cargos</span>
-        </a>
-        <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Cargos</a>
-            <a class="collapse-item" href="Cargos/CreacionCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="9" y1="14" x2="15" y2="14" /></svg> Crear Cargo Nuevo</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Ciudades Plegar Menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades" aria-expanded="true" aria-controls="collapseCiudades">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="3" y1="21" x2="21" y2="21" /><path d="M5 21v-14l8 -4v18" /><path d="M19 21v-10l-6 -4" /><line x1="9" y1="9" x2="9" y2="9.01" /><line x1="9" y1="12" x2="9" y2="12.01" /><line x1="9" y1="15" x2="9" y2="15.01" /><line x1="9" y1="18" x2="9" y2="18.01" /></svg> Ciudades</span>
-        </a>
-        <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Ciudades</a>
-            <a class="collapse-item" href="Ciudades/CreacionCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="9" y1="14" x2="15" y2="14" /></svg> Crear Ciudad Nueva</a>
-          </div>
-      </li>
-
-      <!-- Nav Item - Departamentos Plegar Menú -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos" aria-expanded="true" aria-controls="collapseDepartamentos">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="3" y1="21" x2="21" y2="21" /><line x1="9" y1="8" x2="10" y2="8" /><line x1="9" y1="12" x2="10" y2="12" /><line x1="9" y1="16" x2="10" y2="16" /><line x1="14" y1="8" x2="15" y2="8" /><line x1="14" y1="12" x2="15" y2="12" /><line x1="14" y1="16" x2="15" y2="16" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /></svg> Departamentos</span>
-        </a>
-        <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Departamentos</a>
-            <a class="collapse-item" href="Departamentos/CreacionDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="9" y1="14" x2="15" y2="14" /></svg> Crear Departamento Nuevo</a>
-          </div>
-      </li>
-
-
-      <!-- Barra lateral cerrar (Barra lateral) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
-    </ul>
-    <!-- Fin de la barra lateral -->
-
-
-    <!-- Envoltorio de contenido -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main contenido -->
-      <div id="content">
-
-        <!-- Barra superior -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Alternar barra lateral (barra superior) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
-
-
-          <!-- Barra superior Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-
-            </li>
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - Información del usuario -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
-                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-              </a>
-              <!-- Desplegable - Información del usuario -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Perfil
-                </a>
-                <a class="dropdown-item" href="nuevoUsuario.php">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Crear usuario
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Actividad
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Cerrar Sesion
-                </a>
-              </div>
-            </li>
-
-          </ul>
-
-        </nav>
-        <!-- Fin de la barra superior -->
-
-        <!-- Illustrations -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">En mantenimiento aun...</h6>
-          </div>
-          <div class="card-body">
-            <div class="text-center">
-              <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;" src="img/mantenimiento-web.png" alt="...">
-            </div>
-            <p>Aun seguimos trabajando en el sistema.</p>
-          </div>
-        </div>
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Bandersnatch 2022</span>
-            </div>
-          </div>
-        </footer>
-        <!-- Fin del Footer -->
-
-      </div>
-      <!-- Envoltorio de fin de contenido -->
-
-    </div>
-    <!-- Envoltorio de fin de página -->
-
-    <!-- Desplácese al botón superior-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Cierre de sesión modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión
-            actual.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="loginForm.php">Cerrar Sesion</a>
-          </div>
-        </div>
-      </div>
+<body>
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
     </div>
 
-    <!-- JavaScript básico de Bootstrap-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ##### Encabezado ##### -->
+    <header class="header-area">
 
-    <!-- Complemento principal de JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Clase: Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="index.php"><img src="img/bg-img/logo.png" alt=""></a>
+                            </div>
+                            <div class="login-content">
+                                <a href="#"></a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
 
-    <!-- Scripts personalizados para todas las páginas-->
-    <script src="js/sb-admin-2.min.js"></script>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Complementos de nivel de página -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Navbar -->
+        <div class="academy-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="academyNav">
 
-    <!-- Scripts personalizados a nivel de página -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
 
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="#">Contenido</a>
+                                        <ul class="dropdown">
+
+                                            <li><a href="index.php">Inicio</a></li>
+                                            <li><a href="menu/about-us.php">¿Quienes Somos?</a></li>
+                                            <li><a href="menu/COPAP.php"></a></li>
+                                            <li><a href="menu/Modulos.php">Nuestro Sistema</a></li>
+                                            <li><a href="menu/contact.php">Contactanos</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Modulos o Servicios</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <ul class="single-mega cn-col-4">
+                                                    <li><a href="#">Planillas</a></li>
+                                                    <li><a href="#"> Empleados </a></li>
+                                                    <li><a href="#"> </a></li>
+
+
+
+                                                </ul>
+
+                                            </ul>
+                                            <div class="single-mega cn-col-4">
+                                                <img src="img/bg-img/modulos.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="menu/about-us.php">Sobre Nosotros</a></li>
+                                    <li><a href="menu/contact.php">Contactanos</a></li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <!-- Calling Info -->
+                        <div class="calling-info">
+                            <div class="call-center">
+                                <a href="Login/loginform.php"><i class="icon-house"></i> <span>INICIAR SESION</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <br> </br>
+    <!-- ##### slider ##### -->
+    <section class="hero-area">
+
+
+        <!-- ##### Hero Area Start ##### -->
+        <section class="hero-area">
+            <div class="hero-slides owl-carousel">
+
+                <!-- Single Hero Slide -->
+                <div class="single-hero-slide bg-img" style="background-image: url(../img/bg-img/control5.jpg);">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12">
+                                <div class="hero-slides-content">
+                                    <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de pago</h4>
+                                    <h2 data-animation="fadeInUp" data-delay="400ms">BIENVENIDO A <br>COPAP</h2>
+                                    <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Hero Slide -->
+                <div class="single-hero-slide bg-img" style="background-image: url(../img/bg-img/control1.jpg);">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12">
+                                <div class="hero-slides-content">
+                                    <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de pago</h4>
+                                    <h2 data-animation="fadeInUp" data-delay="400ms">BIENVENIDO A <br>COPAP</h2>
+                                    <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ##### Hero Area End ##### -->
+
+        <!-- ##### PRESENTACION DE LA EMPRESA##### -->
+        <div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="features-content">
+                            <div class="row no-gutters">
+                                <!-- Single Top Features -->
+                                <div class="col-12 col-md-4">
+                                    <div class="single-top-features d-flex align-items-center justify-content-center">
+                                        <i class="icon-id-card"></i>
+                                        <h5>CONTROL DE PLANLLAS DE PAGO</h5>
+                                    </div>
+                                </div>
+                                <!-- Single Top Features -->
+                                <div class="col-12 col-md-4">
+                                    <div class="single-top-features d-flex align-items-center justify-content-center">
+                                        <i class="icon-assistance"></i>
+                                        <h5>CONTROL DE EMPLEADOS</h5>
+                                    </div>
+                                </div>
+                                <!-- Single Top Features -->
+                                <div class="col-12 col-md-4">
+                                    <div class="single-top-features d-flex align-items-center justify-content-center">
+                                        <i class="icon-worldwide-1"></i>
+                                        <h5>UNA CONTABLDAD TRANSPARENTE</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ##### FIN PRESENTACION DE LA EMPRESA ##### -->
+
+        <!-- ##### SERVICIOS##### -->
+        <div class="academy-courses-area section-padding-100-0">
+            <div class="container">
+                <div class="row">
+                    <!-- DESCRIPCON DE SERVICOS -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="course-icon">
+                                <i class="icon-id-card"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>CREACION DE PLANLLAS</h4>
+                                <p>Crea planillas de pago que te prporcionaran un control adecuado de pagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="course-icon">
+                                <i class="icon-woman"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>CONTROL DE EMPLEADOS</h4>
+                                <p>TE PRROPORCIONAMOS LAS HERRAMIENTAS PARA QUE PUEDAS CONOCER Y MANEJAR MEJOR A TU PERSONAL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+                            <div class="course-icon">
+                                <i class="icon-assistance"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>INTEGRIDAD DE DATOS</h4>
+                                <p>TU PRIVACIDAD Y BIENESTAR SON NUESTRA PRIORIDAD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="600ms">
+                            <div class="course-icon">
+                                <i class="icon-info"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>ACCESO FACIL, RAPIDO PERO TAMBIEN SEGURO</h4>
+                                <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rapida y confiable</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="700ms">
+                            <div class="course-icon">
+                                <i class="icon-responsive"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>RESPALDAMOS TU INFORMACION</h4>
+                                <p>Todos tus registros son debidamente respaldados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="800ms">
+                            <div class="course-icon">
+                                <i class="icon-customer-service"></i>
+                            </div>
+                            <div class="course-content">
+                                <h4>Atención las 24 horas</h4>
+                                <p>Te ofrecemos atención personalizada las 24 horas del dia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ##### FIN AREA DE SERVICIOS ##### -->
+
+        <!-- ##### CLIENTES SATISFECHOS ##### -->
+        <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(../img/bg-img/back.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
+                            <p>ALGUNOS DE NUESTROS CLIENTES</p>
+                            <p>ESTA ES LA OPINION DE ALGUNAS DE LAS EMPRESAS QUE HAN DEPOSITADO SU CONFIANZA EN NOSOTROS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- EMPRESAS -->
+                    <div class="col-12 col-md-6">
+                        <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                            <div class="testimonial-thumb">
+                                <img src="img/bg-img/l1.jpg" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h5>STANDART FRUT COMPANY HONDURAS</h5>
+                                <p>Gracias a COPAP logramos consolidar el manejo adecuando del pago de salario justo a nuestros empleados, llevando control del cumplimiento de sus horarios y de sus horas extra de trabajo</p>
+                                <h6><span>Valeria Vargas,</span> GERENTE DE PERSONAL</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
+                            <div class="testimonial-thumb">
+                                <img src="img/bg-img/l3.jpeg" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h5>D'ALE DETALLES</h5>
+                                <p>COPAP ha superado nuestras expectativas cubriendo las necesidades basicas de mi empresa, haciendo el manejo de la contabilidad sea mas eficiente</p>
+                                <h6><span>Belkis Navarro</span>Propietaria</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
+                            <div class="testimonial-thumb">
+                                <img src="img/bg-img/d.jpg" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h5>D&D COMPANY</h5>
+                                <p>Sin duda alguna COPAP ha hecho mucho mas facil y eficiente el manejo de nuestra compañia, es un aleado de trabajo que todas las medianas y grandes empresas deberian tener </p>
+                                <h6><span>Peaky Blinders</span>PROPIETARIO</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
+                            <div class="testimonial-thumb">
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
+                                        <a href="#" class="btn academy-btn">VER MAS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### FIN COMENTARIOS DE CLIENTES ##### -->
+
+                    <br> </br>
+                    <br> </br>
+
+                    <!-- ##### INVITACION ##### -->
+
+                    <div class="call-to-action-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                                        <h3>¿Que esperas para formar parte de COPAP? ¡NO LO PIENSES MAS!</h3>
+                                        <a href="#" class="btn academy-btn">VER MAS</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### INVITACION ##### -->
+
+                    <!-- ##### INFO  ##### -->
+                    <footer class="footer-area">
+                        <div class="main-footer-area section-padding-100-0">
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Footer Widget Area -->
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="footer-widget mb-100">
+                                            <div class="widget-title">
+                                                <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
+                                            </div>
+                                            <p>CONTROL DE PLANILAS DE PAGO COPAP</p>
+                                            <div class="footer-social-info">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-github"></i></a>
+                                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Footer Widget Area -->
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="footer-widget mb-100">
+                                            <div class="widget-title">
+                                                <h6>DESARROLLADORES</h6>
+                                            </div>
+                                            <nav>
+                                                <ul class="useful-links">
+                                                    <li><a href="#">EMERSON ZAPATA</a></li>
+                                                    <li><a href="#">DENIS GARCIA</a></li>
+                                                    <li><a href="#">DULCE SANCHEZ</a></li>
+                                                    <li><a href="#">ONAN AGUILERA</a></li>
+                                                    <li><a href="#">DIEGO MOLINA</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <!-- Footer Widget Area -->
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="footer-widget mb-100">
+                                            <div class="widget-title">
+
+                                            </div>
+                                            <div class="gallery-list d-flex justify-content-between flex-wrap">
+                                                <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
+                                                <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
+                                                <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
+                                                <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
+                                                <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
+                                                <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- contactos-->
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="footer-widget mb-100">
+                                            <div class="widget-title">
+                                                <h6>Contactanos</h6>
+                                            </div>
+                                            <div class="single-contact d-flex mb-30">
+                                                <i class="icon-placeholder"></i>
+                                                <p>Tegucigalpa,Honduras</p>
+                                            </div>
+                                            <div class="single-contact d-flex mb-30">
+                                                <i class="icon-telephone-1"></i>
+                                                <p>2446 6349</p>
+                                            </div>
+                                            <div class="single-contact d-flex">
+                                                <i class="icon-email"></i>
+                                                <p>copapoficial@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-footer-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>
+                                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                            Copyright &copy;<script>
+                                                document.write(new Date().getFullYear());
+                                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">COPAP</a>
+                                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- ##### contactos ##### -->
+
+                    <!-- #####  Javascript Script ##### -->
+                    <!-- jQuery-2.2.4 js -->
+                    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+                    <!-- Popper js -->
+                    <script src="js/bootstrap/popper.min.js"></script>
+                    <!-- Bootstrap js -->
+                    <script src="js/bootstrap/bootstrap.min.js"></script>
+                    <!-- All Plugins js -->
+                    <script src="js/plugins/plugins.js"></script>
+                    <!-- Active js -->
+                    <script src="js/active.js"></script>
 </body>
 
 </html>

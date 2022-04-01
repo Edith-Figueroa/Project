@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../menu/style.css">
     <title>Login</title>
-    <link rel="icon" href="img/bg-img/logo.png">
+    <link rel="icon" href="../img/bg-img/logo.png">
 </head>
 
 <body>
@@ -211,7 +211,7 @@
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li><a href="inicio.php">Inicio</a></li>
+                                        <li><a href="../index.php">Inicio</a></li>
                                         </li>
                                         <li><a href="#">Modulos o Servicios</a>
                                             <div class="megamenu">
@@ -230,8 +230,8 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li><a href="about-us.php">Sobre Nosotros</a></li>
-                                        <li><a href="contact.php">Contactanos</a></li>
+                                        <li><a href="../menu/about-us.php">Sobre Nosotros</a></li>
+                                        <li><a href="../menu/contact.php">Contactanos</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
@@ -267,11 +267,13 @@
                     <br></br>
                     <input name="submit" class="btn" type="submit" value="Iniciar Sesion ">
                     <br></br>
-                    <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
+                    <a class="small" href="../contraOlvidada.php">¿Has olvidado tu contraseña?</a>
                 </form>
             </div>
 
-            <img class="image-container" src=../img/img1.png" alt="">
+
+            <img class="image-container" src="../img/img1.png" alt="">
+
             <BR> </BR>
             <BR> </BR>
             <BR> </BR>
