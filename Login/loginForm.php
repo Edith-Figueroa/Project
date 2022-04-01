@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../menu/style.css">
     <title>Login</title>
-    <link rel="icon" href="img/bg-img/logo.png">
+    <link rel="icon" href="../img/bg-img/logo.png">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                         <div class="col-12 h-100">
                             <div class="header-content h-100 d-flex align-items-center justify-content-between">
                                 <div class="academy-logo">
-                                    <a href="inicio.php"><img src="img/bg-img/logo.png" alt=""></a>
+                                    <a href="inicio.php"><img src="../img/bg-img/logo.png" alt=""></a>
                                 </div>
                                 <div class="login-content">
                                     <a href="#"></a>
@@ -211,7 +211,7 @@
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li><a href="inicio.php">Inicio</a></li>
+                                        <li><a href="../index.php">Inicio</a></li>
                                         </li>
                                         <li><a href="#">Modulos o Servicios</a>
                                             <div class="megamenu">
@@ -226,12 +226,12 @@
                                                     </ul>
                                                 </ul>
                                                 <div class="single-mega cn-col-4">
-                                                    <img src="img/bg-img/modulos.jpg" alt="">
+                                                    <img src="../img/bg-img/modulos.jpg" alt="">
                                                 </div>
                                             </div>
                                         </li>
-                                        <li><a href="about-us.php">Sobre Nosotros</a></li>
-                                        <li><a href="contact.php">Contactanos</a></li>
+                                        <li><a href="../menu/about-us.php">Sobre Nosotros</a></li>
+                                        <li><a href="../menu/contact.php">Contactanos</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
@@ -258,8 +258,8 @@
 
                 <br> </br>
 
-                <form action="Login/validar.php" method="post" class="inputs-container">
-                    <img src="img/f.png">
+                <form action="validar.php" method="post" class="inputs-container">
+                    <img src="../img/f.png">
                     <br></br>
                     <input class="input" type="text" placeholder="Usuario" name="Usuario">
                     <br></br>
@@ -267,11 +267,11 @@
                     <br></br>
                     <input name="submit" class="btn" type="submit" value="Iniciar Sesion ">
                     <br></br>
-                    <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
+                    <a class="small" href="../contraOlvidada.php">¿Has olvidado tu contraseña?</a>
                 </form>
             </div>
 
-            <img class="image-container" src="img/img1.png" alt="">
+            <img class="image-container" src="../img/img1.png" alt="">
             <BR> </BR>
             <BR> </BR>
             <BR> </BR>
