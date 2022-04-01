@@ -9,13 +9,13 @@ const expresiones = {
   apellido: /^[a-zA-ZÀ-ÿ\s]{1,15}$/,
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
   telefono: /^[2389]+\d{1,8}$/, //
-  identidad: /^\d{13,13}$/,
+  identidad: /^[01]{1}[\d]{1}[02]{1}[012]{1}[12]{1}[09]{1}[\d]{7}$/,
   direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{1,50}$/,
   cuentaBan: /^\d{8,15}$/,
-  DescripcionCargo: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
+  DescripcionCargo: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
   Salario: /^\d+$/,
-  DescripcionCiudad: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
-  DescripcionDepto: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
+  DescripcionCiudad: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
+  DescripcionDepto: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
 };
 
 const validarFormulario = (e) => {
