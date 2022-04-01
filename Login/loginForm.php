@@ -273,7 +273,6 @@
 
 
             <img class="image-container" src="../img/img1.png" alt="">
-            <img class="image-container" src=../img/img1.png" alt="">
 
             <BR> </BR>
             <BR> </BR>
