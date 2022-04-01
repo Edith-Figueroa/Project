@@ -45,15 +45,6 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-        <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-            <rect x="9" y="3" width="6" height="4" rx="2" />
-            <path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
-            <path d="M12 17v1m0 -8v1" />
-          </svg></i>
-
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
           <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -312,7 +303,7 @@
                           <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" onkeypress="return soloLetras(event)" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {
                                                                                                                                                                                                     echo $row['DescripcionCargo'];
-                                                                                                                                                                                                  } ?>" required maxlength="30">
+                                                                                                                                                                                                  } ?>" required  minlength="5" maxlength="30">
                           </div>
                           <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 30.</p>
                         </div>
@@ -322,7 +313,7 @@
                           <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="Salario" id="Salario" onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {
                                                                                                                                                                             echo $row['Salario'];
-                                                                                                                                                                          } ?>" required maxlength="7">
+                                                                                                                                                                          } ?>" required  minlength="3" maxlength="7">
                           </div>
                           <p class="formulario__input-error">El salario solo acepta numeros.</p>
                         </div>
