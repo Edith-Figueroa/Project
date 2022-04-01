@@ -229,245 +229,297 @@
       </ul>
   </section>
   <!-- Fin de la barra lateral -->
+  <!-- Envoltorio de contenido -->
+  <div id="content-wrapper" class="d-flex flex-column">
 
-  <!--Intro Section-->
-  <div class="contex">
-    <section id="intro" class="clearfix">
-      <div class="container">
+    <!-- Main contenido -->
+    <div id="content">
 
-        <div class="intro-img">
-          <img src="img/imgi/intro-img.svg" alt="" class="img-fluid">
-        </div>
+      <!-- Barra superior -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-        <div class="intro-info">
-          <h2>Bienvenido a <br><span>COPAP</span><br>¿Listo para comenzar?</h2>
-          <div>
-            <a href="#portfolio" class="btn-get-started scrollto">Galeria</a>
-            <a href="#services" class="btn-services scrollto">Servicios</a>
+        <!-- Alternar barra lateral (barra superior) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          <i class="fa fa-bars"></i>
+        </button>
+
+
+        <!-- Barra superior Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+          <li class="nav-item dropdown no-arrow d-sm-none">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+
+          </li>
+
+          <div class="topbar-divider d-none d-sm-block"></div>
+
+          <!-- Nav Item - Información del usuario -->
+          <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
+              <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+            </a>
+            <!-- Desplegable - Información del usuario -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Perfil
+              </a>
+              <a class="dropdown-item" href="nuevoUsuario.php">
+                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                Crear usuario
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                Actividad
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Cerrar Sesion
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+      </nav>
+      <!-- Fin de la barra superior -->
+
+      <!--Intro Section-->
+      <div class="contex">
+        <section id="intro" class="clearfix">
+          <div class="container">
+
+            <div class="intro-img">
+              <img src="img/imgi/intro-img.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="intro-info">
+              <h2>Bienvenido a <br><span>COPAP</span><br>¿Listo para comenzar?</h2>
+              <div>
+                <a href="#portfolio" class="btn-get-started scrollto">Galeria</a>
+                <a href="#services" class="btn-services scrollto">Servicios</a>
+              </div>
+            </div>
+
           </div>
-        </div>
+        </section>
+        <!-- #intro -->
+        <main id="main">
+          <!--OPCIONES-->
+          <section id="services" class="section-bg">
+            <div class="container">
 
+              <header class="section-header">
+                <h3>¿Necesitas ayuda para usar COPAP?</h3>
+                <p>Aquì tienes unas opciones que te lo facilitaran</p>
+              </header>
+
+              <div class="row">
+
+                <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-ios-paper-outline" style="color: #c5793ae0;;"></i></div>
+                    <h4 class="title"><a href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas de pago</a></h4>
+                    <p class="description"> Accede al registro almacenado de tus planillas de pago. </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-ios-paper-outline" style="color: #e9bf06;"></i></div>
+                    <h4 class="title"><a href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear Nueva Planilla</a></h4>
+                    <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te imaginas</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-man" style="color: #c5793ae0;"></i></div>
+                    <h4 class="title"><a href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a></h4>
+                    <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre todo eficiente</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-woman" style="color:#c5793ae0;"></i></div>
+                    <h4 class="title"><a href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar un Nuevo Empleado</a></h4>
+                    <p class="description">¡Tu compañia cada dìa crece màs! ingresa la informaciòn del nuevo integrante de tu grupo de empleados</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-more" style="color: #c5793ae0;"></i></div>
+                    <h4 class="title"><a href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a></h4>
+                    <p class="description">Accede a la informaciòn de los distintos cargos con los que cuenta tu empresa</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                  <div class="box">
+                    <div class="icon"><i class="ion-location" style="color: #c5793ae0;"></i></div>
+                    <h4 class="title"><a href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a></h4>
+                    <p class="description">Tu empresa genera funtes de ingresos para familias de Honduras, explora las diferentes ciudades a las que pertenecen tus empleados</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section><!-- #services -->
+          <!--Portafolio de Infografias-->
+          <section id="portfolio" class="clearfix">
+            <div class="container">
+
+              <header class="section-header">
+                <h3 class="section-title">Galeria de Infografias</h3>
+              </header>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">Todo</li>
+                    <li data-filter=".filter-plantilla">Planillas</li>
+                    <li data-filter=".filter-empleados">Empleados</li>
+                    <li data-filter=".filter-contraseña">Recuperar Contraseña</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/P1.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Crear una nueva planilla 1</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio" data-title="COPAP" class="link-preview" title="COPAP"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.1s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/P2.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Crear una nueva planilla 2</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/planilla2.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.2s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/M1.png" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Razones para usar COPAP</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/planillas4.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/P3.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Crear una nueva planilla 3</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/planilla3.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.1s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/anexo2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Agregar un nuevo empleado 1</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Consejos Utiles</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Reestablcer Contraseña 1</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña" data-wow-delay="0.1s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Reestablcer Contraseña 2</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
+                  <div class="portfolio-wrap">
+                    <img src="img/imgi/portfolio/anexo4.jpeg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Mostrar Empleados</h4>
+                      <p>Ver</p>
+                      <div>
+                        <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview" data-lightbox="portfolio" data-title="Empleados" title="Preview"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section><!-- #portfolio -->
       </div>
-    </section>
-    <!-- #intro -->
-    <main id="main">
-      <!--OPCIONES-->
-      <section id="services" class="section-bg">
-        <div class="container">
 
-          <header class="section-header">
-            <h3>¿Necesitas ayuda para usar COPAP?</h3>
-            <p>Aquì tienes unas opciones que te lo facilitaran</p>
-          </header>
 
-          <div class="row">
 
-            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-ios-paper-outline" style="color: #c5793ae0;;"></i></div>
-                <h4 class="title"><a href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas de pago</a></h4>
-                <p class="description"> Accede al registro almacenado de tus planillas de pago. </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-ios-paper-outline" style="color: #e9bf06;"></i></div>
-                <h4 class="title"><a href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear Nueva Planilla</a></h4>
-                <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te imaginas</p>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-man" style="color: #c5793ae0;"></i></div>
-                <h4 class="title"><a href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a></h4>
-                <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre todo eficiente</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-woman" style="color:#c5793ae0;"></i></div>
-                <h4 class="title"><a href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar un Nuevo Empleado</a></h4>
-                <p class="description">¡Tu compañia cada dìa crece màs! ingresa la informaciòn del nuevo integrante de tu grupo de empleados</p>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-more" style="color: #c5793ae0;"></i></div>
-                <h4 class="title"><a href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a></h4>
-                <p class="description">Accede a la informaciòn de los distintos cargos con los que cuenta tu empresa</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><i class="ion-location" style="color: #c5793ae0;"></i></div>
-                <h4 class="title"><a href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a></h4>
-                <p class="description">Tu empresa genera funtes de ingresos para familias de Honduras, explora las diferentes ciudades a las que pertenecen tus empleados</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section><!-- #services -->
-      <!--Portafolio de Infografias-->
-      <section id="portfolio" class="clearfix">
-        <div class="container">
-
-          <header class="section-header">
-            <h3 class="section-title">Galeria de Infografias</h3>
-          </header>
-
-          <div class="row">
-            <div class="col-lg-12">
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">Todo</li>
-                <li data-filter=".filter-plantilla">Planillas</li>
-                <li data-filter=".filter-empleados">Empleados</li>
-                <li data-filter=".filter-contraseña">Recuperar Contraseña</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row portfolio-container">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/P1.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Crear una nueva planilla 1</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio" data-title="COPAP" class="link-preview" title="COPAP"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.1s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/P2.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Crear una nueva planilla 2</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/planilla2.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.2s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/M1.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Razones para usar COPAP</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/planillas4.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/P3.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Crear una nueva planilla 3</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/planilla3.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.1s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/anexo2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Agregar un nuevo empleado 1</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Consejos Utiles</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Reestablcer Contraseña 1</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña" data-wow-delay="0.1s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Reestablcer Contraseña 2</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
-              <div class="portfolio-wrap">
-                <img src="img/imgi/portfolio/anexo4.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Mostrar Empleados</h4>
-                  <p>Ver</p>
-                  <div>
-                    <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview" data-lightbox="portfolio" data-title="Empleados" title="Preview"><i class="ion ion-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section><!-- #portfolio -->
-  </div>
-
-  <!-- Footer -->
-  <footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-      <div class="copyright text-center my-auto">
-        <span>Copyright &copy; Bandersnatch 2022</span>
-      </div>
     </div>
-  </footer>
-  <!-- Fin del Footer -->
-
-  </div>
-  <!-- Envoltorio de fin de contenido -->
+    <!-- Envoltorio de fin de contenido -->
 
   </div>
   <!-- Envoltorio de fin de página -->
@@ -495,6 +547,17 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy; Bandersnatch 2022</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Fin del Footer -->
 
   <!-- JavaScript básico de Bootstrap-->
   <script src="vendor/jquery/jquery.min.js"></script>

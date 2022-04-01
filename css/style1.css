@@ -25,10 +25,10 @@
 #intro {
   width: 100%;
   position: center;
+  float: right;
   background: url("../img/imgi/intro-bg.png") center bottom no-repeat;
   background-size: cover;
   right: 0;
-  width: 1150px;
   padding: 100px;
   
 }
