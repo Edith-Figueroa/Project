@@ -2,6 +2,7 @@ const formulario = document.getElementById("formulario"); //Accedemos al formula
 const input = document.querySelectorAll("#formulario input"); //Almacenamos los inputs en una variable
 const select = document.querySelectorAll("#formulario select");
 const date = document.querySelectorAll("#formulario date");
+var telefono = document.getElementById("telefono");
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/,
@@ -126,7 +127,7 @@ const validarSelect = (select) => {
 
 const validarFecha = (date) => {
   var fecha = document.getElementById(`${date}`);
-  if (fecha != "FechaNacimiento") {
+  if (fecha.value == "") {
     document
       .getElementById(`grupo__${date}`)
       .classList.add("formulario__grupo-incorrecto");
@@ -138,7 +139,7 @@ const validarFecha = (date) => {
       .getElementById(`grupo__${date}`)
       .classList.remove("formulario__grupo-incorrecto");
     document
-      .querySelector(`grupo__${date} .formulario__input-error`)
+      .querySelector(`#grupo__${date} .formulario__input-error`)
       .classList.remove("formulario__input-error-activo");
   }
 };
