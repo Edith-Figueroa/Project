@@ -207,3 +207,20 @@ function soloNumeros(e) {
     }
   }
 }
+
+function soloNumerosE(e) {
+  let key = e.keyCode || e.wich;
+  let teclado = String.fromCharCode(key).toUpperCase();
+  let letras = "1234567890.";
+  let especiales = [8, 37, 38, 46, 164];
+  let teclado_especial = false;
+  for (let i in especiales) {
+    if (key == especiales[i]) {
+      teclado_especial = true;
+      break;
+    }
+    if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+      return false;
+    }
+  }
+}

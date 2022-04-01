@@ -1,6 +1,7 @@
 USE sistema_planilla;
 DROP procedure IF EXISTS plan_det;
-DELIMITER $$ Create Procedure plan_det(planX varchar (50), emp int, fecha datetime) Begin
+DELIMITER $$ Create Procedure plan_det(planX varchar (50), emp int, fecha datetime)
+Begin
 DECLARE x int default 0;
 DECLARE i int default 1;
 DECLARE j int default 0;

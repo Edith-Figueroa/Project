@@ -13,9 +13,7 @@
 
   <!-- FUENTES-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- CSS-->
   <link href="../css/estilo.css" rel="stylesheet">
@@ -39,34 +37,31 @@
                   <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
 
                   <a href="loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
-              </form>
-              <hr>
-              <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
-                <div class=" col-sm-5 mb-5 mb-sm-0">
-                  <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
+                  </form>
+                  <hr>
+                  <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
+                    <div class=" col-sm-5 mb-5 mb-sm-0">
+                      <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
             </div>
+
           </div>
         </div>
       </div>
+
     </div>
+    <!-- JavaScript básico de Bootstrap-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </div>
-  </div>
-  </div>
+    <!-- Complemento principal de JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  </div>
-  <!-- JavaScript básico de Bootstrap-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Complemento principal de JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Scripts personalizados para todas las páginas-->
-  <script src="js/sb-admin-2.min.js"></script>
+    <!-- Scripts personalizados para todas las páginas-->
+    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
