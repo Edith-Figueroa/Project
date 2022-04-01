@@ -38,7 +38,7 @@
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
 
-                  <a href="../loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
+                  <a href="loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
               </form>
               <hr>
               <div class="text-center" style=" width: 50vw; margin-left : 3vw;">

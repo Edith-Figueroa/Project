@@ -21,7 +21,7 @@ $idUser = $row['idUsuario'];
 $idEnt = $row['Empresas_idEmpresas'];
 
 if($filas){
-  header("location:../index.php?idUsuario=$idUser&Empresas_idEmpresas=$idEnt");
+  header("location:../menu.php?idUsuario=$idUser&Empresas_idEmpresas=$idEnt");
 }else{
   ?>
   <?php
