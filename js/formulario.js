@@ -1,16 +1,16 @@
-const formulario = document.getElementById("formulario");
-const input = document.querySelectorAll("#formulario input");
+const formulario = document.getElementById("formulario"); //Accedemos al formulario
+const input = document.querySelectorAll("#formulario input"); //Almacenamos los inputs en una variable
+const select = document.querySelectorAll("#formulario select");
+const date = document.querySelectorAll("#formulario date");
 
 const expresiones = {
-  usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  password: /^.{4,12}$/, // 4 a 12 digitos.
+  nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/,
+  apellido: /^[a-zA-ZÀ-ÿ\s]{1,15}$/,
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{8,8}$/, // 7 a 14 numeros.
-  identidad: /^\d{13,13}$/, // 7 a 14 numeros.
-  direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  cuentaBan: /^\d{8,14}$/, // 7 a 14 numeros.
+  telefono: /^[2389]+\d{1,8}$/, //
+  identidad: /^\d{13,13}$/,
+  direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{1,50}$/,
+  cuentaBan: /^\d{8,15}$/,
   DescripcionCargo: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
   Salario: /^\d+$/,
   DescripcionCiudad: /^[a-zA-ZÀ-ÿ\s.,#]{1,40}$/,
@@ -26,16 +26,8 @@ const validarFormulario = (e) => {
       validarCampo(expresiones.nombre, e.target, "primerNombre");
       break;
 
-    case "SegundoNombre":
-      validarCampo(expresiones.nombre, e.target, "segundoNombre");
-      break;
-
     case "PrimerApellido":
       validarCampo(expresiones.apellido, e.target, "primerApellido");
-      break;
-
-    case "SegundoApellido":
-      validarCampo(expresiones.apellido, e.target, "segundoApellido");
       break;
 
     case "Correo":
@@ -47,7 +39,7 @@ const validarFormulario = (e) => {
       break;
 
     case "Direccion":
-      validarCampo(expresiones.direccion, e.target, "direccion");
+      validarCampo(expresiones.direccion, e.target, "Direccion");
       break;
 
     case "CuentaBancaria":
@@ -73,6 +65,26 @@ const validarFormulario = (e) => {
     case "DescripcionDepto":
       validarCampo(expresiones.DescripcionDepto, e.target, "DescripcionDepto");
       break;
+
+    case "Departamentos_idDepartamentos":
+      validarSelect("Departamentos_idDepartamentos");
+      break;
+
+    case "Ciudades_idCiudades":
+      validarSelect("Ciudades_idCiudades");
+      break;
+
+    case "Cargos_idCargos":
+      validarSelect("Cargos_idCargos");
+      break;
+
+    case "FechaNacimiento":
+      validarFecha("FechaNacimiento");
+      break;
+
+    case "Departamentos_idDepartamentos":
+      validarSelect("Departamentos_idDepartamentos");
+      break;
   }
 };
 const validarCampo = (expresion, input, campo) => {
@@ -81,12 +93,8 @@ const validarCampo = (expresion, input, campo) => {
       .getElementById(`grupo__${campo}`)
       .classList.remove("formulario__grupo-incorrecto");
     document
-      .getElementById(`grupo__${campo}`)
-      .classList.add("formulario__grupo-correcto");
-    document
       .querySelector(`#grupo__${campo} .formulario__input-error`)
       .classList.remove("formulario__input-error-activo");
-    campos[campo] = true;
   } else {
     document
       .getElementById(`grupo__${campo}`)
@@ -94,11 +102,107 @@ const validarCampo = (expresion, input, campo) => {
     document
       .querySelector(`#grupo__${campo} .formulario__input-error`)
       .classList.add("formulario__input-error-activo");
-    campos[campo] = false;
+  }
+};
+
+const validarSelect = (select) => {
+  var seleccion = document.getElementById(`${select}`);
+  if (seleccion.value == 0 || seleccion == "") {
+    document
+      .getElementById(`grupo__${select}`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${select} .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+  } else {
+    document
+      .getElementById(`grupo__${select}`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${select} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
+  }
+};
+
+const validarFecha = (date) => {
+  var fecha = document.getElementById(`${date}`);
+  if (fecha != "FechaNacimiento") {
+    document
+      .getElementById(`grupo__${date}`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__${date} .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+  } else {
+    document
+      .getElementById(`grupo__${date}`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`grupo__${date} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
   }
 };
 
 input.forEach((input) => {
-  input.addEventListener("keyup", validarFormulario);
+  input.addEventListener("keyup", validarFormulario); //Valida cada tecla apretada
   input.addEventListener("blur", validarFormulario);
 });
+
+select.forEach((select) => {
+  select.addEventListener("blur", validarFormulario);
+});
+
+date.forEach((date) => {
+  date.addEventListener("blur", validarFormulario);
+});
+
+function soloLetras(e) {
+  let key = e.keyCode || e.wich;
+  let teclado = String.fromCharCode(key).toUpperCase();
+  let letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ÁÉÍÓÚ";
+  let especiales = [8, 37, 38, 46, 164];
+  let teclado_especial = false;
+  for (let i in especiales) {
+    if (key == especiales[i]) {
+      teclado_especial = true;
+      break;
+    }
+    if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+      return false;
+    }
+  }
+}
+
+function soloLetrasYespeciales(e) {
+  let key = e.keyCode || e.wich;
+  let teclado = String.fromCharCode(key).toUpperCase();
+  let letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ÁÉÍÓÚ.#,- 1234567890";
+  let especiales = [8, 37, 38, 46, 164];
+  let teclado_especial = false;
+  for (let i in especiales) {
+    if (key == especiales[i]) {
+      teclado_especial = true;
+      break;
+    }
+    if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+      return false;
+    }
+  }
+}
+
+function soloNumeros(e) {
+  let key = e.keyCode || e.wich;
+  let teclado = String.fromCharCode(key).toUpperCase();
+  let letras = "1234567890";
+  let especiales = [8, 37, 38, 46, 164];
+  let teclado_especial = false;
+  for (let i in especiales) {
+    if (key == especiales[i]) {
+      teclado_especial = true;
+      break;
+    }
+    if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+      return false;
+    }
+  }
+}

@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <input type="" name="DescripcionCargo" class="form-control form-control-user"
                     aria-describedby="emailHelp" placeholder="" 
-                    value="<?php if(isset($row)) { echo $row['DescripcionCargo']; } ?>" required>
+                    value="<?php if(isset($row)) { echo $row['DescripcionCargo']; } ?>" required readonly>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <input type="" name="Salario" class="form-control form-control-user"
                     aria-describedby="emailHelp" placeholder="" 
-                    value="<?php if(isset($row)) { echo $row['Salario']; } ?>" required>
+                    value="<?php if(isset($row)) { echo $row['Salario']; } ?>" required readonly>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos">
+                        <select class="custom-select form-control" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" readonly>
                             <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
                                 <option value="none" selected disabled hidden>Select an Option</option>
                                 <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>

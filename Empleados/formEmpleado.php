@@ -19,9 +19,7 @@
                 Numero de Identidad
             </div>
             <div class="form-group">
-                <input type="" name="Cedula" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                                            echo $row['Cedula'];
-                                                                                                                                        } ?>" required readonly>
+                <input type="" name="Cedula" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required readonly>
             </div>
         </div>
 
@@ -50,9 +48,7 @@
                 Primer Nombre
             </div>
             <div class="form-group">
-                <input id="" type="text" name="PrimerNombre" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                                echo $row['PrimerNombre'];
-                                                                                                                            } ?>" required readonly>
+                <input id="" type="text" name="PrimerNombre" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['PrimerNombre'];} ?>" required readonly>
             </div>
         </div>
         <!--Segundo Nombre-->
@@ -61,9 +57,7 @@
                 Segundo Nombre
             </div>
             <div class="form-group">
-                <input type="text" name="SegundoNombre" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                            echo $row['SegundoNombre'];
-                                                                                                                        } ?>" required readonly>
+                <input type="text" name="SegundoNombre" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['SegundoNombre'];} ?>" required readonly>
             </div>
         </div>
     </div>
@@ -74,9 +68,7 @@
                 Primer Apellido
             </div>
             <div class="form-group">
-                <input type="text" name="PrimerApellido" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                            echo $row['PrimerApellido'];
-                                                                                                                        } ?>" required readonly>
+                <input type="text" name="PrimerApellido" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['PrimerApellido'];} ?>" required readonly>
             </div>
         </div>
         <!--Segundo Apellido-->
@@ -85,9 +77,7 @@
                 Segundo Apellido
             </div>
             <div class="form-group">
-                <input type="text" name="SegundoApellido" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                            echo $row['SegundoApellido'];
-                                                                                                                        } ?>" required readonly>
+                <input type="text" name="SegundoApellido" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['SegundoApellido'];} ?>" required readonly>
             </div>
         </div>
     </div>
@@ -98,9 +88,7 @@
                 Numero Telefonico
             </div>
             <div class="form-group">
-                <input type="tel" name="Telefono" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                    echo $row['Telefono'];
-                                                                                                                } ?>" required readonly>
+                <input type="tel" name="Telefono" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['Telefono'];} ?>" required readonly>
             </div>
         </div>
         <!--Direccion-->
@@ -109,9 +97,7 @@
                 Direccion
             </div>
             <div class="form-group">
-                <input type="text" name="Direccion" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                        echo $row['Direccion'];
-                                                                                                                    } ?>" required readonly>
+                <input type="text" name="Direccion" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['Direccion'];} ?>" required readonly>
             </div>
         </div>
     </div>
@@ -169,9 +155,7 @@
             </div>
             <div class="form-group">
                 <div>
-                    <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null" value="<?php if (isset($row)) {
-                                                                                                                            echo $row['Ciudades_idCiudades'];
-                                                                                                                        } ?>" required readonly>
+                    <select class="custom-select form-control" name="Ciudades_idCiudades" SelectedItem="null" value="<?php if (isset($row)) {echo $row['Ciudades_idCiudades'];} ?>" required readonly>
                         <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
                             <option value="none" selected disabled hidden>Selecciona una opcion</option>
                             <option value=<?php echo $ex['idCiudades']; ?>><?php echo $ex['DescripcionCiudad']; ?></option>
@@ -204,11 +188,7 @@
                 Fecha de Nacimiento
             </div>
             <div class="form-group">
-                <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                            echo $row['FechaNacimiento'];
-                                                                                                                        } else {
-                                                                                                                            echo '2000-01-01';
-                                                                                                                        } ?>" required readonly>
+                <input type="date" name="FechaNacimiento" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['FechaNacimiento'];} else {echo '2000-01-01';} ?>" required readonly>
             </div>
         </div>
         <!--Fecha Ingreso-->
@@ -217,9 +197,7 @@
                 Fecha de Ingreso
             </div>
             <div class="form-group">
-                <input type="date" name="FechaIngreso" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                        echo $row['FechaIngreso'];
-                                                                                                                    } ?>" required readonly>
+                <input type="date" name="FechaIngreso" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['FechaIngreso'];} ?>" required readonly>
             </div>
         </div>
     </div>
@@ -228,18 +206,14 @@
         Correo Electronico
     </div>
     <div class="form-group">
-        <input type="email" name="Correo" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                            echo $row['Correo'];
-                                                                                                        } ?>" required readonly>
+        <input type="email" name="Correo" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['Correo'];} ?>" required readonly>
     </div>
     <!--Numero de cuenta bancaria-->
     <div class="sidebar-heading">
         Numero de cuenta bancaria
     </div>
     <div class="form-group">
-        <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {
-                                                                                                                    echo $row['CuentaBancaria'];
-                                                                                                                } ?>" required readonly>
+        <input type="text" name="CuentaBancaria" class="form-control form-control-user" placeholder="" value="<?php if (isset($row)) {echo $row['CuentaBancaria'];} ?>" required readonly>
     </div>
 </body>
 

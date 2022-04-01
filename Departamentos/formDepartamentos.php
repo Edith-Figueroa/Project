@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <input type="" name="DescripcionDepto" class="form-control form-control-user"
                     aria-describedby="emailHelp" placeholder="" 
-                    value="<?php if(isset($row)) { echo $row['DescripcionDepto']; } ?>" required>
+                    value="<?php if(isset($row)) { echo $row['DescripcionDepto']; } ?>" required readonly>
                 </div>
                 <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
