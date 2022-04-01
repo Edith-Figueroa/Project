@@ -12,11 +12,10 @@
     <title>COPAP - CONTROL DE PLANILLAS DE PAGO</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/bg-img/logo.png">
+    <link rel="icon" href="../img/bg-img/logo.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleT.css">
 
 
 </head>
@@ -37,7 +36,7 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="inicio.php"><img src="img/bg-img/logo.png" alt=""></a>
+                                <a href="inicio.php"><img src="../img/bg-img/logo.png" alt=""></a>
                             </div>
                             <div class="login-content">
                                 <a href="#"></a>
@@ -101,7 +100,7 @@
 
                                             </ul>
                                             <div class="single-mega cn-col-4">
-                                                <img src="img/bg-img/modulos.jpg" alt="">
+                                                <img src="../img/bg-img/modulos.jpg" alt="">
                                             </div>
                                         </div>
                                     </li>
@@ -115,7 +114,7 @@
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="loginform.php"><i class="icon-house"></i> <span>INICIAR SESION</span></a>
+                                <a href="../Login/loginForm.php"><i class="icon-house"></i> <span>INICIAR SESION</span></a>
                             </div>
                         </div>
                     </nav>
@@ -131,7 +130,7 @@
 
     <!-- ##### INFO SOBRE COPAP ##### -->
 
-    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
             <h2>COPAP ES TU MEJOR OPCION</h2>
         </div>
@@ -160,9 +159,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="about-slides owl-carousel mt-100 wow fadeInUp" data-wow-delay="600ms">
-                        <img src="img/bg-img/S1.jpeg" alt="">
-                        <img src="img/bg-img/S2.jpeg" alt="">
-                        <img src="img/bg-img/S3.jpeg" alt="">
+                        <img src="../img/bg-img/S1.jpeg" alt="">
+                        <img src="../img/bg-img/S2.jpeg" alt="">
+                        <img src="../img/bg-img/S3.jpeg" alt="">
                     </div>
                 </div>
             </div>
@@ -173,7 +172,7 @@
     <!-- ##### Team Area Start ##### -->
     <section class="teachers-area section-padding-0-100">
 
-        <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/breadcumb.jpg);">
             <div class="bradcumbContent">
                 <h2>NUESTROS DESARROLLADORES</h2>
             </div>
@@ -196,7 +195,7 @@
                     <br></br>
                     <br></br>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P2.jpg" alt="JARED GARCIA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P2.jpg" alt="JARED GARCIA"></div>
                     <h3>JARED GARCIA</h3>
                     <span class="position">PROGRAMADOR PRINCIPAL</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -217,7 +216,7 @@
                     <br></br>
                     <br></br>
 
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="EMERSON ZAPATA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="EMERSON ZAPATA"></div>
                     <h3>EMERSON ZAPATA</h3>
                     <span class="position">CO-PROGRAMADOR</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -251,7 +250,7 @@
 
             <div class="col-md-4">
                 <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="ONAN AGUILERA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="ONAN AGUILERA"></div>
                     <br></br>
                     <br></br>
                     <br></br>
@@ -303,7 +302,7 @@
                     <br></br>
                     <br></br>
                     <br></br>
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/p1.jpg" alt="DULCE SANCHEZ"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/p1.jpg" alt="DULCE SANCHEZ"></div>
                     <h3>DULCE SANCHEZ</h3>
                     <span class="position">DISEÑADOR GRAFICO</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -320,7 +319,7 @@
 
             <div class="col-md-4">
                 <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="img/bg-img/P3.jpg" alt="DIEGO MOLINA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="DIEGO MOLINA"></div>
                     <br></br>
                     <br></br>
                     <br></br>
@@ -353,7 +352,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
+                                <a href="#"><img src="../img/bg-img/logo.png" alt=""></a>
                             </div>
                             <p>CONTROL DE PLANILAS DE PAGO COPAP</p>
                             <div class="footer-social-info">
@@ -388,12 +387,12 @@
 
                             </div>
                             <div class="gallery-list d-flex justify-content-between flex-wrap">
-                                <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
-                                <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
-                                <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
-                                <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
-                                <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
-                                <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
+                                <a href="../img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="../img/bg-img/control1.jpg" alt=""></a>
+                                <a href="../img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="../img/bg-img/control2.jpg" alt=""></a>
+                                <a href="../img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="../img/bg-img/control3.jpg" alt=""></a>
+                                <a href="../img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="../img/bg-img/control4.jpg" alt=""></a>
+                                <a href="../img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="../img/bg-img/control5.jpg" alt=""></a>
+                                <a href="../img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="../img/bg-img/control6.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -440,15 +439,15 @@
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="../js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="../js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="../js/active.js"></script>
 </body>
 
 </html>
