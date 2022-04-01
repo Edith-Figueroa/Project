@@ -1,6 +1,13 @@
-1) Filtro de Busquedad con input text (x)
-2) Filtro de Busquedad con de activos e inactivos (x)
-3) Poner opcion de agregar dato como departamentos en los combobox
-4) Validaciones(x)
+1) Validaciones de Fechas(x)
+2) Numero de telefono Inicial
+4) PDF
 5) Ver datos de la planilla empleado por empleado
 6) investigar como mandar correos desde php
+7) Validaciones de Caja negra
+8) Historial
+9) Resolucion
+
+Auxiliar
+
+1)Dependiendo del departamentos y municipio Numero de Identidad
+3) Poner opcion de agregar dato como departamentos en los combobox
