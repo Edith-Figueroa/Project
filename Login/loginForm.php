@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
     <link rel="icon" href="img/bg-img/logo.png">
-
 </head>
 
 <body>

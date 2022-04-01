@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>CONTROL DE PLANILLA DE PAGO COPAP</title>
-    <link rel="icon" href="img/bg-img/logo.png">
+    <title>COPAP - CONTROL DE PLANILLAS DE PAGO</title>
 
-    <!-- Logo -->
+    <!-- Favicon -->
+    <link rel="icon" href="../img/bg-img/logo.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -25,19 +25,19 @@
         <i class="circle-preloader"></i>
     </div>
 
-    <!-- ##### Encabezado ##### -->
+    <!-- ##### ENCABEZADO ##### -->
     <header class="header-area">
 
-        <!-- Clase: Top Header Area -->
+        <!-- Top Header Area -->
         <div class="top-header">
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-12 h-100">
-                        <div class="header-content h-100 d-flex align-items-center justify-content-center">
-                            <div class="icon">
-                                <a href="inicio.php"><img src="img/bg-img/logo.png" alt=""></a>
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="inicio.php"><img src="../img/bg-img/logo.png" alt=""></a>
                             </div>
-                            <div class="login-content justify-content-center">
+                            <div class="login-content">
                                 <a href="#"></a>
 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -197,14 +197,14 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Navbar -->
+
+        <!-- Navbar Area -->
         <div class="academy-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
@@ -251,13 +251,11 @@
                                                     <li><a href="#"> Empleados </a></li>
                                                     <li><a href="#"> </a></li>
 
-
-
                                                 </ul>
 
                                             </ul>
                                             <div class="single-mega cn-col-4">
-                                                <img src="img/bg-img/modulos.jpg" alt="">
+                                                <img src="../img/bg-img/modulos.jpg" alt="">
                                             </div>
                                         </div>
                                     </li>
@@ -268,10 +266,10 @@
                             <!-- Nav End -->
                         </div>
 
-                        <!-- Calling Info -->
+                        <!-- LLAMA YA! -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="loginform.php"><i class="icon-house"></i> <span>INICIAR SESION</span></a>
+                                <a href="tel:+504 9986 1858"><i class="icon-telephone-2"></i> <span>(+504) 9986 1858</span></a>
                             </div>
                         </div>
                     </nav>
@@ -279,227 +277,57 @@
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
+    <!-- ##### FIN DEL ENCABEZADO ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
-            <h2>C O P A P </h2>
+            <h2>CONTACTANOS</h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Elements Area Start ##### -->
-    <section class="elements-area mt-50 section-padding-100-0">
+    <!-- ##### Google Maps ##### -->
+    <div class="map-area wow fadeInUp" data-wow-delay="300ms">
+        <div id="googleMap"></div>
+    </div>
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area">
         <div class="container">
             <div class="row">
-
-                <!-- ========== BOTONES ========== -->
                 <div class="col-12">
-                    <div class="elements-title mb-50">
-                        <span>CONTROL DE PLANILLAS DE PAGO</span>
-                        <h2>NUESTROS MODULOS</h2>
-                    </div>
-                    <!-- Selene Button -->
-                    <div class="academy-buttons-area mb-100">
-                        <a href="#" class="btn academy-btn m-2">CONTROL DE EMPLEADOS </a>
-                        <a href="#" class="btn academy-btn btn-2 m-2">REGISTRO DE HORARIOS</a>
-                        <a href="#" class="btn academy-btn btn-3 m-2">CREACION DE PLANILLAS DE PAGO</a>
-                        <a href="#" class="btn academy-btn btn-4 m-2">REPORTES DE PLANILLA</a>
-                    </div>
-                </div>
-
-                <!-- ========== Progress Bars & Accordions ========== -->
-                <div class="col-12">
-                    <div class="elements-title mb-50">
-                        <span>DESCRIPCION</span>
-                        <h2> DE NUESTROS MODULOS</h2>
-                    </div>
-                </div>
-
-                <!-- ##### Accordians ##### -->
-                <div class="col-12 col-lg-6">
-                    <div class="accordions mb-100" id="accordion" role="tablist" aria-multiselectable="true">
-                        <!-- single accordian area -->
-                        <div class="panel single-accordion">
-                            <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Acceso a reporte de tus empleados segun se presenten tus necesidades:
-                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                </a></h6>
-                            <div id="collapseOne" class="accordion-content collapse show">
-                                <h>Podras genrar reportes de tus empleados segun su jornada, horas trabajadas, salario, y cualquie clasificación que necesites incorporar.</h>
-                            </div>
-                        </div>
-                        <!-- single accordian area -->
-                        <div class="panel single-accordion">
-                            <h6>
-                                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">PLAN MULTIUSUARIO.
-                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                </a>
-                            </h6>
-                            <div id="collapseTwo" class="accordion-content collapse">
-                                <h>Si no eres el unico administrador de tu empresa tambien tenemos una propuesta para ti. Con nuestro plan multiusuario podras crear tres perfiles en nuestro sistema y asignar los modulos de acceso segun el rol de cada usuario.</h>
-                            </div>
-                        </div>
-                        <!-- single accordian area -->
-                        <div class="panel single-accordion">
-                            <h6>
-                                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree"> CREACION Y REGISTRO DE PLANILLAS
-                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                </a>
-                            </h6>
-                            <div id="collapseThree" class="accordion-content collapse">
-                                <h>Ya no tienes que preocuparte por extensos papeleos ni las tendiosas hojas de calculo y mucho menos por respaldar tu información. COPAP hace eso y mucho mas por ti</h>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- ##### Tabs ##### -->
-                <div class="col-12 col-lg-6">
-                    <div class="academy-tabs-content">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" id="tab--1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false">MISION</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">VISION</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tab--3" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true">OBJETIVO GENERAL</a>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content mb-100" id="myTabContent">
-                            <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab--1">
-                                <div class="academy-tab-content">
-                                    <!-- Tab Text -->
-                                    <div class="academy-tab-text">
-                                        <h>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración .</h>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab--2">
-                                <div class="academy-tab-content">
-                                    <!-- Tab Text -->
-                                    <div class="academy-tab-text">
-                                        <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración .</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab--3">
-                                <div class="academy-tab-content">
-                                    <!-- Tab Text -->
-                                    <div class="academy-tab-text">
-                                        <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración .</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========== Milestones ========== -->
-                <div class="col-12">
-                    <div class="elements-title mb-50">
-                        <span>NUESTROS</span>
-                        <h2>ALCANCES</h2>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="academy-cool-facts-area mb-50">
+                    <div class="contact-content">
                         <div class="row">
+                            <!-- Contact Information -->
+                            <div class="col-12 col-lg-5">
+                                <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="section-heading text-left">
+                                        <span>COPAP</span>
+                                        <h3>CONTACTANOS</h3>
+                                        <img src="../img/bg-img/logo.png" alt="">
+                                        <h class="mt-30">Envianos un correo electronico y con gusto te atenderemos resolviendo todas tus dudas</h>
+                                    </div>
 
-                            <!-- Single Cool Fact-->
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-cool-fact text-center">
-                                    <i class="icon-house"></i>
-                                    <h3><span class="counter">90</span></h3>
-                                    <p>confian en nosotros</p>
+
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info d-flex">
+                                        <div class="contact-icon mr-15">
+                                            <i class="icon-contract"></i>
+                                        </div>
+                                        <h>copapoficial@gmail.com</h>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Single Cool Fact-->
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-cool-fact text-center">
-                                    <i class="icon-assistance"></i>
-                                    <h3><span class="counter">54</span>+</h3>
-                                    <p>Desarrolladores</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Cool Fact-->
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-cool-fact text-center">
-                                    <i class="icon-id-card"></i>
-                                    <h3><span class="counter">67</span></h3>
-                                    <p>blbla</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Cool Fact-->
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-cool-fact text-center">
-                                    <i class="icon-like"></i>
-                                    <h3><span class="counter">100</span>%</h3>
-                                    <p>De clientes satisfechos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- ========== Icon Boxes ========== -->
-                <div class="col-12">
-                    <div class="elements-title mb-50">
-                        <span>SOMOS</span>
-                        <h2>COPAP</h2>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="row">
-
-                        <!-- Single Course Area -->
-                        <div class="col-12 col-lg-4">
-                            <div class="single-course-area d-flex align-items-center mb-100">
-                                <div class="">
-                                    <img src="img/bg-img/calidad.png">
-                                </div>
-                                <div class="course-content">
-                                    <h4>CALIDAD Y SERIVICIO</h4>
-                                    <p>&nbsp;&nbsp;TU BIENESTAR ES NUESTRO OBJETIVO</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Course Area -->
-                        <div class="col-12 col-lg-4">
-                            <div class="single-course-area d-flex align-items-center mb-100">
-                                <div class="">
-                                    <img src="img/bg-img/seguridad.png">
-                                </div>
-                                <div class="course-content">
-                                    <h4>SEGURIDAD</h4>
-                                    <p>&nbsp;&nbsp;INTEGRIDAD DE TU INFORMACION</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Course Area -->
-                        <div class="col-12 col-lg-4">
-                            <div class="single-course-area d-flex align-items-center mb-100">
-                                <div class="">
-                                    <img src="img/bg-img/acceso.png">
-                                </div>
-                                <div class="course-content">
-                                    <h4>ACCESO</h4>
-                                    <p>&nbsp;&nbsp;SEGURO, FACIL Y RAPIDO</p>
+                            <!-- Contact Form Area -->
+                            <div class="col-12 col-lg-7">
+                                <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
+                                    <form action="#" method="post">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <button class="btn academy-btn mt-30" type="submit">Enviar</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -507,10 +335,8 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
-    <!-- ***** Elements Area End ***** -->
+    <!-- ##### Contact Area End ##### -->
 
     <!-- ##### INFO  ##### -->
     <footer class="footer-area">
@@ -521,7 +347,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
+                                <a href="#"><img src="../img/bg-img/logo.png" alt=""></a>
                             </div>
                             <p>CONTROL DE PLANILAS DE PAGO COPAP</p>
                             <div class="footer-social-info">
@@ -556,12 +382,12 @@
 
                             </div>
                             <div class="gallery-list d-flex justify-content-between flex-wrap">
-                                <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
-                                <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
-                                <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
-                                <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
-                                <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
-                                <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
+                                <a href="../img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="../img/bg-img/control1.jpg" alt=""></a>
+                                <a href="../img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="../img/bg-img/control2.jpg" alt=""></a>
+                                <a href="../img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="../img/bg-img/control3.jpg" alt=""></a>
+                                <a href="../img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="../img/bg-img/control4.jpg" alt=""></a>
+                                <a href="../img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="../img/bg-img/control5.jpg" alt=""></a>
+                                <a href="../img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="../img/bg-img/control6.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -608,15 +434,17 @@
 
     <!-- #####  Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="../js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="../js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
-</body>
-
-</html>
+    <script src="../js/active.js"></script>
+    <!-- ##### <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="js/google-map/map-active.js"></script>
+    </body>
+    
+    </html>
