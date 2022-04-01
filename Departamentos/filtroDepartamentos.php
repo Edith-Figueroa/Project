@@ -86,6 +86,7 @@ if ($table->num_rows > 0) {
                 </td>
             </tr>';
     }
+
     $salida .= '</tbody>';
 } else {
     $salida .= "Busqueda no encontrada.";
