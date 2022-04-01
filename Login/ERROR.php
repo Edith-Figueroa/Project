@@ -36,7 +36,7 @@
                 <div class=" col-sm-6 mb-3 mb-sm-0">
                   <h1 class="h4 text-gray-900 mb-4">ERROR DE AUTENTIFICACION</h1>
 
-                  <a href="../loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
+                  <a href="loginForm.php" class="btn btn-primary btn-user btn-block" value="Aceptar ">Aceptar</a>
                   </form>
                   <hr>
                   <div class="text-center" style=" width: 50vw; margin-left : 3vw;">
@@ -44,27 +44,24 @@
                       <a class="small" href="contraOlvidada.php">¿Has olvidado tu contraseña?</a>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-
       </div>
+
     </div>
-  </div>
+    <!-- JavaScript básico de Bootstrap-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </div>
-  <!-- JavaScript básico de Bootstrap-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Complemento principal de JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Complemento principal de JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Scripts personalizados para todas las páginas-->
-  <script src="js/sb-admin-2.min.js"></script>
+    <!-- Scripts personalizados para todas las páginas-->
+    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
