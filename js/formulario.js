@@ -2,7 +2,6 @@ const formulario = document.getElementById("formulario"); //Accedemos al formula
 const input = document.querySelectorAll("#formulario input"); //Almacenamos los inputs en una variable
 const select = document.querySelectorAll("#formulario select");
 const date = document.querySelectorAll("#formulario date");
-var telefono = document.getElementById("telefono");
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/,
