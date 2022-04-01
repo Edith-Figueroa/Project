@@ -9,5 +9,5 @@
 
 Auxiliar
 
-1)Dependiendo del departamentos y municipio Numero de Identidad
+1) Dependiendo del departamentos y municipio Numero de Identidad
 3) Poner opcion de agregar dato como departamentos en los combobox
