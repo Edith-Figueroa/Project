@@ -153,9 +153,9 @@
           <!-- Búsqueda en la barra superior -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder=" Buscar..." aria-label="Search" aria-describedby="basic-addon2" name="filtro" id="filtro">
+              <input type="text" class="form-control bg-light border-0 small" title="Ingrese dato a buscar" placeholder=" Buscar..." aria-label="Search" aria-describedby="basic-addon2" name="filtro" id="filtro">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button title="Buscar" class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -164,7 +164,7 @@
           <!--Estado-->
           <form class="d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="formulario__grupo" id="grupo__direccion">
-              <select class="custom-select form-control" name="estado_Cargos" id="estado_Cargos">
+              <select class="custom-select form-control" name="estado_Cargos" id="estado_Cargos" title="Seleccione opcion para buscar por estado" >
                 <option value="1" selected>Activos</option>
                 <option value="2">Inactivos</option>
               </select>

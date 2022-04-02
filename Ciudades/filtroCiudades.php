@@ -72,15 +72,15 @@ if ($table->num_rows > 0) {
     while ($fila = mysqli_fetch_assoc($table)) {
         $salida .= '
             <tr>
-                <td>' . $fila['idCiudades'] . '</td>
+                <td align="center">' . $fila['idCiudades'] . '</td>
                 <td>' . $fila['DescripcionCiudad'] . '</td>
-                <td>
+                <td align="center">
                 <a href="SQLRead_Ciudades.php?idCiudades=' . $fila['idCiudades'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
                 </td>
-                <td>
+                <td align="center">
                 <a href="ModificacionCiudades.php?idCiudades=' . $fila['idCiudades'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
                 </td>
-                <td>
+                <td align="center">
                 <a href="SQLInactive_Ciudades.php?idCiudades=' . $fila['idCiudades'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-danger btn-sm">Desactivar</a>
                 </td>
             </tr>';
