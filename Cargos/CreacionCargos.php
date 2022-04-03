@@ -301,7 +301,7 @@
                         <div class="formulario__grupo" id="grupo__DescripcionCargo">
                           <label for="DescripcionCargo" class="formulario__label">Nombre del Cargo</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" title="Ingresa nombre de cargo" onkeypress="return soloLetras(event)" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {echo $row['DescripcionCargo'];} ?>" required  minlength="5" maxlength="30">
+                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" title="Ingresa nombre de cargo" onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCargo')" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {echo $row['DescripcionCargo'];} ?>" required  minlength="5" maxlength="30">
                           </div>
                           <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 30.</p>
                         </div>

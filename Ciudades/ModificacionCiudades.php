@@ -220,44 +220,43 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <form class="formulario" id="formulario" action="SQLUpdate_Ciudades.php" method="post">
-                        <input type="hidden" name="idCiudades" value="<?php echo $Usuario; ?>">
+                      <form class="formulario" action="SQLInsert_Ciudades.php" id="formulario" method="post">
                         <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                         <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                         <!--Grupo: Descripcion de Ciudades-->
                         <div class="formulario__grupo" id="grupo__DescripcionCiudad">
                           <label for="DescripcionCiudad" class="formulario__label">Nombre de la Ciudad</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionCiudad" id="DescripcionCiudad" onkeypress="soloLetras(event)" placeholder="Nombre de la Ciudad" value="<?php if (isset($row)) {echo $row['DescripcionCiudad'];} ?>" required maxlength="15">
+                            <input type="text" class="formulario__input" name="DescripcionCiudad" id="DescripcionCiudad" title="Modifica nombre de la ciudad" onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCiudad')" placeholder="Nombre de la Ciudad" value="<?php if (isset($row)) {echo $row['DescripcionCiudad'];} ?>" required minlength="5" maxlength="30">
                           </div>
-                          <p class="formulario__input-error">La descripcion de la ciudad solo acepta letras y su maximo son 15.</p>
+                          <p class="formulario__input-error">La descripcion de la ciudad solo acepta letras y el maximo son 30.</p>
                         </div>
                         <!--Grupo: Estado-->
                         <div class="formulario__grupo" id="grupo__estado">
                           <label for="estado" class="formulario__label">Estado</label>
                           <div class="formulario__grupo">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                              <input type="radio" name="Estados_idEstado" value="1" <?php if (isset($row)) if ($row['Estados_idEstado'] == 1) : ?> checked="checked" <?php endif ?> required>
+                              <input type="radio" name="Estados_idEstado" title="Seleciona si esta activo" value="1" <?php if (isset($row)) if ($row['Estados_idEstado'] == 1) : ?> checked="checked" <?php endif ?> required>
                               <label for="contactChoice1">Activo</label>
                             </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                              <input type="radio" name="Estados_idEstado" value="2" <?php if (isset($row)) if ($row['Estados_idEstado'] == 2) : ?> checked="checked" <?php endif; ?>>
+                              <input type="radio" name="Estados_idEstado" title="Selecciona si esta inactivo" value="2" <?php if (isset($row)) if ($row['Estados_idEstado'] == 2) : ?> checked="checked" <?php endif; ?>>
                               <label for="contactChoice2">Inactivo</label>
                             </div>
                           </div>
                         </div>
                         <!--Submit-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Guardar" >
+                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value="Guardar">
                         </div>
                         <!--Limpiar-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                          <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
                         </div>
                         <!--Cancelar-->
                         <div class="formulario__grupo formulario__grupo-btn-enviar">
                           <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
-                            <a href="TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
+                            <a title="Click si no desea hacer ni una acción" href="TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
                               Cancelar
                             </a>
                           </div>

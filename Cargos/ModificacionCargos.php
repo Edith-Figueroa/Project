@@ -216,23 +216,22 @@
                   <div class="">
                     <div class="p-5">
                       <!--Inicio de Form-->
-                      <form class="formulario" action="SQLUpdate_Cargos.php" id="formulario" method="post">
-                        <input type="hidden" name="idCargo" value="<?php echo $id; ?>">
+                      <form class="formulario" action="SQLInsert_Cargos.php" id="formulario" method="post">
                         <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                         <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                         <!--Grupo: Descripcion de cargo-->
                         <div class="formulario__grupo" id="grupo__DescripcionCargo">
                           <label for="DescripcionCargo" class="formulario__label">Nombre del Cargo</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" onkeypress="return soloLetras(event)" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {echo $row['DescripcionCargo'];} ?>" required maxlength="15">
+                            <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" title="Ingresa nombre de cargo" onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCargo')" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {echo $row['DescripcionCargo'];} ?>" required  minlength="5" maxlength="30">
                           </div>
-                          <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 15.</p>
+                          <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 30.</p>
                         </div>
                         <!--Grupo: Salario-->
                         <div class="formulario__grupo" id="grupo__Salario">
                           <label for="Salario" class="formulario__label">Salario</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="Salario" id="Salario" onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {echo $row['Salario'];} ?>" required maxlength="6">
+                            <input type="text" class="formulario__input" name="Salario" id="Salario" title="Ingresa salario" onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {echo $row['Salario'];} ?>" required  minlength="3" maxlength="7">
                           </div>
                           <p class="formulario__input-error">El salario solo acepta numeros.</p>
                         </div>
@@ -243,41 +242,41 @@
                         $table = $grid->sql;
                         ?>
                         <div class="formulario__grupo" id="grupo__Departamentos_idDepartamentos">
-                          <label for="departamento" class="formulario__label">Departamentos</label>
-                          <select class="formulario__input" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" required>
-                            <option value="" >Selcciona un departamento</option>
+                          <label for="Departamentos_idDepartamentos" class="formulario__label">Departamento</label>
+                          <select class="formulario__input" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" title="Seleciona una opcion" value="" required>
+                            <option value="">Selcciona un departamento</option>
                             <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
-                              <!-- <option value="none" selected disabled hidden>Selcciona un departamento</option> -->
                               <option value="<?php echo $ex['idDepartamentos']; ?>"><?php echo $ex['DescripcionDepto']; ?></option>
                             <?php } ?>
                           </select>
+                          <p class="formulario__input-error">Debe seleccionar un departamento.</p>
                         </div>
                         <!--Grupo: Estado-->
                         <div class="formulario__grupo" id="grupo__estado">
                           <label for="estado" class="formulario__label">Estado</label>
                           <div class="formulario__grupo">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                              <input type="radio" name="Estados_idEstado" value="1" <?php if (isset($row)) if ($row['Estados_idEstado'] == 1) : ?> checked="checked" <?php endif ?> required>
+                              <input type="radio" name="Estados_idEstado" title="Seleciona si esta activo" value="1" <?php if (isset($row)) if ($row['Estados_idEstado'] == 1) : ?> checked="checked" <?php endif ?> required>
                               <label for="contactChoice1">Activo</label>
                             </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                              <input type="radio" name="Estados_idEstado" value="2" <?php if (isset($row)) if ($row['Estados_idEstado'] == 2) : ?> checked="checked" <?php endif; ?> required>
+                              <input type="radio" name="Estados_idEstado" title="Selecciona si esta inactivo" value="2" <?php if (isset($row)) if ($row['Estados_idEstado'] == 2) : ?> checked="checked" <?php endif; ?>>
                               <label for="contactChoice2">Inactivo</label>
                             </div>
                           </div>
                         </div>
                         <!--Submit-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" value="Confirmar">
+                          <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value="Guardar">
                         </div>
                         <!--Limpiar-->
                         <div class="formulario__grupo" id="grupo__departamento">
-                          <input type="Reset" class="btn btn-primary btn-user btn-block" value="Limpiar">
+                          <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
                         </div>
                         <!--Cancelar-->
                         <div class="formulario__grupo formulario__grupo-btn-enviar">
                           <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
-                            <a href="TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
+                            <a title="Click si no desea hacer ni una acción" href="TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
                               Cancelar
                             </a>
                           </div>
