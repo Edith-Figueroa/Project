@@ -8,7 +8,8 @@ const expresiones = {
   apellido: /^[a-zA-ZÀ-ÿ\s]{1,15}$/,
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
   telefono: /^[2389]+\d{1,8}$/, //
-  identidad: /^[01]{1}[\d]{1}[02]{1}[\d]{1}[12]{1}[09]{1}[\d]{7}$/,
+  identidad:
+    /^[01]{1}[0-8]{1}[012]{1}[\d]{1}[12]{1}[09]{1}[012]{1}[\d]{1}[\d]{5}$/,
   direccion: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{1,50}$/,
   cuentaBan: /^\d{8,15}$/,
   DescripcionCargo: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
@@ -155,7 +156,14 @@ select.forEach((select) => {
 date.forEach((date) => {
   date.addEventListener("blur", validarFormulario);
 });
-
+function upperCase(input) {
+  var x = document.getElementById(input).value;
+  document.getElementById(input).value = x.toUpperCase();
+}
+function lowerCase(input) {
+  var x = document.getElementById(input).value;
+  document.getElementById(input).value = x.toLowerCase();
+}
 function soloLetras(e) {
   let key = e.keyCode || e.wich;
   let teclado = String.fromCharCode(key).toUpperCase();

@@ -294,7 +294,7 @@
                           <label for="Cedula" class="formulario__label">Identidad</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" pattern="[01]{1}[0-9]{1}[02]{1}[0-9]{1}[12]{1}[09]{1}[0-9]{7}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
+                            <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}[12]{1}[09]{1}[012]{1}[0-9]{1}[0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
 
 
                           </div>
@@ -319,7 +319,7 @@
                           <label for="PrimerNombre" class="formulario__label">Primer Nombre</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="PrimerNombre" id="PrimerNombre" title="Ingresa primer nombre" onkeypress="return soloLetras(event)" placeholder="Primer Nombre" value="<?php if (isset($row)) {echo $row['PrimerNombre'];} ?>" required required minlength="3" maxlength="15">
+                            <input type="text" class="formulario__input" name="PrimerNombre" id="PrimerNombre" title="Ingresa primer nombre" onkeypress="return soloLetras(event)" placeholder="Primer Nombre" value="<?php if (isset($row)) {echo $row['PrimerNombre'];} ?>" required minlength="3" maxlength="15" onblur="upperCase('PrimerNombre')">
 
                           </div>
                           <p class="formulario__input-error">EL primer nombre tiene que ser de 3 a 15 digitos y solo puede contener
@@ -331,7 +331,7 @@
                           <label for="SegundoNombre" class="formulario__label">Segundo Nombre</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="SegundoNombre" id="SegundoNombre" title="Ingresa segundo nombre (Es opcional, si no tiene deja vacio)" onkeypress="return soloLetras(event)" placeholder="Segundo Nombre" value="<?php if (isset($row)) {echo $row['SegundoNombre'];} ?>" minlength="3" maxlength="15">
+                            <input type="text" class="formulario__input" name="SegundoNombre" id="SegundoNombre" title="Ingresa segundo nombre (Es opcional, si no tiene deja vacio)" onkeypress="return soloLetras(event)" placeholder="Segundo Nombre" value="<?php if (isset($row)) {echo $row['SegundoNombre'];} ?>" minlength="3" maxlength="15" onblur="upperCase('SegundoNombre')">
 
 
                           </div>
@@ -344,7 +344,7 @@
                           <label for="PrimerApellido" class="formulario__label">Primer Apellido</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="PrimerApellido" id="PrimerApellido" title="Ingresa primer apellido" onkeypress="return soloLetras(event)" placeholder="Primer Apellido" value="<?php if (isset($row)) {echo $row['PrimerApellido'];} ?>" required minlength="3" maxlength="15">
+                            <input type="text" class="formulario__input" name="PrimerApellido" id="PrimerApellido" title="Ingresa primer apellido" onkeypress="return soloLetras(event)" placeholder="Primer Apellido" value="<?php if (isset($row)) {echo $row['PrimerApellido'];} ?>" required minlength="3" maxlength="15" onblur="upperCase('PrimerApellido')">
 
                           </div>
                           <p class="formulario__input-error">EL primer apellido tiene que ser de 3 a 15 digitos y solo puede contener
@@ -356,7 +356,7 @@
                           <label for="SegundoApellido" class="formulario__label">Segundo Apellido</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="SegundoApellido" id="SegundoApellido" title="Ingresa segundo apellido (Es opcional, si no tiene deja vacio)"onkeypress="return soloLetras(event)" placeholder="Segundo Apellido" value="<?php if (isset($row)) {echo $row['SegundoApellido'];} ?>" minlength="3" maxlength="15">
+                            <input type="text" class="formulario__input" name="SegundoApellido" id="SegundoApellido" title="Ingresa segundo apellido (Es opcional, si no tiene deja vacio)"onkeypress="return soloLetras(event)" placeholder="Segundo Apellido" value="<?php if (isset($row)) {echo $row['SegundoApellido'];} ?>" minlength="3" maxlength="15" onblur="upperCase('SegundoApellido')">
                           </div>
                           <p class="formulario__input-error">EL segundo apellido tiene que ser de 3 a 15 digitos y solo puede contener
                             letras.</p>
@@ -375,7 +375,7 @@
                           <label for="Direccion" class="formulario__label">Direccion</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class=" formulario__input" name="Direccion" id="Direccion" title="Ingresa dirección" onkeypress="return soloLetrasYespeciales(event)" placeholder="Direccion" value="<?php if (isset($row)) {echo $row['Direccion'];} ?>" required minlength="3" maxlength="50">
+                            <input type="text" class=" formulario__input" name="Direccion" id="Direccion" title="Ingresa dirección" onkeypress="return soloLetrasYespeciales(event)" placeholder="Direccion" value="<?php if (isset($row)) {echo $row['Direccion'];} ?>" required minlength="3" maxlength="50" onblur="upperCase('Direccion')">
 
                           </div>
                           <p class="formulario__input-error">La direccion tiene que ser de 3 a 50 digitos y solo puede contener
@@ -460,7 +460,7 @@
                         <div class="formulario__grupo" id="grupo__correo">
                           <label for="Correo" class="formulario__label">Correo Elecronico</label>
                           <div class="formulario__grupo-input">
-                            <input type="email" class="formulario__input" name="Correo" id="Correo" title="Ingresa el correo elecctronico" placeholder="Correo Electronico" value="<?php if (isset($row)) {echo $row['Correo'];} ?>" pattern="[a-z0-9_]+([.][a-z0-9_]+)*@[a-z0-9_]+([.][a-z0-9_]+)*[.][a-z]{1,5}" required minlength="12" maxlength="50">
+                            <input type="email" class="formulario__input" name="Correo" id="Correo" title="Ingresa el correo elecctronico" placeholder="Correo Electronico" value="<?php if (isset($row)) {echo $row['Correo'];} ?>" pattern="[a-z0-9_]+([.][a-z0-9_]+)*@[a-z0-9_]+([.][a-z0-9_]+)*[.][a-z]{1,5}" required minlength="12" maxlength="50" onblur="lowerCase('Correo')">
                           </div>
                           <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
                           </p>

@@ -212,7 +212,7 @@
                         <div class="formulario__grupo" id="grupo__DescripcionCiudad">
                           <label for="DescripcionCiudad" class="formulario__label">Nombre de la Ciudad</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="DescripcionCiudad" id="DescripcionCiudad" title="Ingresa nombre de la ciudad" onkeypress="return soloLetras(event)" placeholder="Nombre de la Ciudad" value="<?php if (isset($row)) {echo $row['DescripcionCiudad'];} ?>" required minlength="5" maxlength="30">
+                            <input type="text" class="formulario__input" name="DescripcionCiudad" id="DescripcionCiudad" title="Ingresa nombre de la ciudad" onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCiudad')" placeholder="Nombre de la Ciudad" value="<?php if (isset($row)) {echo $row['DescripcionCiudad'];} ?>" required minlength="5" maxlength="30">
                           </div>
                           <p class="formulario__input-error">La descripcion de la ciudad solo acepta letras y el maximo son 30.</p>
                         </div>
