@@ -377,4 +377,30 @@ LOCK TABLES `detalleplanillas` WRITE;
 UNLOCK TABLES;
 
 
+--
+-- Table structure for table `registros`
+--
+
+DROP TABLE IF EXISTS `registros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `registros` (
+  `id` int NOT NULL,
+  `id_Planilla` int NOT NULL,
+  `Nombre_Planilla` varchar(75) NOT NULL,
+  `url` varchar(75) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_Registros_planillas` FOREIGN KEY (`id_Planilla`) REFERENCES `planillas` (`idPlanillas`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `registros`
+--
+
+LOCK TABLES `registros` WRITE;
+/*!40000 ALTER TABLE `registros` DISABLE KEYS */;
+/*!40000 ALTER TABLE `registros` ENABLE KEYS */;
+UNLOCK TABLES;
+
 -- Dump completed on 2022-02-22 13:56:45

@@ -236,18 +236,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Búsqueda en la barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
           <!-- Barra superior Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -305,15 +293,14 @@
             <button class="btn btn-success btn-sm" id="btnExportar" onclick="exceller()">Excel</button>
           </div>
 
-
           <!-- Tablas-->
           <div class="card shadow mb-4">
             <div class="table-body">
-              <div class="table-responsive">
+              <div class="table-responsive" id="pdfDiv">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>id_Empleado</th>
+                      <th>id</th>
                       <th>Nombre</th>
                       <th>Salario</th>
                       <th>IHSS</th>
@@ -324,7 +311,6 @@
                       <th>DecimoTercero</th>
                       <th>Bonificaciones</th>
                       <th>Sueldo Neto</th>
-                      <th scope="col" colspan="3">Accion</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -353,12 +339,6 @@
                         <td><?php echo $row['13vo']; ?></td>
                         <td><?php echo $row['Total_Bonificaciones']; ?></td>
                         <td><?php echo $row['Sueldo_Neto']; ?></td>
-                        <td>
-                          <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-success btn-sm">Ver</a>
-                        </td>
-                        <td>
-                          <a href="#?idEmpleados=<?php echo $row['idEmpleados']; ?>&idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-sm">Enviar</a>
-                        </td>
                       </tr>
                     <?php } ?>
 
@@ -429,6 +409,7 @@
   <!-- Scripts personalizados a nivel de página -->
   <script src="../js/demo/chart-area-demo.js"></script>
   <script src="../js/demo/chart-pie-demo.js"></script>
+  <script src="../js/FileSaver.js"></script>
 
 </body>
 
@@ -457,7 +438,23 @@
     link.click();
   }
 
-  $("#btnExportarPDF").on("click", function() {
+  function pdf(value) {
+    $.ajax({
+      type: "POST",
+      url: "htmlPDF.php",
+      data: {
+        "rolex": value,
+        "empresa": <?php echo $Empresa ?>,
+        "planilla": <?php echo $idPlanillas ?>
+      },
+      success: function(response) {
+        alert("Planilla Descargada con exito y guardada en Registro");
+      }
+    });
+  }
 
+  $("#btnExportarPDF").on("click", function() {
+    var val = $("#pdfDiv").html();
+    pdf(val);
   });
 </script>
