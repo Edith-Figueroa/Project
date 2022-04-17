@@ -448,7 +448,7 @@
         "planilla": <?php echo $idPlanillas ?>
       },
       success: function(response) {
-        alert("Planilla Descargada con exito y guardada en Registro");
+        alert("Planilla Descargada con exito y guardada en Registro" + response);
       }
     });
   }

@@ -36,3 +36,7 @@ $db->insert('registros', [
     'Nombre_Planilla' => $name,
     'url' => $url
 ]);
+
+if ($db == true) {
+    echo 'insertado correcto';
+}
