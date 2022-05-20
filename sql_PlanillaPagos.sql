@@ -19,6 +19,12 @@
 -- Table structure for table `cargos`
 --
 
+DROP DATABASE `sistema_planilla`;
+
+CREATE DATABASE `sistema_planilla`;
+
+USE `sistema_planilla`;
+
 DROP TABLE IF EXISTS `cargos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -269,8 +275,7 @@ CREATE TABLE `planillas` (
   `Empresas_idEmpresas` int(11) NOT NULL,
   `FechaInicio` datetime NOT NULL,
   `FechaFin` datetime NOT NULL,
-  PRIMARY KEY (`idPlanillas`),
-  UNIQUE KEY `NumeroPlanilla` (`NumeroPlanilla`)
+  PRIMARY KEY (`idPlanillas`)
 ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
