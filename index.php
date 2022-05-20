@@ -522,7 +522,7 @@
                                 <div class="col-12">
                                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
                                         <h3>¿Que esperas para formar parte de COPAP? ¡NO LO PIENSES MAS!</h3>
-                                        <a href="#" class="btn academy-btn">VER MAS</a>
+                                        <a href="menu/contact.php" class="btn academy-btn">VER MAS</a>
 
                                     </div>
                                 </div>

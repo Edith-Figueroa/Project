@@ -195,7 +195,7 @@
                     <br></br>
                     <br></br>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P2.jpg" alt="JARED GARCIA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/denis.jpg" alt="JARED GARCIA"></div>
                     <h3>JARED GARCIA</h3>
                     <span class="position">PROGRAMADOR PRINCIPAL</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -216,7 +216,7 @@
                     <br></br>
                     <br></br>
 
-                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="EMERSON ZAPATA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/Emerson.jpg" alt="EMERSON ZAPATA"></div>
                     <h3>EMERSON ZAPATA</h3>
                     <span class="position">CO-PROGRAMADOR</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -250,7 +250,7 @@
 
             <div class="col-md-4">
                 <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="ONAN AGUILERA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/Onan.jpg" alt="ONAN AGUILERA"></div>
                     <br></br>
                     <br></br>
                     <br></br>
@@ -302,7 +302,7 @@
                     <br></br>
                     <br></br>
                     <br></br>
-                    <div class="user"><img class="img-reponsive" src="../img/bg-img/p1.jpg" alt="DULCE SANCHEZ"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/Dulce.jpg" alt="DULCE SANCHEZ"></div>
                     <h3>DULCE SANCHEZ</h3>
                     <span class="position">DISEÑADOR GRAFICO</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
@@ -319,7 +319,7 @@
 
             <div class="col-md-4">
                 <div class="team-box text-center to-animate-2">
-                    <div class="user"><img class="img-reponsive" src="../img/bg-img/P3.jpg" alt="DIEGO MOLINA"></div>
+                    <div class="user"><img class="img-reponsive" src="../img/bg-img/Diego.jpg" alt="DIEGO MOLINA"></div>
                     <br></br>
                     <br></br>
                     <br></br>
