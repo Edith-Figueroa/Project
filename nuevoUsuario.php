@@ -62,7 +62,7 @@
                     placeholder="Repetir contraseña">
                 </div>
               </div>
-              <a href="index.php" class="btn btn-primary btn-user btn-block">
+              <a href="Login/loginForm.php" class="btn btn-primary btn-user btn-block">
                 Registrar nuevo usuario
               </a>
             </form>
