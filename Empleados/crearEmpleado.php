@@ -294,7 +294,7 @@
                           <label for="Cedula" class="formulario__label">Identidad</label>
                           <div class="formulario__grupo-input">
 
-                            <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}[12]{1}[09]{1}[012]{1}[0-9]{1}[0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
+                            <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}     [12]{1}[09]{1}[0129]{1}[0-9]{1}    [0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
 
 
                           </div>
