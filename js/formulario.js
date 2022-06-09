@@ -2,7 +2,7 @@ const formulario = document.getElementById("formulario"); //Accedemos al formula
 const input = document.querySelectorAll("#formulario input"); //Almacenamos los inputs en una variable
 const select = document.querySelectorAll("#formulario select");
 const date = document.querySelectorAll("#formulario date");
-
+const textarea = document.querySelectorAll("#formulario textarea");
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/,
   apellido: /^[a-zA-ZÀ-ÿ\s]{1,15}$/,
@@ -16,6 +16,8 @@ const expresiones = {
   Salario: /^\d+$/,
   DescripcionCiudad: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
   DescripcionDepto: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
+  nombrec: /^[a-zA-ZÀ-ÿ\s]{12,50}$/,
+  mensaje: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{8,150}$/,
 };
 
 const validarFormulario = (e) => {
@@ -85,6 +87,14 @@ const validarFormulario = (e) => {
 
     case "Departamentos_idDepartamentos":
       validarSelect("Departamentos_idDepartamentos");
+      break;
+
+    case "nombre_contactanos":
+      validarCampo(expresiones.nombrec, e.target, "nombre_contactanos");
+      break;
+
+    case "Mensaje":
+      validarCampo(expresiones.mensaje, e.target, "Mensaje");
       break;
   }
 };

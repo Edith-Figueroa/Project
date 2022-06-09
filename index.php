@@ -503,7 +503,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
-                                        <a href="#" class="btn academy-btn">VER MAS</a>
+                                        <a href="menu/contact.php" class="btn academy-btn">VER MAS</a>
                                     </div>
                                 </div>
                             </div>

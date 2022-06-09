@@ -7,6 +7,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.formulario_contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 
 .formulario__label {
   display: block;
@@ -40,6 +45,7 @@
   font-size: 12px;
   margin-bottom: 0;
   display: none;
+  color: #bb2929;
 }
 .formulario__input-error-activo {
   display: block;
@@ -87,7 +93,7 @@
   height: 45px;
   line-height: 45px;
   width: 30%;
-  background: #000;
+  background: rgba(245, 121, 4, 0.925);
   color: #fff;
   font-weight: bold;
   border: none;

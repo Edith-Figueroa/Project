@@ -16,6 +16,7 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/estilosValidacion.css">
 
 </head>
 
@@ -288,9 +289,6 @@
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Google Maps ##### -->
-    <div class="map-area wow fadeInUp" data-wow-delay="300ms">
-        <div id="googleMap"></div>
-    </div>
 
     <!-- ##### Contact Area Start ##### -->
     <section class="contact-area">
@@ -322,11 +320,40 @@
                             <!-- Contact Form Area -->
                             <div class="col-12 col-lg-7">
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                    <form action="#" method="post">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                        <button class="btn academy-btn mt-30" type="submit">Enviar</button>
+                                    <form class="formulario_contacto" id="formulario" action="#" method="post">
+                                      
+                                        <!--Grupo: Primer Nombre-->
+                                        <div class="formulario__grupo" id="grupo__nombre_contactanos">
+                                          <label for="nombre_contactanos" class="formulario__label">Nombre Completo</label>
+                                          <div class="formulario__grupo-input">
+
+                                            <input type="text" class="formulario__input" name="nombre_contactanos" id="nombre_contactanos" title="Ingresa su nombre completo" onkeypress="return soloLetras(event)" placeholder="Nombre Completo"  required minlength="12" maxlength="50">
+
+                                          </div>
+                                          <p class="formulario__input-error">Este tiene que ser de 12 a 50 digitos y solo puede contener
+                                            letras.</p>
+                                        </div>
+
+                                        <div class="formulario__grupo" id="grupo__correo">
+                                          <label for="Correo" class="formulario__label">Correo Elecronico</label>
+                                          <div class="formulario__grupo-input">
+                                            <input type="email" class="formulario__input" name="Correo" id="Correo" title="Ingresa el correo elecctronico" placeholder="Correo Electronico" pattern="[a-z0-9_]+([.][a-z0-9_]+)*@[a-z0-9_]+([.][a-z0-9_]+)*[.][a-z]{1,5}" required minlength="12" maxlength="50" onblur="lowerCase('Correo')">
+                                          </div>
+                                          <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
+                                          </p>
+                                        </div>
+
+                                        <div class="formulario__grupo" id="grupo__Mensaje">
+                                          <label for="Mensaje" class="formulario__label">Mensaje</label>
+                                          <div class="formulario__grupo-input">
+                                            <textarea class="formulario__input" name="Mensaje" id="Mensaje" placeholder="Ingresa un mensaje" cols="30" rows=50 minlength="8" maxlength="150" ></textarea>
+                                          </div>
+                                          <div id="contador">0/150</div>
+                                          <p class="formulario__input-error">Este tiene que ser de 12 a 50 digitos y solo puede contener
+                                            letras.</p>
+                                        </div>
+
+                                        <button class="btn academy-btn mt-30 formulario__btn" type="submit">Enviar</button>
                                     </form>
                                 </div>
                             </div>
@@ -443,8 +470,19 @@
     <script src="../js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="../js/active.js"></script>
-    <!-- ##### <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-    <script src="js/google-map/map-active.js"></script>
+      <!-- Scripts Validacion de Formulario -->
+  <script src="../js/formulario.js"></script>
+  <script>
+    const mensaje = document.getElementById('Mensaje');
+const contador = document.getElementById('contador');
+
+mensaje.addEventListener('input', function(e) {
+    const target = e.target;
+    const longitudMax = target.getAttribute('maxlength');
+    const longitudAct = target.value.length;
+    contador.innerHTML = `${longitudAct}/${longitudMax}`;
+});
+  </script>
     </body>
     
     </html>
