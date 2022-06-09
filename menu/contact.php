@@ -236,7 +236,6 @@
                                             <li><a href="about-us.php">¿Quienes Somos?</a></li>
                                             <li><a href="COPAP.php"></a></li>
                                             <li><a href="Modulos.php">Nuestro Sistema</a></li>
-                                            <li><a href="pago.php">Planes de Pago</a></li>
                                             <li><a href="contact.php">Contactanos</a></li>
 
                                         </ul>

@@ -299,7 +299,7 @@
                                 <div class="hero-slides-content">
                                     <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de pago</h4>
                                     <h2 data-animation="fadeInUp" data-delay="400ms">BIENVENIDO A <br>COPAP</h2>
-                                    <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
+                                    <a href="menu/about-us.php" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
                                 </div>
                             </div>
                         </div>
