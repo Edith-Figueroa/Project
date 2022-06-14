@@ -29,7 +29,6 @@
                     'Estados_idEstado'=>$Estados_idEstado,'Correo'=>$Correo,
                     'Ciudades_idCiudades'=>$Ciudades_idCiudades]);
         if ($a == true) {
-            header("location:../index.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
+            header("location: tablas.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
         }
     }
-?>

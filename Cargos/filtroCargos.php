@@ -64,10 +64,10 @@ if ($table->num_rows > 0) {
                     <td>' . $fila['Salario'] . '</td>
                     <td>' . $fila['Departamentos_idDepartamentos'] . '</td>
                     <td>
-                    <a href="SQLRead_Cargos.php?idCargo=' . $fila['idCargo'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                    <a href="formCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=3" class="btn btn-success btn-sm">Ver</a>
                     </td>
                     <td>
-                    <a href="ModificacionCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                    <a href="formCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=2" class="btn btn-primary btn-sm">Modificar</a>
                     </td>
                     <td>
                     <a href="SQLInactive_Cargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
@@ -84,10 +84,10 @@ if ($table->num_rows > 0) {
                 <td>' . $fila['Salario'] . '</td>
                 <td>' . $fila['Departamentos_idDepartamentos'] . '</td>
                 <td>
-                <a href="SQLRead_Cargos.php?idCargo=' . $fila['idCargo'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                <a href="formCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=3" class="btn btn-success btn-sm">Ver</a>
                 </td>
                 <td>
-                <a href="ModificacionCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                <a href="formCargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=2" class="btn btn-primary btn-sm">Modificar</a>
                 </td>
                 <td>
                 <a href="SQLInactive_Cargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-danger btn-sm">Desactivar</a>

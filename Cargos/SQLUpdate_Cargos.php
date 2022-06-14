@@ -1,15 +1,13 @@
 <?php
 include '../SqlTools/database.php';
 if (isset($_POST['submit'])) {
+    $id = $_POST['idCargo'];
     $Usuario = $_POST['Usuario'];
     $Empresa = $_POST['Empresa'];
-    $id = $_POST['idCargo'];
     $DescripcionCargo = $_POST['DescripcionCargo'];
     $Salario = $_POST['Salario'];
     $Departamentos_idDepartamentos = $_POST['Departamentos_idDepartamentos'];
     $Estado_idEstado = $_POST['Estados_idEstado'];
-
-    echo $Estado_idEstado;
 
     $a = new database();
     $a->update('cargos', "idCargo = $id", [

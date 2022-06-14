@@ -58,10 +58,10 @@ if ($table->num_rows > 0) {
                     <td>' . $fila['idDepartamentos'] . '</td>
                     <td>' . $fila['DescripcionDepto'] . '</td>
                     <td>
-                    <a href="SQLRead_Departamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                    <a href="formDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=3" class="btn btn-success btn-sm">Ver</a>
                     </td>
                     <td>
-                    <a href="ModificacionDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                    <a href="formDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=2" class="btn btn-primary btn-sm">Modificar</a>
                     </td>
                     <td>
                     <a href="SQLInactive_Departamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
@@ -76,10 +76,10 @@ if ($table->num_rows > 0) {
                 <td>' . $fila['idDepartamentos'] . '</td>
                 <td>' . $fila['DescripcionDepto'] . '</td>
                 <td>
-                <a href="SQLRead_Departamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . ' &idUsuario=' . $Usuario . ' &Empresas_idEmpresas=' . $Empresa . '" class="btn btn-success btn-sm">Ver</a>
+                <a href="formDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=3" class="btn btn-success btn-sm">Ver</a>
                 </td>
                 <td>
-                <a href="ModificacionDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-primary btn-sm">Modificar</a>
+                <a href="formDepartamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&action=2" class="btn btn-primary btn-sm">Modificar</a>
                 </td>
                 <td>
                 <a href="SQLInactive_Departamentos.php?idDepartamentos=' . $fila['idDepartamentos'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-danger btn-sm">Desactivar</a>
