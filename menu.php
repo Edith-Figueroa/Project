@@ -246,45 +246,52 @@
 
 
         <!-- Barra superior Navbar -->
-        <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto">
 
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
 
-          <div class="topbar-divider d-none d-sm-block"></div>
+                        </li>
 
-          <!-- Nav Item - Información del usuario -->
-          <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
-              <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-            </a>
-            <!-- Desplegable - Información del usuario -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                Perfil
-              </a>
-              <a class="dropdown-item" href="nuevoUsuario.php">
-                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                Crear usuario
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Actividad
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                Cerrar Sesion
-              </a>
-            </div>
-          </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
 
-        </ul>
+                        <!-- Nav Item - Información del usuario -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
+                                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
+                            </a>
+                            <!-- Desplegable - Información del usuario -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <!-- <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a> -->
+                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cambio de contraseña
+                                </a>
+                                <!-- <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Actividad
+                                </a> -->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar Sesion
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
 
       </nav>
       <!-- Fin de la barra superior -->
 
-      <!--Intro Section-->
+      Intro Section
       <div class="contex">
         <section id="intro" class="clearfix">
           <div class="container">

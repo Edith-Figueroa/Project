@@ -24,7 +24,15 @@
 </head>
 
 <body class="bg-gradient-primary">
+<?php
+  $Usuario = $_GET['idUsuario'];
+  $Empresa = $_GET['Empresas_idEmpresas'];
 
+  include 'SqlTools/database.php';
+  $auxiliar = new database();
+  $auxiliar->select('usuarios', 'Usuario', "idUsuario = '$Usuario'");
+  $nombre = $auxiliar->sql;
+  $name = mysqli_fetch_assoc($nombre); ?>
   <!-- Contenido de la página de inicio -->
   <div class="container">
     
@@ -74,7 +82,7 @@
                         <!--Cancelar-->
                         <div class="formulario__grupo formulario__grupo-btn-enviar">
                           <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
-                            <a title="Click si no desea hacer ni una acción" href="Login/loginForm.php" class="btn btn-primary btn-user btn-block">
+                            <a title="Click si no desea hacer ni una acción" href="javascript:history.back()" class="btn btn-primary btn-user btn-block">
                               Cancelar
                             </a>
                           </div>

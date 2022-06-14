@@ -270,18 +270,18 @@
                             </a>
                             <!-- Desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
-                                </a>
-                                <a class="dropdown-item" href="#">
+                                </a> -->
+                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Opciones
+                                    Cambio de contraseña
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Actividad
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -351,11 +351,11 @@
                                                 <!--Submit-->
                                                 <div class="formulario__grupo" id="grupo__departamento">
                                                     <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
-                                                                                                                                                                                                    echo "CREAR";
+                                                                                                                                                                                                    echo "Crear";
                                                                                                                                                                                                 } else if ($action == 2) {
-                                                                                                                                                                                                    echo "MODIFICAR";
+                                                                                                                                                                                                    echo "Modificar";
                                                                                                                                                                                                 } else {
-                                                                                                                                                                                                    echo "LEER";
+                                                                                                                                                                                                    echo "Leer";
                                                                                                                                                                                                 } ?>>
                                                 </div>
                                                 <!--Limpiar-->
