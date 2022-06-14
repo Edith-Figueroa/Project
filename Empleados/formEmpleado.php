@@ -256,18 +256,18 @@
                             </a>
                             <!-- Desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
-                                </a>
-                                <a class="dropdown-item" href="#">
+                                </a> -->
+                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Opciones
+                                    Cambio de contraseña
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Actividad
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -315,9 +315,7 @@
                                                 <div class="formulario__grupo" id="grupo__identidad">
                                                     <label for="Cedula" class="formulario__label">Identidad</label>
                                                     <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" <?php if ($action != 1 && $action != 2) echo "readonly" ?> onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {
-                                                                                                                                                                                                                                                                                                            echo $row['Cedula'];
-                                                                                                                                                                                                                                                                                                        } ?>" required minlength="13" maxlength="13">
+                                                        <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" <?php if ($action != 1 && $action != 2) echo "readonly" ?> pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}[12]{1}[09]{1}[012789]{1}[0-9]{1}[0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
                                                     </div>
                                                     <p class="formulario__input-error">El numero de identidad solo puede contener numeros y el maximo son 13.</p>
                                                 </div>
@@ -531,11 +529,11 @@
                                                 <!--Grupo: Botones-->
                                                 <div class="formulario__grupo">
                                                     <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
-                                                                                                                                                                                                    echo "CREAR";
+                                                                                                                                                                                                    echo "Crear";
                                                                                                                                                                                                 } else if ($action == 2) {
-                                                                                                                                                                                                    echo "MODIFICAR";
+                                                                                                                                                                                                    echo "Modificar";
                                                                                                                                                                                                 } else {
-                                                                                                                                                                                                    echo "LEER";
+                                                                                                                                                                                                    echo "Leer";
                                                                                                                                                                                                 } ?> onclick="" <?php if ($action != 1 && $action != 2) echo "readonly" ?>>
                                                 </div>
                                                 <div class="formulario__grupo">
