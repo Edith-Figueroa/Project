@@ -18,6 +18,7 @@ const expresiones = {
   DescripcionDepto: /^[a-zA-ZÀ-ÿ\s.,#]{5,30}$/,
   nombrec: /^[a-zA-ZÀ-ÿ\s]{12,50}$/,
   mensaje: /^[a-zA-ZÀ-ÿ0-9\s.,#-]{8,150}$/,
+  contraseña: /^.{8,15}$/,
 };
 
 const validarFormulario = (e) => {
@@ -96,6 +97,12 @@ const validarFormulario = (e) => {
     case "Mensaje":
       validarCampo(expresiones.mensaje, e.target, "Mensaje");
       break;
+    case "contraseña":
+      validarCampo(expresiones.mensaje, e.target, "contraseña");
+      break;
+    case "contraseña2":
+      validarContraseña2();
+      break;
   }
 };
 const validarCampo = (expresion, input, campo) => {
@@ -113,6 +120,27 @@ const validarCampo = (expresion, input, campo) => {
     document
       .querySelector(`#grupo__${campo} .formulario__input-error`)
       .classList.add("formulario__input-error-activo");
+  }
+};
+
+const validarContraseña2 = () => {
+  const inputContraseña1 = document.getElementById("contraseña");
+  const inputContraseña2 = document.getElementById("contraseña2");
+
+  if (inputContraseña1.value !== inputContraseña2.value) {
+    document
+      .getElementById(`grupo__contraseña2`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__contraseña2 .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+  } else {
+    document
+      .getElementById(`grupo__contraseña2`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .querySelector(`#grupo__contraseña2 .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
   }
 };
 
