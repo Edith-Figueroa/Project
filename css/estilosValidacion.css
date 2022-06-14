@@ -7,6 +7,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.formulario2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
 .formulario_contacto {
   display: grid;
   grid-template-columns: 1fr;

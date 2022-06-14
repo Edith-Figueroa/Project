@@ -261,13 +261,13 @@
                 <form action="validar.php" method="post" class="inputs-container">
                     <img src="../img/f.png">
                     <br></br>
-                    <input class="input" type="text" placeholder="Usuario" name="Usuario">
+                    <input class="input" type="text" placeholder="Usuario" name="Usuario" required>
                     <br></br>
-                    <input class="input" type="password" placeholder="Contraseña" name="Contrasenia">
+                    <input class="input" type="password" placeholder="Contraseña" name="Contrasenia" required>
                     <br></br>
                     <input name="submit" class="btn" type="submit" value="Iniciar Sesion ">
                     <br></br>
-                    <a class="small" href="../contraOlvidada.php">¿Has olvidado tu contraseña?</a>
+                    <a class="small" href="../cambioContra.php">¿Has olvidado tu contraseña?</a>
                 </form>
             </div>
 

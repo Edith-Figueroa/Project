@@ -28,25 +28,6 @@
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
-
-        <!-- Top Header Area -->
-        <div class="top-header">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 h-100">
-                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <div class="academy-logo">
-                                <a href="inicio.php"><img src="../img/bg-img/logo.png" alt=""></a>
-                            </div>
-                            <div class="login-content">
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Navbar Area -->
         <div class="academy-main-menu">
             <div class="classy-nav-container breakpoint-off">
@@ -69,40 +50,11 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
+                              <div class="academy-logo">
+                                <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
+                              </div>
                                 <ul>
                                     <li><a href="../index.php">Inicio</a></li>
-                                    <li><a href="#">Contenido</a>
-                                        <ul class="dropdown">
-
-                                            <li><a href="../index.php">Inicio</a></li>
-                                            <li><a href="about-us.php">¿Quienes Somos?</a></li>
-                                            <li><a href="COPAP.php"></a></li>
-                                            <li><a href="Modulos.php">Nuestro Sistema</a></li>
-                                            <li><a href="contact.php">Contactanos</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Modulos o Servicios</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <ul class="single-mega cn-col-4">
-                                                    <li><a href="#">Planllas</a></li>
-                                                    <li><a href="#"> Empleados </a></li>
-                                                    <li><a href="#"> </a></li>
-
-
-
-                                                </ul>
-
-                                            </ul>
-                                            <div class="single-mega cn-col-4">
-                                                <img src="../img/bg-img/modulos.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
                                     <li><a href="about-us.php">Sobre Nosotros</a></li>
                                     <li><a href="contact.php">Contactanos</a></li>
                                 </ul>
