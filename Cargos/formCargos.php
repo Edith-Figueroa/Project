@@ -58,7 +58,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Barra lateral - Marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../menu.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>">
                 <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
@@ -74,7 +74,7 @@
 
             <!-- Nav Item - Menu-->
             <li class="nav-item active">
-                <a class="nav-link" href="../menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                <a class="nav-link" href="../menu.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>">
                     <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <polyline points="5 12 3 12 12 3 21 12 19 12" />
@@ -99,14 +99,14 @@
                 </a>
                 <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../Empleados/formEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="../Empleados/formEmpleado.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                                 <line x1="12" y1="11" x2="12" y2="17" />
                                 <line x1="9" y1="14" x2="15" y2="14" />
                             </svg> Crear Empleado</a>
-                        <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Empleados</a>
+                        <a class="collapse-item" href="../Empleados/tablas.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><i class="fas fa-fw fa-table"></i> Mostrar Empleados</a>
                     </div>
                 </div>
             </li>
@@ -126,7 +126,7 @@
                 </a>
                 <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="../Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <circle cx="17" cy="17" r="4" />
                                 <path d="M17 13v4h4" />
@@ -134,7 +134,7 @@
                                 <path d="M11.5 21h-6.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v2m0 3v4" />
                             </svg> Registro</a>
 
-                        <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="../Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -160,8 +160,8 @@
                 </a>
                 <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Cargos</a>
-                        <a class="collapse-item" href="formCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="TablaCargos.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><i class="fas fa-fw fa-table"></i> Mostrar Cargos</a>
+                        <a class="collapse-item" href="formCargos.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -188,8 +188,8 @@
                 </a>
                 <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Ciudades</a>
-                        <a class="collapse-item" href="../Ciudades/formCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="../Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><i class="fas fa-fw fa-table"></i> Mostrar Ciudades</a>
+                        <a class="collapse-item" href="../Ciudades/formCiudades.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -216,8 +216,8 @@
                 </a>
                 <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Departamentos</a>
-                        <a class="collapse-item" href="../Departamentos/formDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <a class="collapse-item" href="../Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>"><i class="fas fa-fw fa-table"></i> Mostrar Departamentos</a>
+                        <a class="collapse-item" href="../Departamentos/formDepartamentos.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -256,7 +256,7 @@
                         <!-- Nav Item - Información del usuario -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario']; ?></span>
                                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
                             </a>
                             <!-- Desplegable - Información del usuario -->
@@ -265,7 +265,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a> -->
-                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cambio de contraseña
                                 </a>
@@ -288,9 +288,13 @@
 
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creacion de Cargo';
-                                                        else if ($action == 2) echo 'Modificacion de Cargo';
-                                                        else echo 'Lectura de Cargo' ?></h1>
+                    <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) {
+        echo 'Creacion de Cargo';
+    } elseif ($action == 2) {
+        echo 'Modificacion de Cargo';
+    } else {
+        echo 'Lectura de Cargo';
+    } ?></h1>
                 </div>
                 <div class="container">
 
@@ -306,10 +310,10 @@
                                         <div class="p-5">
                                             <!--Inicio de Form-->
                                             <form class="formulario" action=<?php if ($action == 1) {
-                                                                                echo "SQLInsert_Cargos.php";
-                                                                            } else if ($action == 2) {
-                                                                                echo "SQLUpdate_Cargos.php";
-                                                                            } ?> id="formulario" method="post">
+        echo 'SQLInsert_Cargos.php';
+    } elseif ($action == 2) {
+        echo 'SQLUpdate_Cargos.php';
+    } ?> id="formulario" method="post">
                                                 <input type="hidden" name="Usuario" value="<?php echo $Usuario; ?>">
                                                 <input type="hidden" name="Empresa" value="<?php echo $Empresa; ?>">
                                                 <input type="hidden" name="idCargo" value="<?php echo $idCargo; ?>">
@@ -318,9 +322,11 @@
                                                 <div class="formulario__grupo" id="grupo__DescripcionCargo">
                                                     <label for="DescripcionCargo" class="formulario__label">Nombre del Cargo</label>
                                                     <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" title="Ingresa nombre de cargo" <?php if ($action != 1 && $action != 2) echo "readonly" ?> onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCargo')" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {
-                                                                                                                                                                                                                                                                                                                                                                    echo $row['DescripcionCargo'];
-                                                                                                                                                                                                                                                                                                                                                                } ?>" required minlength="5" maxlength="30">
+                                                        <input type="text" class="formulario__input" name="DescripcionCargo" id="DescripcionCargo" title="Ingresa nombre de cargo" <?php if ($action != 1 && $action != 2) {
+        echo 'readonly';
+    } ?> onkeypress="return soloLetras(event)" onblur="upperCase('DescripcionCargo')" placeholder="Nombre de Cargo" value="<?php if (isset($row)) {
+        echo $row['DescripcionCargo'];
+    } ?>" required minlength="5" maxlength="30">
                                                     </div>
                                                     <p class="formulario__input-error">La descripcion de cargo solo acepta letras y el maximo son 30.</p>
                                                 </div>
@@ -329,9 +335,11 @@
                                                 <div class="formulario__grupo" id="grupo__Salario">
                                                     <label for="Salario" class="formulario__label">Salario</label>
                                                     <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="Salario" id="Salario" title="Ingresa salario" <?php if ($action != 1 && $action != 2) echo "readonly" ?> onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {
-                                                                                                                                                                                                                                                                                            echo $row['Salario'];
-                                                                                                                                                                                                                                                                                        } ?>" required minlength="3" maxlength="7">
+                                                        <input type="text" class="formulario__input" name="Salario" id="Salario" title="Ingresa salario" <?php if ($action != 1 && $action != 2) {
+        echo 'readonly';
+    } ?> onkeypress="return soloNumeros(event)" placeholder="Salario" value="<?php if (isset($row)) {
+        echo $row['Salario'];
+    } ?>" required minlength="3" maxlength="7">
                                                     </div>
                                                     <p class="formulario__input-error">El salario solo acepta numeros.</p>
                                                 </div>
@@ -344,10 +352,16 @@
                                                 ?>
                                                 <div class="formulario__grupo" id="grupo__Departamentos_idDepartamentos">
                                                     <label for="Departamentos_idDepartamentos" class="formulario__label">Departamento</label>
-                                                    <select class="formulario__input" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" title="Seleciona una opcion" <?php if ($action != 1 && $action != 2) echo "readonly" ?> value="" required>
+                                                    <select class="formulario__input" name="Departamentos_idDepartamentos" id="Departamentos_idDepartamentos" title="Seleciona una opcion" <?php if ($action != 1 && $action != 2) {
+                                                    echo 'readonly';
+                                                } ?> value="" required>
                                                         <option value="">Selcciona un departamento</option>
                                                         <?php while ($ex = mysqli_fetch_assoc($table)) { ?>
-                                                            <option value=<?php echo $ex['idDepartamentos']; ?> <?php if (isset($row)) if ($row['Departamentos_idDepartamentos'] == $ex['idDepartamentos']) echo "selected" ?>><?php echo $ex['DescripcionDepto']; ?></option>
+                                                            <option value=<?php echo $ex['idDepartamentos']; ?> <?php if (isset($row)) {
+                                                    if ($row['Departamentos_idDepartamentos'] == $ex['idDepartamentos']) {
+                                                        echo 'selected';
+                                                    }
+                                                } ?>><?php echo $ex['DescripcionDepto']; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                     <p class="formulario__input-error">Debe seleccionar un departamento.</p>
@@ -358,11 +372,19 @@
                                                     <label for="estado" class="formulario__label">Estado</label>
                                                     <div class="formulario__grupo">
                                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                                            <input type="radio" name="Estados_idEstado" title="Seleciona si esta activo" <?php if ($action != 1 && $action != 2) echo "readonly" ?> value="1" <?php if (isset($row)) if ($row['Estados_idEstado'] == 1) : ?> checked="checked" <?php endif ?> required>
+                                                            <input type="radio" name="Estados_idEstado" title="Seleciona si esta activo" <?php if ($action != 1 && $action != 2) {
+                                                    echo 'readonly';
+                                                } ?> value="1" <?php if (isset($row)) {
+                                                    if ($row['Estados_idEstado'] == 1) { ?> checked="checked" <?php }
+                                                } ?> required>
                                                             <label for="contactChoice1">Activo</label>
                                                         </div>
                                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                                            <input type="radio" name="Estados_idEstado" title="Selecciona si esta inactivo" <?php if ($action != 1 && $action != 2) echo "readonly" ?> value="2" <?php if (isset($row)) if ($row['Estados_idEstado'] == 2) : ?> checked="checked" <?php endif; ?>>
+                                                            <input type="radio" name="Estados_idEstado" title="Selecciona si esta inactivo" <?php if ($action != 1 && $action != 2) {
+                                                    echo 'readonly';
+                                                } ?> value="2" <?php if (isset($row)) {
+                                                    if ($row['Estados_idEstado'] == 2) { ?> checked="checked" <?php }
+                                                } ?>>
                                                             <label for="contactChoice2">Inactivo</label>
                                                         </div>
                                                     </div>
@@ -373,12 +395,12 @@
 
                                                     <div class="formulario__grupo" id="grupo__departamento">
                                                         <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
-                                                                                                                                                                                                        echo "Crear";
-                                                                                                                                                                                                    } else if ($action == 2) {
-                                                                                                                                                                                                        echo "Modificar";
-                                                                                                                                                                                                    } else {
-                                                                                                                                                                                                        echo "Leer";
-                                                                                                                                                                                                    } ?>>
+                                                    echo 'Crear';
+                                                } elseif ($action == 2) {
+                                                    echo 'Modificar';
+                                                } else {
+                                                    echo 'Leer';
+                                                } ?>>
                                                     </div>
                                                     <!--Limpiar-->
                                                     <div class="formulario__grupo" id="grupo__departamento">
@@ -390,8 +412,8 @@
                                                 <!--Cancelar-->
                                                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                                                     <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
-                                                        <a title="Click si no desea hacer ni una acción" href="TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
-                                                            Cancelar
+                                                        <a title="Click si no desea hacer ni una acción" href="TablaCargos.php?idUsuario=<?php echo $Usuario; ?>&Empresas_idEmpresas=<?php echo $Empresa; ?>" class="btn btn-primary btn-user btn-block">
+                                                            Regresar
                                                         </a>
                                                     </div>
                                                 </div>

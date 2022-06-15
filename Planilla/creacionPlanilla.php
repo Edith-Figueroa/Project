@@ -331,8 +331,8 @@
                           </div>
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 16vw;">
-                          <a href="tablas.php" class="btn btn-primary btn-user btn-block">
-                            Cancelar
+                          <a href="historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
+                            Regresar
                           </a>
                         </div>
                       </form>
