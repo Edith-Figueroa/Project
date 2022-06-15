@@ -369,7 +369,7 @@
                                                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                                                     <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
                                                         <a title="Click si no desea hacer ni una acción" href="TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
-                                                            Cancelar
+                                                            Regresar
                                                         </a>
                                                     </div>
                                                 </div>
