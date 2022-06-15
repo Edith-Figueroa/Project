@@ -33,9 +33,9 @@
                                 </div>
                                 <!-- Nav Start -->
                                 <div class="classynav">
-                                  <div class="academy-logo">
-                                <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
-                              </div>
+                                    <div class="academy-logo">
+                                        <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
+                                    </div>
                                     <ul>
                                         <li><a href="../index.php">Inicio</a></li>
                                         </li>

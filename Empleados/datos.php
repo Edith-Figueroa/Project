@@ -1,12 +1,10 @@
 <?php
-    $conexion = mysqli_connect('localhost','root','root','sistema_planilla');
+    include '../SqlTools/database.php';
+    $a = new database();
     $idDpto=$_POST['dpto'];
 
-    $sql="SELECT idCargo, DescripcionCargo FROM cargos WHERE Departamentos_idDepartamentos = '$idDpto'";
+    $a->select('cargos', 'idCargo, DescripcionCargo',"Departamentos_idDepartamentos = '$idDpto'");
 
-    $result=mysqli_query($conexion, $sql);
-
-    while ($ex = mysqli_fetch_assoc($result)){
+    while ($ex = mysqli_fetch_assoc($a->sql)){
         echo'<option value='.$ex['idCargo'].'>'.$ex['DescripcionCargo'].'</option>';
     }
-?>
