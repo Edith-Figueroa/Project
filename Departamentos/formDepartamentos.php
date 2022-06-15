@@ -345,20 +345,26 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--Submit-->
-                                                <div class="formulario__grupo" id="grupo__departamento">
-                                                    <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
-                                                                                                                                                                                                    echo "Crear";
-                                                                                                                                                                                                } else if ($action == 2) {
-                                                                                                                                                                                                    echo "Modificar";
-                                                                                                                                                                                                } else {
-                                                                                                                                                                                                    echo "Leer";
-                                                                                                                                                                                                } ?>>
-                                                </div>
-                                                <!--Limpiar-->
-                                                <div class="formulario__grupo" id="grupo__departamento">
-                                                    <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
-                                                </div>
+
+                                                <?php if ($action == 1 || $action == 2) { ?>
+
+                                                    <!--Submit-->
+                                                    <div class="formulario__grupo" id="grupo__departamento">
+                                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
+                                                                                                                                                                                                        echo "Crear";
+                                                                                                                                                                                                    } else if ($action == 2) {
+                                                                                                                                                                                                        echo "Modificar";
+                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                        echo "Leer";
+                                                                                                                                                                                                    } ?>>
+                                                    </div>
+                                                    <!--Limpiar-->
+                                                    <div class="formulario__grupo" id="grupo__departamento">
+                                                        <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
+                                                    </div>
+
+                                                <?php } ?>
+
                                                 <!--Cancelar-->
                                                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                                                     <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">

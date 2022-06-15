@@ -315,7 +315,9 @@
                                                 <div class="formulario__grupo" id="grupo__identidad">
                                                     <label for="Cedula" class="formulario__label">Identidad</label>
                                                     <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" <?php if ($action != 1 && $action != 2) echo "readonly" ?> pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}[12]{1}[09]{1}[012789]{1}[0-9]{1}[0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {echo $row['Cedula'];} ?>" required minlength="13" maxlength="13">
+                                                        <input type="text" class="formulario__input" name="Cedula" id="Cedula" title="Ingresa el numero de identidad" <?php if ($action != 1 && $action != 2) echo "readonly" ?> pattern="[01]{1}[0-8]{1}[012]{1}[0-9]{1}[12]{1}[09]{1}[012789]{1}[0-9]{1}[0-9]{5}" onkeypress="return soloNumeros(event)" placeholder="Identidad" value="<?php if (isset($row)) {
+                                                                                                                                                                                                                                                                                                                                                                                                echo $row['Cedula'];
+                                                                                                                                                                                                                                                                                                                                                                                            } ?>" required minlength="13" maxlength="13">
                                                     </div>
                                                     <p class="formulario__input-error">El numero de identidad solo puede contener numeros y el maximo son 13.</p>
                                                 </div>
@@ -527,18 +529,28 @@
                                                 </div>
 
                                                 <!--Grupo: Botones-->
-                                                <div class="formulario__grupo">
-                                                    <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
-                                                                                                                                                                                                    echo "Crear";
-                                                                                                                                                                                                } else if ($action == 2) {
-                                                                                                                                                                                                    echo "Modificar";
-                                                                                                                                                                                                } else {
-                                                                                                                                                                                                    echo "Leer";
-                                                                                                                                                                                                } ?> onclick="" <?php if ($action != 1 && $action != 2) echo "readonly" ?>>
-                                                </div>
-                                                <div class="formulario__grupo">
-                                                    <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
-                                                </div>
+
+                                                <?php if ($action == 1 || $action == 2) { ?>
+
+                                                    <!--Submit-->
+                                                    <div class="formulario__grupo">
+                                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" title="Click si el formulario esta listo para guardar" value=<?php if ($action == 1) {
+                                                                                                                                                                                                        echo "Crear";
+                                                                                                                                                                                                    } else if ($action == 2) {
+                                                                                                                                                                                                        echo "Modificar";
+                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                        echo "Leer";
+                                                                                                                                                                                                    } ?> onclick="" <?php if ($action != 1 && $action != 2) echo "readonly" ?>>
+                                                    </div>
+
+                                                    <!-- Limpiar -->
+                                                    <div class="formulario__grupo">
+                                                        <input type="Reset" class="btn btn-primary btn-user btn-block" title="Click si desea limpiar todos los campos" value="Limpiar">
+                                                    </div>
+
+                                                <?php } ?>
+
+                                                <!--Cancelar-->
                                                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                                                     <div class="col-sm-6 mb-3 mb-sm-0" style=" width: 50vw; margin-left : 0vw;">
                                                         <a title="Click si no desea hacer ni una acción" href="tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>" class="btn btn-primary btn-user btn-block">
