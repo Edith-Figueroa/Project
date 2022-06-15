@@ -50,9 +50,9 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
-                              <div class="academy-logo">
-                                <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
-                              </div>
+                                <div class="academy-logo">
+                                    <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
+                                </div>
                                 <ul>
                                     <li><a href="../index.php">Inicio</a></li>
                                     <li><a href="about-us.php">Sobre Nosotros</a></li>
@@ -169,7 +169,7 @@
 
                     <div class="user"><img class="img-reponsive" src="../img/bg-img/Emerson.jpg" alt="EMERSON ZAPATA"></div>
                     <h3>EMERSON ZAPATA</h3>
-                    <span class="position">CO-PROGRAMADOR</span>
+                    <span class="position">EL GUAPO</span>
                     <p>Un texto narrativo es un relato en el que se cuenta una historia real o ficticia que ocurre en un lugar y tiempo concretos. En la vida cotidiana, la narración</p>
                     <ul class="social-media">
                         <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
