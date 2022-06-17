@@ -55,7 +55,7 @@
                                     <a href="index.php"><img src="img/bg-img/logo.png" alt="" width="120"></a>
                                 </div>
                                 <ul>
-                                <li><a href="../menu/Modulos.php">Modulos o Servicios</a></li>
+                                    <li><a href="../menu/Modulos.php">Modulos o Servicios</a></li>
                                     <li><a href="menu/about-us.php">Sobre Nosotros</a></li>
                                     <li><a href="menu/contact.php">Contactanos</a></li>
                                 </ul>
@@ -419,8 +419,6 @@
                     <!-- ##### contactos ##### -->
 
                     <!-- #####  Javascript Script ##### -->
-                    <!-- jQuery-2.2.4 js -->
-                    <script src="js/jquery/jquery-2.2.4.min.js"></script>
                     <!-- Popper js -->
                     <script src="js/bootstrap/popper.min.js"></script>
                     <!-- Bootstrap js -->
@@ -430,16 +428,16 @@
                     <!-- Active js -->
                     <script src="js/active.js"></script>
                     <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="../js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="../js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="../js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="../js/active.js"></script>
+                    <!-- jQuery-2.2.4 js -->
+                    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
+                    <!-- Popper js -->
+                    <script src="../js/bootstrap/popper.min.js"></script>
+                    <!-- Bootstrap js -->
+                    <script src="../js/bootstrap/bootstrap.min.js"></script>
+                    <!-- All Plugins js -->
+                    <script src="../js/plugins/plugins.js"></script>
+                    <!-- Active js -->
+                    <script src="../js/active.js"></script>
 </body>
 
 </html>
