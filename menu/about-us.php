@@ -147,7 +147,7 @@
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Emerson Zapata</h4>
-                <span>El Guapo</span>
+                <span></span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
