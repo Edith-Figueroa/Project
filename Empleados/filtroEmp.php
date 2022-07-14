@@ -4,7 +4,7 @@ include '../SqlTools/database.php';
 $Usuario = $_GET['idUsuario'];
 $Empresa = $_GET['Empresas_idEmpresas'];
 if (isset($_GET['state']))
-    $state = $_GET['state'];
+  $state = $_GET['state'];
 
 $db = new database();
 $salida = "";
@@ -20,8 +20,8 @@ FROM empleados
 WHERE Estados_idEstado = 1 and Empresas_idEmpresas = ' . $Empresa . '';
 
 if (isset($_POST['sql'])) {
-    $sql = $_POST['sql'];
-    $query = 'SELECT idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
+  $sql = $_POST['sql'];
+  $query = 'SELECT idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
     PrimerApellido, SegundoApellido, Telefono, Direccion,
     FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
     Cargos_idCargos, Estados_idEstado, Correo,
@@ -37,8 +37,8 @@ if (isset($_POST['sql'])) {
 }
 
 if (isset($_POST['point'])) {
-    $sql = $_POST['point'];
-    $query = 'SELECT idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
+  $sql = $_POST['point'];
+  $query = 'SELECT idEmpleados, Cedula, PrimerNombre, SegundoNombre, 
     PrimerApellido, SegundoApellido, Telefono, Direccion,
     FechaNacimiento, FechaIngreso, CuentaBancaria, Sexos_idSexo,
     Cargos_idCargos, Estados_idEstado, Correo,
@@ -54,7 +54,7 @@ $db->specialSelect($query);
 $table = $db->sql;
 
 if ($table->num_rows > 0) {
-    $salida = '
+  $salida = '
         <thead>
         <tr>
         <th>id</th>
@@ -80,11 +80,11 @@ if ($table->num_rows > 0) {
         </tr>
     </tfoot>';
 
-    $salida .= '<tbody>';
+  $salida .= '<tbody>';
 
-    if (isset($_POST['point']) && $_POST['point'] == 2) {
-        while ($fila = mysqli_fetch_assoc($table)) {
-            $salida .= '
+  if (isset($_POST['point']) && $_POST['point'] == 2) {
+    while ($fila = mysqli_fetch_assoc($table)) {
+      $salida .= '
                 <tr>
                     <td>' . $fila['idEmpleados'] . '</td>
                     <td>' . $fila['Cedula'] . '</td>
@@ -103,11 +103,11 @@ if ($table->num_rows > 0) {
                     <a href="inactivate.php?idEmpleados=' . $fila['idEmpleados'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
                     </td>
                 </tr>';
-        }
     }
+  }
 
-    while ($fila = mysqli_fetch_assoc($table)) {
-        $salida .= '
+  while ($fila = mysqli_fetch_assoc($table)) {
+    $salida .= '
             <tr>
                 <td>' . $fila['idEmpleados'] . '</td>
                 <td>' . $fila['Cedula'] . '</td>
@@ -126,10 +126,10 @@ if ($table->num_rows > 0) {
                 <a href="inactivate.php?idEmpleados=' . $fila['idEmpleados'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-danger btn-sm">Desactivar</a>
                 </td>
             </tr>';
-    }
-    $salida .= '</tbody>';
+  }
+  $salida .= '</tbody>';
 } else {
-    $salida .= "Busqueda no encontrada.";
+  $salida .= "Busqueda no encontrada.";
 }
 
 echo $salida;

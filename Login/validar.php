@@ -5,7 +5,7 @@ $usuario = $_POST['Usuario'];
 $Contrasenia = $_POST['Contrasenia'];
 $a = new database();
 
-$a->select('usuarios', '*', "Usuario='$usuario' and Contrasenia='$Contrasenia'");
+$a->select('usuarios', '*', "Usuario='$usuario' and Contrasenia=md5('$Contrasenia')");
 $filas = mysqli_num_rows($a->sql);
 
 $data = $a->sql;

@@ -4,7 +4,7 @@ include '../SqlTools/database.php';
 $Usuario = $_GET['idUsuario'];
 $Empresa = $_GET['Empresas_idEmpresas'];
 if (isset($_GET['state']))
-    $state = $_GET['state'];
+  $state = $_GET['state'];
 
 $db = new database();
 $salida = "";
@@ -13,8 +13,8 @@ FROM cargos
 WHERE Estados_idEstado = 1';
 
 if (isset($_POST['sql'])) {
-    $sql = $_POST['sql'];
-    $query = 'SELECT idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos, Estados_idEstado
+  $sql = $_POST['sql'];
+  $query = 'SELECT idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos, Estados_idEstado
     FROM cargos
     WHERE idCargo LIKE "%' . $sql . '%" or 
     DescripcionCargo like "%' . $sql . '%" or
@@ -22,8 +22,8 @@ if (isset($_POST['sql'])) {
 }
 
 if (isset($_POST['point'])) {
-    $sql = $_POST['point'];
-    $query = 'SELECT idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos, Estados_idEstado
+  $sql = $_POST['point'];
+  $query = 'SELECT idCargo, DescripcionCargo, Salario, Departamentos_idDepartamentos, Estados_idEstado
     FROM cargos
     WHERE Estados_idEstado = ' . $sql . ';';
 }
@@ -32,7 +32,7 @@ $db->specialSelect($query);
 $table = $db->sql;
 
 if ($table->num_rows > 0) {
-    $salida = '
+  $salida = '
         <thead>
         <tr>
         <th>id</th>
@@ -53,11 +53,11 @@ if ($table->num_rows > 0) {
         </tr>
     </tfoot>';
 
-    $salida .= '<tbody>';
+  $salida .= '<tbody>';
 
-    if (isset($_POST['point']) && $_POST['point'] == 2) {
-        while ($fila = mysqli_fetch_assoc($table)) {
-            $salida .= '
+  if (isset($_POST['point']) && $_POST['point'] == 2) {
+    while ($fila = mysqli_fetch_assoc($table)) {
+      $salida .= '
                 <tr>
                     <td>' . $fila['idCargo'] . '</td>
                     <td>' . $fila['DescripcionCargo'] . '</td>
@@ -73,11 +73,11 @@ if ($table->num_rows > 0) {
                     <a href="SQLInactive_Cargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '&state=' . $state . '" class="btn btn-danger btn-sm">Activar</a>
                     </td>
                 </tr>';
-        }
     }
+  }
 
-    while ($fila = mysqli_fetch_assoc($table)) {
-        $salida .= '
+  while ($fila = mysqli_fetch_assoc($table)) {
+    $salida .= '
             <tr>
                 <td>' . $fila['idCargo'] . '</td>
                 <td>' . $fila['DescripcionCargo'] . '</td>
@@ -93,10 +93,10 @@ if ($table->num_rows > 0) {
                 <a href="SQLInactive_Cargos.php?idCargo=' . $fila['idCargo'] . '&idUsuario=' . $Usuario . '&Empresas_idEmpresas=' . $Empresa . '" class="btn btn-danger btn-sm">Desactivar</a>
                 </td>
             </tr>';
-    }
-    $salida .= '</tbody>';
+  }
+  $salida .= '</tbody>';
 } else {
-    $salida .= "Busqueda no encontrada.";
+  $salida .= "Busqueda no encontrada.";
 }
 
 echo $salida;

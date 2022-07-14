@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <?php
-    include "../SqlTools/database.php";
-    $idEmpleado = $_GET['idEmpleados'];
-    $idUsuario = $_GET['idUsuario'];
-    $Empresas_idEmpresas = $_GET['Empresas_idEmpresas'];
-    $idPlanillas = $_GET['idPlanillas'];
-    $db = new database();
-    $db->specialSelect("SELECT 	detalleplanillas.Empleados_idEmpleados,
+  <?php
+  include "../SqlTools/database.php";
+  $idEmpleado = $_GET['idEmpleados'];
+  $idUsuario = $_GET['idUsuario'];
+  $Empresas_idEmpresas = $_GET['Empresas_idEmpresas'];
+  $idPlanillas = $_GET['idPlanillas'];
+  $db = new database();
+  $db->specialSelect("SELECT 	detalleplanillas.Empleados_idEmpleados,
     concat(empleados.PrimerNombre,' ',empleados.PrimerApellido) as Nombre,
     cargos.Salario,
     detalleplanillas.IHSS,
@@ -32,9 +32,9 @@
     inner join cargos
     on empleados.Cargos_idCargos=cargos.idCargo
     WHERE Planillas_idPlanilla='$idPlanillas' AND Empleados_idEmpleados = '$idEmpleado';");
-    $table = $db->sql;
-    $row = mysqli_fetch_assoc($table);
-    ?>
+  $table = $db->sql;
+  $row = mysqli_fetch_assoc($table);
+  ?>
 
 </body>
 

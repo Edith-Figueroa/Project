@@ -30,4 +30,3 @@
             header("location: tablas.php?idUsuario=$Usuario&Empresas_idEmpresas=$Empresa");
         }
     }
-?>
