@@ -261,11 +261,11 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a> -->
-                                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Cambio de contraseña
-                                </a>
-                                <!-- <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Cambio de contraseña
+                </a>
+                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Actividad
                                 </a> -->
@@ -448,7 +448,7 @@
         "planilla": <?php echo $idPlanillas ?>
       },
       success: function(response) {
-        alert("Planilla Descargada con exito y guardada en Registro" + response);
+        alert("Planilla Descargada con exito y guardada en Registro");
       }
     });
   }

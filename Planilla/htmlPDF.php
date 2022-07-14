@@ -17,7 +17,7 @@ $name = 'planilla' . $planilla . ' Empresa' . $empresa;
 $url = 'C:/Planillas/planilla' . $planilla . ' Empresa' . $empresa . '.pdf';
 
 if (!file_exists("C:\Planillas")) {
-    mkdir('C:\Planillas', 0777, true);
+  mkdir('C:\Planillas', 0777, true);
 }
 
 $stylesheet = file_get_contents('../css/estilo.css');
@@ -32,11 +32,11 @@ $mpdf->WriteHTML($html);
 $mpdf->Output('C:\Planillas\planilla' . $planilla . ' Empresa' . $empresa . '.pdf', 'F');
 
 $db->insert('registros', [
-    'id_Planilla' => $planilla,
-    'Nombre_Planilla' => $name,
-    'url' => $url
+  'id_Planilla' => $planilla,
+  'Nombre_Planilla' => $name,
+  'url' => $url
 ]);
 
 if ($db == true) {
-    echo 'insertado correcto';
+  echo 'insertado correcto';
 }
