@@ -87,9 +87,11 @@
           <div class="row h-100 align-items-center">
             <div class="col-12">
               <div class="hero-slides-content">
-                <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de pago</h4>
+                <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de
+                  pago</h4>
                 <h2 data-animation="fadeInUp" data-delay="400ms">BIENVENIDO A <br>COPAP</h2>
-                <a href="menu/about-us.php" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
+                <a href="menu/about-us.php" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer
+                  Mas</a>
               </div>
             </div>
           </div>
@@ -102,7 +104,8 @@
           <div class="row h-100 align-items-center">
             <div class="col-12">
               <div class="hero-slides-content">
-                <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de pago</h4>
+                <h4 data-animation="fadeInUp" data-delay="100ms">Todo lo que necesitas sobre control de planillas de
+                  pago</h4>
                 <h2 data-animation="fadeInUp" data-delay="400ms">BIENVENIDO A <br>COPAP</h2>
                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
               </div>
@@ -198,7 +201,8 @@
             </div>
             <div class="course-content">
               <h4>ACCESO FACIL, RAPIDO PERO TAMBIEN SEGURO</h4>
-              <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rapida y confiable</p>
+              <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rapida y
+                confiable</p>
             </div>
           </div>
         </div>
@@ -232,7 +236,8 @@
   <!-- ##### FIN AREA DE SERVICIOS ##### -->
 
   <!-- ##### CLIENTES SATISFECHOS ##### -->
-  <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(../img/bg-img/back.jpg);">
+  <div class="testimonials-area section-padding-100 bg-img bg-overlay"
+    style="background-image: url(../img/bg-img/back.jpg);">
     <div class="container">
 
       <div class="row">
@@ -253,7 +258,8 @@
             </div>
             <div class="testimonial-content">
               <h5>STANDART FRUT COMPANY HONDURAS</h5>
-              <p>Gracias a COPAP logramos consolidar el manejo adecuando del pago de salario justo a nuestros empleados, llevando control del cumplimiento de sus horarios y de sus horas extra de trabajo</p>
+              <p>Gracias a COPAP logramos consolidar el manejo adecuando del pago de salario justo a nuestros empleados,
+                llevando control del cumplimiento de sus horarios y de sus horas extra de trabajo</p>
               <h6><span>Valeria Vargas,</span> GERENTE DE PERSONAL</h6>
             </div>
           </div>
@@ -266,7 +272,8 @@
             </div>
             <div class="testimonial-content">
               <h5>D'ALE DETALLES</h5>
-              <p>COPAP ha superado nuestras expectativas cubriendo las necesidades basicas de mi empresa, haciendo el manejo de la contabilidad sea mas eficiente</p>
+              <p>COPAP ha superado nuestras expectativas cubriendo las necesidades basicas de mi empresa, haciendo el
+                manejo de la contabilidad sea mas eficiente</p>
               <h6><span>Belkis Navarro</span>Propietaria</h6>
             </div>
           </div>
@@ -279,7 +286,8 @@
             </div>
             <div class="testimonial-content">
               <h5>D&D COMPANY</h5>
-              <p>Sin duda alguna COPAP ha hecho mucho mas facil y eficiente el manejo de nuestra compañia, es un aleado de trabajo que todas las medianas y grandes empresas deberian tener </p>
+              <p>Sin duda alguna COPAP ha hecho mucho mas facil y eficiente el manejo de nuestra compañia, es un aleado
+                de trabajo que todas las medianas y grandes empresas deberian tener </p>
               <h6><span>Peaky Blinders</span>PROPIETARIO</h6>
             </div>
           </div>
@@ -366,12 +374,18 @@
 
                 </div>
                 <div class="gallery-list d-flex justify-content-between flex-wrap">
-                  <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
-                  <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
-                  <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
-                  <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
-                  <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
-                  <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
+                  <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img
+                      src="img/bg-img/control1.jpg" alt=""></a>
+                  <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img
+                      src="img/bg-img/control2.jpg" alt=""></a>
+                  <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img
+                      src="img/bg-img/control3.jpg" alt=""></a>
+                  <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img
+                      src="img/bg-img/control4.jpg" alt=""></a>
+                  <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img
+                      src="img/bg-img/control5.jpg" alt=""></a>
+                  <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img
+                      src="img/bg-img/control6.jpg" alt=""></a>
                 </div>
               </div>
             </div>
@@ -405,8 +419,9 @@
               <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
+                document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+                  aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>
