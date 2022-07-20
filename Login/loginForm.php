@@ -72,27 +72,6 @@
         <br> </br>
 
         <form action="validar.php" method="post" class="inputs-container">
-          <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
           <img src="../img/loginUser.png" width="150">
           <br></br>
           <div style="display: flex;">
