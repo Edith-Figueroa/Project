@@ -63,7 +63,35 @@
     </header>
     <br> </br>
 
-    <div class="login-container ">
+
+    <div class="login-container">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div class="login-info-container">
         <div class="social-login">
           <div class="login-element"></div>
@@ -71,10 +99,10 @@
 
         <br> </br>
 
-        <form action="validar.php" method="post" class="inputs-container">
+        <form action="validar.php" method="post" class="inputs-container" style="position:relative;">
           <img src="../img/loginUser.png" width="150">
           <br></br>
-          <div style="display: flex;">
+          <div style="display: flex; ">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44"
               height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
@@ -104,7 +132,6 @@
         </form>
       </div>
 
-
       <img class="image-container" src="../img/img1.png" alt="">
 
       <BR> </BR>
@@ -113,6 +140,7 @@
       <BR> </BR>
       <BR> </BR>
       <BR> </BR>
+
     </div>
     <!-- #####  Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
@@ -126,5 +154,6 @@
     <!-- Active js -->
     <script src="../js/active.js"></script>
 </body>
+
 
 </html>
