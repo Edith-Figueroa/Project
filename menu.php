@@ -15,12 +15,9 @@
   <title>Planilla de Pagos</title>
   <!-- FUENTES-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,11 +52,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Barra lateral - Marca -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center"
-        href="menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-        <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money"
-            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+        <i class="fas "><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-money" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
             <rect x="9" y="3" width="6" height="4" rx="2" />
@@ -75,9 +69,7 @@
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
         <a class="nav-link" href="menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="16" height="16"
-              viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <polyline points="5 12 3 12 12 3 21 12 19 12" />
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
@@ -90,11 +82,8 @@
 
       <!-- Nav Item -Empleados Cerrar menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados"
-          aria-expanded="true" aria-controls="collapseEmpleados">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="16"
-              height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpleados" aria-expanded="true" aria-controls="collapseEmpleados">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <circle cx="9" cy="7" r="4" />
               <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -104,30 +93,21 @@
         </a>
         <div id="collapseEmpleados" class="collapse" aria-labelledby="headingEmpleados" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item"
-              href="Empleados/formEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Empleados/formEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                 <line x1="12" y1="11" x2="12" y2="17" />
                 <line x1="9" y1="14" x2="15" y2="14" />
               </svg> Crear Empleado</a>
-            <a class="collapse-item"
-              href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
-                class="fas fa-fw fa-table"></i> Mostrar Empleados</a>
+            <a class="collapse-item" href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Empleados</a>
           </div>
         </div>
       </li>
       <!-- Nav Item - Planillas Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas"
-          aria-expanded="true" aria-controls="collapsePlanillas">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-list" width="16"
-              height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePlanillas" aria-expanded="true" aria-controls="collapsePlanillas">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-list" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
               <rect x="9" y="3" width="6" height="4" rx="2" />
@@ -135,15 +115,11 @@
               <line x1="13" y1="12" x2="15" y2="12" />
               <line x1="9" y1="16" x2="9.01" y2="16" />
               <line x1="13" y1="16" x2="15" y2="16" />
-            </svg> Planillas</span>
+            </svg>Planillas</span>
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item"
-              href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="16"
-                height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <circle cx="17" cy="17" r="4" />
                 <path d="M17 13v4h4" />
@@ -151,11 +127,7 @@
                 <path d="M11.5 21h-6.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v2m0 3v4" />
               </svg> Registro</a>
 
-            <a class="collapse-item"
-              href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -168,11 +140,8 @@
 
       <!-- Nav Item - Cargos Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos" aria-expanded="true"
-          aria-controls="collapseCargos">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="16"
-              height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCargos" aria-expanded="true" aria-controls="collapseCargos">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
               <line x1="14.5" y1="5.5" x2="18.5" y2="9.5" />
@@ -184,14 +153,8 @@
         </a>
         <div id="collapseCargos" class="collapse" aria-labelledby="headingCargos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item"
-              href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
-                class="fas fa-fw fa-table"></i> Mostrar Cargos</a>
-            <a class="collapse-item"
-              href="Cargos/formCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Cargos</a>
+            <a class="collapse-item" href="Cargos/formCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -204,11 +167,8 @@
 
       <!-- Nav Item - Ciudades Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades"
-          aria-expanded="true" aria-controls="collapseCiudades">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper"
-              width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-              stroke-linecap="round" stroke-linejoin="round">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCiudades" aria-expanded="true" aria-controls="collapseCiudades">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <line x1="3" y1="21" x2="21" y2="21" />
               <path d="M5 21v-14l8 -4v18" />
@@ -219,16 +179,10 @@
               <line x1="9" y1="18" x2="9" y2="18.01" />
             </svg> Ciudades</span>
         </a>
-        <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
+        <div id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item"
-              href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
-                class="fas fa-fw fa-table"></i> Mostrar Ciudades</a>
-            <a class="collapse-item"
-              href="Ciudades/formCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Ciudades</a>
+            <a class="collapse-item" href="Ciudades/formCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -240,11 +194,8 @@
 
       <!-- Nav Item - Departamentos Plegar Menú -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos"
-          aria-expanded="true" aria-controls="collapseDepartamentos">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building" width="16"
-              height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDepartamentos" aria-expanded="true" aria-controls="collapseDepartamentos">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <line x1="3" y1="21" x2="21" y2="21" />
               <line x1="9" y1="8" x2="10" y2="8" />
@@ -256,23 +207,41 @@
               <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
             </svg> Departamentos</span>
         </a>
-        <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos"
-          data-parent="#accordionSidebar">
+        <div id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item"
-              href="Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
-                class="fas fa-fw fa-table"></i> Mostrar Departamentos</a>
-            <a class="collapse-item"
-              href="Departamentos/formDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg
-                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+            <a class="collapse-item" href="Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i class="fas fa-fw fa-table"></i> Mostrar Dptos</a>
+            <a class="collapse-item" href="Departamentos/formDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                 <line x1="12" y1="11" x2="12" y2="17" />
                 <line x1="9" y1="14" x2="15" y2="14" />
-              </svg> Crear Departamento Nuevo</a>
+              </svg>Dpto Nuevo</a>
+          </div>
+      </li>
+
+      <!-- Nav Item - Reportes Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes" aria-expanded="true" aria-controls="collapseDepartamentos">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-list" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+              <rect x="9" y="3" width="6" height="4" rx="2" />
+              <line x1="9" y1="12" x2="9.01" y2="12" />
+              <line x1="13" y1="12" x2="15" y2="12" />
+              <line x1="9" y1="16" x2="9.01" y2="16" />
+              <line x1="13" y1="16" x2="15" y2="16" />
+            </svg>Reportes</span>
+        </a>
+        <div id="collapseReportes" class="collapse" aria-labelledby="headingDepartamentos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="dashboards.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                <line x1="12" y1="11" x2="12" y2="17" />
+                <line x1="9" y1="14" x2="15" y2="14" />
+              </svg> Dashboards</a>
           </div>
       </li>
 
@@ -303,10 +272,9 @@
             <div class="topbar-divider d-none d-sm-block"></div>
             <!-- Nav Item - Información del usuario -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
-                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
+                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -314,8 +282,7 @@
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Perfil
                     </a> -->
-                <a class="dropdown-item"
-                  href="/cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                <a class="dropdown-item" href="/cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Cambio de contraseña
                 </a>
@@ -374,8 +341,7 @@
                           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-ios-paper-outline" style="color: #c5793ae0;;"></i></div>
-                              <h4 class="title"><a
-                                  href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas
+                              <h4 class="title"><a href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas
                                   de pago</a></h4>
                               <p class="description"> Accede al registro almacenado de tus planillas de pago. </p>
                             </div>
@@ -383,8 +349,7 @@
                           <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-ios-paper-outline" style="color: #e9bf06;"></i></div>
-                              <h4 class="title"><a
-                                  href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
+                              <h4 class="title"><a href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
                                   Nueva Planilla</a></h4>
                               <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te
                                 imaginas
@@ -392,12 +357,10 @@
                             </div>
                           </div>
 
-                          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s"
-                            data-wow-duration="1.4s">
+                          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-man" style="color: #c5793ae0;"></i></div>
-                              <h4 class="title"><a
-                                  href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
+                              <h4 class="title"><a href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
                               </h4>
                               <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre
                                 todo
@@ -407,20 +370,17 @@
                           <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-woman" style="color:#c5793ae0;"></i></div>
-                              <h4 class="title"><a
-                                  href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar
+                              <h4 class="title"><a href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar
                                   un Nuevo Empleado</a></h4>
                               <p class="description">¡Tu compañia cada dìa crece màs! ingresa la informaciòn del nuevo
                                 integrante de tu grupo de empleados</p>
                             </div>
                           </div>
 
-                          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s"
-                            data-wow-duration="1.4s">
+                          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-more" style="color: #c5793ae0;"></i></div>
-                              <h4 class="title"><a
-                                  href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a>
+                              <h4 class="title"><a href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a>
                               </h4>
                               <p class="description">Accede a la informaciòn de los distintos cargos con los que cuenta
                                 tu
@@ -430,8 +390,7 @@
                           <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                             <div class="box">
                               <div class="icon"><i class="ion-location" style="color: #c5793ae0;"></i></div>
-                              <h4 class="title"><a
-                                  href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a>
+                              <h4 class="title"><a href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a>
                               </h4>
                               <p class="description">Tu empresa genera funtes de ingresos para familias de Honduras,
                                 explora las
@@ -471,9 +430,7 @@
                                 <h4>Crear una nueva planilla 1</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio"
-                                    data-title="COPAP" class="link-preview" title="COPAP"><i
-                                      class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio" data-title="COPAP" class="link-preview" title="COPAP"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -486,9 +443,7 @@
                                 <h4>Crear una nueva planilla 2</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/planilla2.png" class="link-preview"
-                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
-                                      class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/planilla2.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -501,9 +456,7 @@
                                 <h4>Razones para usar COPAP</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/planillas4.png" class="link-preview"
-                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
-                                      class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/planillas4.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
 
                                 </div>
                               </div>
@@ -517,9 +470,7 @@
                                 <h4>Crear una nueva planilla 3</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/planilla3.png" class="link-preview"
-                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
-                                      class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/planilla3.png" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -532,8 +483,7 @@
                                 <h4>Agregar un nuevo empleado 1</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -546,8 +496,7 @@
                                 <h4>Consejos Utiles</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio"
-                                    data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -560,8 +509,7 @@
                                 <h4>Reestablcer Contraseña 1</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -574,8 +522,7 @@
                                 <h4>Reestablcer Contraseña 2</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -588,9 +535,7 @@
                                 <h4>Mostrar Empleados</h4>
                                 <p>Ver</p>
                                 <div>
-                                  <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview"
-                                    data-lightbox="portfolio" data-title="Empleados" title="Preview"><i
-                                      class="ion ion-eye"></i></a>
+                                  <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview" data-lightbox="portfolio" data-title="Empleados" title="Preview"><i class="ion ion-eye"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -614,8 +559,7 @@
             </a>
 
             <!-- Cierre de sesión modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -629,7 +573,7 @@
                     actual.</div>
                   <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../Login/loginForm.php">Cerrar Sesion</a>
+                    <a class="btn btn-primary" href="Login/loginForm.php">Cerrar Sesion</a>
                   </div>
                 </div>
               </div>
