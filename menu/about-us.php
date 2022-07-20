@@ -26,6 +26,7 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/style2.0.css">
   <link rel="stylesheet" href="team.css">
 
 
@@ -102,6 +103,27 @@
   <!-- ##### About Us Area Start ##### -->
   <section class="about-us-area mt-50 section-padding-100">
     <div class="container">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div class="row">
         <div class="col-12">
           <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
