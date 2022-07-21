@@ -26,6 +26,7 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleT.css">
   <link rel="stylesheet" href="../css/style2.0.css">
   <link rel="stylesheet" href="team.css">
 
@@ -180,12 +181,13 @@
               <div class="member-info-content">
                 <h4>Emerson Zapata</h4>
                 <span></span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -198,12 +200,13 @@
               <div class="member-info-content">
                 <h4>Dulce Sanchez</h4>
                 <span>Diseñadora Grafica</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -216,12 +219,13 @@
               <div class="member-info-content">
                 <h4>Denis Garcia</h4>
                 <span>Programador Principal</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -234,12 +238,13 @@
               <div class="member-info-content">
                 <h4>Onan Aguilera</h4>
                 <span>Analista de Base de Datos</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -264,12 +269,13 @@
               <div class="member-info-content">
                 <h4>Fernando Villatoro</h4>
                 <span>Co Analista de base de Datos</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -282,12 +288,13 @@
               <div class="member-info-content">
                 <h4>Edith Toledo</h4>
                 <span>Administradora de Trello</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -300,12 +307,13 @@
               <div class="member-info-content">
                 <h4>Jonny Deep</h4>
                 <span>Asistente de Atencion al cliente</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
@@ -318,12 +326,13 @@
               <div class="member-info-content">
                 <h4>Diego Molina</h4>
                 <span>Co Diseñador Grafico</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <ol>
+                  <li><a href="#"><i class="fa-brands instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands whatsapp"></i></a></li>
+                  <li><a href="#"><i class="fa-brands twitter twitter"></i></a></li>
+                  <li><a href="#"><i class=""></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ol>
               </div>
             </div>
           </div>
