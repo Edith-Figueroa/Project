@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../menu/style.css">
+  <link rel="stylesheet" href="../css/style2.0.css">
   <title>Login</title>
   <link rel="icon" href="../img/bg-img/logo.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -22,7 +23,7 @@
       <!-- Navbar -->
       <div class="academy-main-menu">
         <div class="classy-nav-container breakpoint-off">
-          <div class="container">
+          <div class="container ">
             <!-- Menu -->
             <nav class="classy-navbar justify-content-between" id="academyNav">
               <!-- Navbar Toggler -->
@@ -41,7 +42,7 @@
                     <a href="../index.php"><img src="../img/bg-img/logo.png" alt="" width="120"></a>
                   </div>
                   <ul>
-                    <li><a href="../menu/Modulos.php">Modulos o Servicios</a></li>
+                    <li><a href="../menu/Modulos.php">Módulos o Servicios</a></li>
                     </li>
                     <li><a href="../menu/about-us.php">Sobre Nosotros</a></li>
                     <li><a href="../menu/contact.php">Contactanos</a></li>
@@ -52,7 +53,7 @@
               <!-- Calling Info -->
               <div class="calling-info">
                 <div class="call-center">
-                  <a href="loginform.php"><i class="icon-house"></i> <span>INICIAR SESION</span></a>
+                  <a href="loginform.php"><i class="icon-house"></i> <span>INICIAR SESIÓN</span></a>
                 </div>
               </div>
             </nav>
@@ -61,8 +62,29 @@
       </div>
     </header>
     <br> </br>
-
     <div class="login-container">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div class="login-info-container">
         <div class="social-login">
           <div class="login-element"></div>
@@ -70,10 +92,10 @@
 
         <br> </br>
 
-        <form action="validar.php" method="post" class="inputs-container">
+        <form action="validar.php" method="post" class="inputs-container" style="position:relative;">
           <img src="../img/loginUser.png" width="150">
           <br></br>
-          <div style="display: flex;">
+          <div style="display: flex; ">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44"
               height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
@@ -103,7 +125,6 @@
         </form>
       </div>
 
-
       <img class="image-container" src="../img/img1.png" alt="">
 
       <BR> </BR>
@@ -112,6 +133,7 @@
       <BR> </BR>
       <BR> </BR>
       <BR> </BR>
+
     </div>
     <!-- #####  Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
@@ -125,5 +147,6 @@
     <!-- Active js -->
     <script src="../js/active.js"></script>
 </body>
+
 
 </html>

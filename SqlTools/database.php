@@ -65,4 +65,3 @@
             $this->mysqli->close();
         }
     }
-?>

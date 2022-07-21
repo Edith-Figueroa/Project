@@ -33,6 +33,7 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link href="css/estilo.css" rel="stylesheet">
   <link href="css/style1.css" rel="stylesheet">
+  <link href="css/style2.0.css" rel="stylesheet">
   <link rel="icon" href="img/Moneda.png">
 </head>
 
@@ -75,14 +76,13 @@
       <!-- Nav Item - Menu-->
       <li class="nav-item active">
         <a class="nav-link" href="menu.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
-          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="16" height="16"
-              viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="" width="16" height="16" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <polyline points="5 12 3 12 12 3 21 12 19 12" />
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
               <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-            </svg> Menu</span></a>
+            </svg> Menú</span></a>
       </li>
 
       <!-- Divisor -->
@@ -135,7 +135,7 @@
               <line x1="13" y1="12" x2="15" y2="12" />
               <line x1="9" y1="16" x2="9.01" y2="16" />
               <line x1="13" y1="16" x2="15" y2="16" />
-            </svg> Planillas</span>
+            </svg>Planillas</span>
         </a>
         <div id="collapsePlanillas" class="collapse" aria-labelledby="headingPlanillas" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -219,7 +219,7 @@
               <line x1="9" y1="18" x2="9" y2="18.01" />
             </svg> Ciudades</span>
         </a>
-        <di id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
+        <div id="collapseCiudades" class="collapse" aria-labelledby="headingCiudades" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item"
               href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
@@ -256,12 +256,12 @@
               <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
             </svg> Departamentos</span>
         </a>
-        <di id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos"
+        <div id="collapseDepartamentos" class="collapse" aria-labelledby="headingDepartamentos"
           data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item"
               href="Departamentos/TablaDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><i
-                class="fas fa-fw fa-table"></i> Mostrar Departamentos</a>
+                class="fas fa-fw fa-table"></i> Mostrar Dptos</a>
             <a class="collapse-item"
               href="Departamentos/formDepartamentos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>&action=1"><svg
                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
@@ -272,7 +272,40 @@
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                 <line x1="12" y1="11" x2="12" y2="17" />
                 <line x1="9" y1="14" x2="15" y2="14" />
-              </svg> Crear Departamento Nuevo</a>
+              </svg>Dpto Nuevo</a>
+          </div>
+      </li>
+
+      <!-- Nav Item - Reportes Plegar Menú -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes"
+          aria-expanded="true" aria-controls="collapseDepartamentos">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-list" width="16"
+              height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+              <rect x="9" y="3" width="6" height="4" rx="2" />
+              <line x1="9" y1="12" x2="9.01" y2="12" />
+              <line x1="13" y1="12" x2="15" y2="12" />
+              <line x1="9" y1="16" x2="9.01" y2="16" />
+              <line x1="13" y1="16" x2="15" y2="16" />
+            </svg>Reportes</span>
+        </a>
+        <div id="collapseReportes" class="collapse" aria-labelledby="headingDepartamentos"
+          data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item"
+              href="dashboards.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>"><svg
+                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-plus" width="16" height="16"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                <line x1="12" y1="11" x2="12" y2="17" />
+                <line x1="9" y1="14" x2="15" y2="14" />
+              </svg> Dashboards</a>
           </div>
       </li>
 
@@ -306,7 +339,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name['Usuario'] ?></span>
-                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
+                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
               </a>
               <!-- Desplegable - Información del usuario -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -326,7 +359,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Cerrar Sesion
+                  Cerrar Sesión
                 </a>
               </div>
             </li>
@@ -335,8 +368,7 @@
 
         </nav>
         <!-- Fin de la barra superior -->
-        <!--  Intro Section
- ============================-->
+        <!--============================Intro Section============================-->
         <div class="contex">
           <section id="intro" class="clearfix">
             <div class="container">
@@ -349,11 +381,12 @@
                 <h2>Bienvenido a <br><span>COPAP</span><br>¿Listo para comenzar?</h2>
                 <div>
                   <a href="#services" class="btn-services scrollto">Galeria</a>
-                  <a href="#portfolio" class="btn-get-started scrollto">Servicios</a>
+                  <a href="#portfolio" class="btn-services scrollto"">Servicios</a>
+                  <a href=" Manual-del-Usuario.html" target="_blank" class=" btn-services scrollto"">Manual</a>
                 </div>
               </div>
 
-            </div>
+                </div>
           </section><!-- #intro -->
 
           <!-- #intro -->
@@ -364,7 +397,7 @@
 
                 <header class="section-header">
                   <h3>¿Necesitas ayuda para usar COPAP?</h3>
-                  <p>Conoce mas sobre </p>
+                  <p>Conoce más sobre </p>
                   <p></p>
                 </header>
                 <br></br>
@@ -374,8 +407,7 @@
                   <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-ios-paper-outline" style="color: #c5793ae0;;"></i></div>
-                      <h4 class="title"><a
-                          href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas
+                      <h4 class="title"><a href="Planilla/historialPlanillas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Planillas
                           de pago</a></h4>
                       <p class="description"> Accede al registro almacenado de tus planillas de pago. </p>
                     </div>
@@ -383,42 +415,36 @@
                   <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-ios-paper-outline" style="color: #e9bf06;"></i></div>
-                      <h4 class="title"><a
-                          href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
+                      <h4 class="title"><a href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
                           Nueva Planilla</a></h4>
-                      <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te imaginas
+                      <p class="description">Generar una nueva planilla de pago es mucho más fácil de lo que te imaginas
                       </p>
                     </div>
                   </div>
 
-                  <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s"
-                    data-wow-duration="1.4s">
+                  <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-man" style="color: #c5793ae0;"></i></div>
-                      <h4 class="title"><a
-                          href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
+                      <h4 class="title"><a href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
                       </h4>
-                      <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre todo
+                      <p class="description">Accede al registro de tus empleados de forma, fácil, rápida y sobre todo
                         eficiente</p>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-woman" style="color:#c5793ae0;"></i></div>
-                      <h4 class="title"><a
-                          href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar
+                      <h4 class="title"><a href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar
                           un Nuevo Empleado</a></h4>
                       <p class="description">¡Tu compañia cada dìa crece màs! ingresa la informaciòn del nuevo
                         integrante de tu grupo de empleados</p>
                     </div>
                   </div>
 
-                  <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s"
-                    data-wow-duration="1.4s">
+                  <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-more" style="color: #c5793ae0;"></i></div>
-                      <h4 class="title"><a
-                          href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a>
+                      <h4 class="title"><a href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a>
                       </h4>
                       <p class="description">Accede a la informaciòn de los distintos cargos con los que cuenta tu
                         empresa</p>
@@ -427,8 +453,7 @@
                   <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                     <div class="box">
                       <div class="icon"><i class="ion-location" style="color: #c5793ae0;"></i></div>
-                      <h4 class="title"><a
-                          href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a>
+                      <h4 class="title"><a href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a>
                       </h4>
                       <p class="description">Tu empresa genera funtes de ingresos para familias de Honduras, explora las
                         diferentes ciudades a las que pertenecen tus empleados</p>
@@ -460,100 +485,186 @@
 
                 <div class="row portfolio-container">
 
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/P1.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Crear una nueva planilla 1</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio" data-title="COPAP"
-                            class="link-preview" title="COPAP"><i class="ion ion-eye"></i></a>
                         </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.1s">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/P2.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Crear una nueva planilla 2</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/planilla2.png" class="link-preview" data-lightbox="portfolio"
-                            data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                      </div>
+                    </section><!-- #services -->
+                    <!--Portafolio de Infografias-->
+                    <section id="portfolio" class="clearfix">
+                      <div class="container">
+
+                        <header class="section-header">
+                          <h3 class="section-title">Galeria de Infografias</h3>
+                        </header>
+
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <ul id="portfolio-flters">
+                              <li data-filter="*" class="filter-active">Todo</li>
+                              <li data-filter=".filter-plantilla">Planillas</li>
+                              <li data-filter=".filter-empleados">Empleados</li>
+                              <li data-filter=".filter-contraseña">Recuperar Contraseña</li>
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.2s">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/M1.png" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Razones para usar COPAP</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/planillas4.png" class="link-preview" data-lightbox="portfolio"
-                            data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                        <div class="row portfolio-container">
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/P1.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Crear una nueva planilla 1</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/planilla1.png" data-lightbox="portfolio"
+                                    data-title="COPAP" class="link-preview" title="COPAP"><i
+                                      class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/P2.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Crear una nueva planilla 2</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/planilla2.png" class="link-preview"
+                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
+                                      class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/M1.png" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Razones para usar COPAP</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/planillas4.png" class="link-preview"
+                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
+                                      class="ion ion-eye"></i></a>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/P3.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Crear una nueva planilla 3</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/planilla3.png" class="link-preview"
+                                    data-lightbox="portfolio" data-title="COPAP" title="COPAP"><i
+                                      class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/anexo2.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Agregar un nuevo empleado 1</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio"
+                                    data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Consejos Utiles</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio"
+                                    data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Reestablcer Contraseña 1</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio"
+                                    data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Reestablcer Contraseña 2</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio"
+                                    data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                              <img src="img/imgi/portfolio/anexo4.jpeg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Mostrar Empleados</h4>
+                                <p>Ver</p>
+                                <div>
+                                  <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview"
+                                    data-lightbox="portfolio" data-title="Empleados" title="Preview"><i
+                                      class="ion ion-eye"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-plantilla">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/P3.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Crear una nueva planilla 3</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/planilla3.png" class="link-preview" data-lightbox="portfolio"
-                            data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.1s">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/anexo2.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Agregar un nuevo empleado 1</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/anexo2.jpg" class="link-preview" data-lightbox="portfolio"
-                            data-title="COPAP" title="COPAP"><i class="ion ion-eye"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                   <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Consejos Utiles</h4>
+                        <h4>Consejos Útiles</h4>
                         <p>Ver</p>
                         <div>
-                          <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio"
-                            data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
+                          <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    </section><!-- #portfolio -->
+                </div>
 
                   <div class="col-lg-4 col-md-6 portfolio-item filter-contraseña">
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Reestablcer Contraseña 1</h4>
+                        <h4>Reestablecer Contraseña 1</h4>
                         <p>Ver</p>
                         <div>
-                          <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio"
-                            data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                          <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
                         </div>
                       </div>
                     </div>
@@ -563,36 +674,24 @@
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Reestablcer Contraseña 2</h4>
+                        <h4>Reestablecer Contraseña 2</h4>
                         <p>Ver</p>
                         <div>
-                          <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio"
-                            data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
+                          <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-empleados" data-wow-delay="0.2s">
-                    <div class="portfolio-wrap">
-                      <img src="img/imgi/portfolio/anexo4.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-info">
-                        <h4>Mostrar Empleados</h4>
-                        <p>Ver</p>
-                        <div>
-                          <a href="img/imgi/portfolio/anexo4.jpeg" class="link-preview" data-lightbox="portfolio"
-                            data-title="Empleados" title="Preview"><i class="ion ion-eye"></i></a>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su
+                    sesión
+                    actual.</div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="Login/loginForm.php">Cerrar Sesion</a>
                   </div>
-
                 </div>
-
               </div>
-            </section><!-- #portfolio -->
-        </div>
-
+            </div>
       </div>
       <!-- Envoltorio de fin de contenido -->
 
@@ -605,8 +704,7 @@
     </a>
 
     <!-- Cierre de sesión modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -619,7 +717,7 @@
             actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="../Login/loginForm.php">Cerrar Sesion</a>
+            <a class="btn btn-primary" href="../Login/loginForm.php">Cerrar Sesión</a>
           </div>
         </div>
       </div>

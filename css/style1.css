@@ -5,14 +5,11 @@
   License: https://bootstrapmade.com/license/
 */
 
-
-
 .contex {
   float: center;
   font-family: "Open Sans", sans-serif;
   position: relative;
   justify-content: center;
-
 }
 
 /*--------------------------------------------------------------
@@ -31,7 +28,6 @@
   background-size: cover;
   right: 0;
   padding: 100px;
-  
 }
 
 #intro.buu {
@@ -449,7 +445,6 @@
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   float: center;
   inline-size: auto;
- 
 }
 
 #services .box {
@@ -585,9 +580,6 @@
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   float: center;
   display: flex;
-
-
-  
 }
 
 #portfolio #portfolio-flters {
@@ -717,8 +709,18 @@
   background: #da7c24;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
+#portfolio
+  .portfolio-item
+  .portfolio-wrap
+  .portfolio-info
+  .link-preview:hover
+  i,
+#portfolio
+  .portfolio-item
+  .portfolio-wrap
+  .portfolio-info
+  .link-details:hover
+  i {
   color: #fff;
 }
 
@@ -729,8 +731,6 @@
 #portfolio .portfolio-item .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
-
-
 
 /* Team Section
 --------------------------------*/
