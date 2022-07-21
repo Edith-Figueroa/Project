@@ -22,11 +22,6 @@
 </head>
 
 <body>
-  <!-- ##### Preloader ##### -->
-  <div id="preloader">
-    <i class="circle-preloader"></i>
-  </div>
-
   <!-- ##### Encabezado ##### -->
   <header class="header-area">
     <!-- Navbar -->
@@ -236,8 +231,7 @@
   <!-- ##### FIN AREA DE SERVICIOS ##### -->
 
   <!-- ##### CLIENTES SATISFECHOS ##### -->
-  <div class="testimonials-area section-padding-100 bg-img bg-overlay"
-    style="background-image: url(../img/bg-img/back.jpg);">
+  <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(../img/bg-img/back.jpg);">
     <div class="container">
 
       <div class="row">
@@ -374,18 +368,12 @@
 
                 </div>
                 <div class="gallery-list d-flex justify-content-between flex-wrap">
-                  <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img
-                      src="img/bg-img/control1.jpg" alt=""></a>
-                  <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img
-                      src="img/bg-img/control2.jpg" alt=""></a>
-                  <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img
-                      src="img/bg-img/control3.jpg" alt=""></a>
-                  <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img
-                      src="img/bg-img/control4.jpg" alt=""></a>
-                  <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img
-                      src="img/bg-img/control5.jpg" alt=""></a>
-                  <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img
-                      src="img/bg-img/control6.jpg" alt=""></a>
+                  <a href="img/bg-img/control1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/control1.jpg" alt=""></a>
+                  <a href="img/bg-img/control2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/control2.jpg" alt=""></a>
+                  <a href="img/bg-img/control3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/control3.jpg" alt=""></a>
+                  <a href="img/bg-img/control4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/control4.jpg" alt=""></a>
+                  <a href="img/bg-img/control5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/control5.jpg" alt=""></a>
+                  <a href="img/bg-img/control6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/control6.jpg" alt=""></a>
                 </div>
               </div>
             </div>
@@ -419,9 +407,8 @@
               <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
-                document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
-                  aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
+                  document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>
