@@ -74,7 +74,7 @@
               <polyline points="5 12 3 12 12 3 21 12 19 12" />
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
               <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-            </svg> Menu</span></a>
+            </svg> Menú</span></a>
       </li>
 
       <!-- Divisor -->
@@ -268,7 +268,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Cerrar Sesion
+                  Cerrar Sesión
                 </a>
               </div>
             </li>
@@ -305,7 +305,7 @@
 
                 <header class="section-header">
                   <h3>¿Necesitas ayuda para usar COPAP?</h3>
-                  <p>Conoce mas sobre </p>
+                  <p>Conoce más sobre </p>
                   <p></p>
                 </header>
                 <br></br>
@@ -325,7 +325,7 @@
                       <div class="icon"><i class="ion-ios-paper-outline" style="color: #e9bf06;"></i></div>
                       <h4 class="title"><a href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
                           Nueva Planilla</a></h4>
-                      <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te imaginas
+                      <p class="description">Generar una nueva planilla de pago es mucho más fácil de lo que te imaginas
                       </p>
                     </div>
                   </div>
@@ -335,7 +335,7 @@
                       <div class="icon"><i class="ion-man" style="color: #c5793ae0;"></i></div>
                       <h4 class="title"><a href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
                       </h4>
-                      <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre todo
+                      <p class="description">Accede al registro de tus empleados de forma, fácil, rápida y sobre todo
                         eficiente</p>
                     </div>
                   </div>
@@ -463,7 +463,7 @@
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Consejos Utiles</h4>
+                        <h4>Consejos Útiles</h4>
                         <p>Ver</p>
                         <div>
                           <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Empleados"><i class="ion ion-eye"></i></a>
@@ -476,7 +476,7 @@
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Reestablcer Contraseña 1</h4>
+                        <h4>Reestablecer Contraseña 1</h4>
                         <p>Ver</p>
                         <div>
                           <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
@@ -489,7 +489,7 @@
                     <div class="portfolio-wrap">
                       <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
                       <div class="portfolio-info">
-                        <h4>Reestablcer Contraseña 2</h4>
+                        <h4>Reestablecer Contraseña 2</h4>
                         <p>Ver</p>
                         <div>
                           <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Contraseña" title="Preview"><i class="ion ion-eye"></i></a>
@@ -542,7 +542,7 @@
             actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="../Login/loginForm.php">Cerrar Sesion</a>
+            <a class="btn btn-primary" href="../Login/loginForm.php">Cerrar Sesión</a>
           </div>
         </div>
       </div>
