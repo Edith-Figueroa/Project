@@ -70,7 +70,7 @@
                   <li><a href="../menu/Modulos.php">Módulos o Servicios</a></li>
                   </li>
                   <li><a href="../menu/about-us.php">Sobre Nosotros</a></li>
-                  <li><a href="../menu/contact.php">Contactanos</a></li>
+                  <li><a href="../menu/contact.php">Contáctanos</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -243,7 +243,7 @@
                 <div class="single-cool-fact text-center">
                   <i class="icon-house"></i>
                   <h3><span class="counter">90</span></h3>
-                  <p>confian en nosotros</p>
+                  <p>confían en nosotros</p>
                 </div>
               </div>
 
@@ -387,7 +387,7 @@
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="footer-widget mb-100">
               <div class="widget-title">
-                <h6>Contactanos</h6>
+                <h6>Contáctanos</h6>
               </div>
               <div class="single-contact d-flex mb-30">
                 <i class="icon-placeholder"></i>

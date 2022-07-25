@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modificacion de cargo</title>
+    <title>Modificación de cargo</title>
     <!-- FUENTES-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -289,9 +289,9 @@
           <!-- Contenido de la página de inicio -->
           <div class="container-fluid">
             <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) {
-                                                echo 'Creacion de Cargo';
+                                                echo 'Creación de Cargo';
                                               } elseif ($action == 2) {
-                                                echo 'Modificacion de Cargo';
+                                                echo 'Modificación de Cargo';
                                               } else {
                                                 echo 'Lectura de Cargo';
                                               } ?></h1>

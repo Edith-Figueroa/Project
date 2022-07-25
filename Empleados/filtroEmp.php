@@ -58,25 +58,25 @@ if ($table->num_rows > 0) {
         <thead>
         <tr>
         <th>id</th>
-        <th>Num. id</th>
+        <th>Núm. id</th>
         <th>Nombre</th>
-        <th>Telefono</th>
+        <th>Teléfono</th>
         <th>Nacimiento</th>
         <th>Edad</th>
         <th>Sexo</th>
-        <th scope="col" colspan="3">Accion</th>
+        <th scope="col" colspan="3">Acción</th>
         </tr>
     </thead>
     <tfoot>
         <tr>
         <th>id</th>
-        <th>Num. id</th>
+        <th>Núm. id</th>
         <th>Nombre</th>
-        <th>Telefono</th>
+        <th>Teléfono</th>
         <th>Nacimiento</th>
         <th>Edad</th>
         <th>Sexo</th>
-        <th scope="col" colspan="3">Accion</th>
+        <th scope="col" colspan="3">Acción</th>
         </tr>
     </tfoot>';
 

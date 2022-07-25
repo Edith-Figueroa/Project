@@ -283,8 +283,8 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creacion de Empleado';
-                                            else if ($action == 2) echo 'Modificacion de Empleado';
+          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creación de Empleado';
+                                            else if ($action == 2) echo 'Modificación de Empleado';
                                             else echo 'Lectura de Empleado' ?></h1>
         </div>
         <div class="container">
@@ -392,7 +392,7 @@
                         <div class="formulario__grupo" id="grupo__telefono">
                           <label for="Telefono" class="formulario__label">Teléfono</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="Telefono" id="Telefono" title="Ingresa telefono" <?php if ($action != 1 && $action != 2) echo "readonly" ?> pattern="[2389]{1}[0-9]{7}" onkeypress="return soloNumeros(event)" placeholder="Telefono" value="<?php if (isset($row)) {
+                            <input type="text" class="formulario__input" name="Telefono" id="Telefono" title="Ingresa telefono" <?php if ($action != 1 && $action != 2) echo "readonly" ?> pattern="[2389]{1}[0-9]{7}" onkeypress="return soloNumeros(event)" placeholder="Teléfono" value="<?php if (isset($row)) {
                                                                                                                                                                                                                                                                                               echo $row['Telefono'];
                                                                                                                                                                                                                                                                                             } ?>" minlength="8" required maxlength="8">
                           </div>
@@ -404,7 +404,7 @@
                         <div class="formulario__grupo" id="grupo__Direccion">
                           <label for="Direccion" class="formulario__label">Dirección</label>
                           <div class="formulario__grupo-input">
-                            <input type="text" class=" formulario__input" name="Direccion" id="Direccion" title="Ingresa dirección" <?php if ($action != 1 && $action != 2) echo "readonly" ?> onkeypress="return soloLetrasYespeciales(event)" placeholder="Direccion" value="<?php if (isset($row)) {
+                            <input type="text" class=" formulario__input" name="Direccion" id="Direccion" title="Ingresa dirección" <?php if ($action != 1 && $action != 2) echo "readonly" ?> onkeypress="return soloLetrasYespeciales(event)" placeholder="Dirección" value="<?php if (isset($row)) {
                                                                                                                                                                                                                                                                                   echo $row['Direccion'];
                                                                                                                                                                                                                                                                                 } ?>" required minlength="3" maxlength="50" onblur="upperCase('Direccion')">
                           </div>
@@ -519,7 +519,7 @@
                         <div class="formulario__grupo" id="grupo__correo">
                           <label for="Correo" class="formulario__label">Correo Electrónico</label>
                           <div class="formulario__grupo-input">
-                            <input type="email" class="formulario__input" name="Correo" id="Correo" title="Ingresa el correo elecctronico" <?php if ($action != 1 && $action != 2) echo "readonly" ?> placeholder="Correo Electronico" value="<?php if (isset($row)) {
+                            <input type="email" class="formulario__input" name="Correo" id="Correo" title="Ingresa el correo elecctronico" <?php if ($action != 1 && $action != 2) echo "readonly" ?> placeholder="Correo Eléctronico" value="<?php if (isset($row)) {
                                                                                                                                                                                                                                                 echo $row['Correo'];
                                                                                                                                                                                                                                               } ?>" pattern="[a-z0-9_]+([.][a-z0-9_]+)*@[a-z0-9_]+([.][a-z0-9_]+)*[.][a-z]{1,5}" required minlength="12" maxlength="50" onblur="lowerCase('Correo')">
                           </div>

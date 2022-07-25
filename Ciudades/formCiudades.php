@@ -297,8 +297,8 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creacion de Ciudad';
-                                            else if ($action == 2) echo 'Modificacion de Ciudad';
+          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creación de Ciudad';
+                                            else if ($action == 2) echo 'Modificación de Ciudad';
                                             else echo 'Lectura de Ciudad' ?></h1>
         </div>
         <div class="container">

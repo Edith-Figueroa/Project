@@ -69,7 +69,7 @@
                 <ul>
                   <li><a href="../menu/Modulos.php">Módulos o Servicios</a></li>
                   <li><a href="about-us.php">Sobre Nosotros</a></li>
-                  <li><a href="contact.php">Contactanos</a></li>
+                  <li><a href="contact.php">Contáctanos</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -396,7 +396,7 @@
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="footer-widget mb-100">
               <div class="widget-title">
-                <h6>Contactanos</h6>
+                <h6>Contáctanos</h6>
               </div>
               <div class="single-contact d-flex mb-30">
                 <i class="icon-placeholder"></i>

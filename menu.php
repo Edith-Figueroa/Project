@@ -82,7 +82,7 @@
               <polyline points="5 12 3 12 12 3 21 12 19 12" />
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
               <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-            </svg> Menu</span></a>
+            </svg> Menú</span></a>
       </li>
 
       <!-- Divisor -->
@@ -359,7 +359,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Cerrar Sesion
+                  Cerrar Sesión
                 </a>
               </div>
             </li>
@@ -380,7 +380,7 @@
               <div class="intro-info">
                 <h2>Bienvenido a <br><span>COPAP</span><br>¿Listo para comenzar?</h2>
                 <div>
-                  <a href="#services" class="btn-services scrollto">Galeria</a>
+                  <a href="#services" class="btn-services scrollto">Galería</a>
                   <a href="#portfolio" class="btn-services scrollto"">Servicios</a>
                   <a href=" Manual-del-Usuario.html" target="_blank" class=" btn-services scrollto"">Manual</a>
                 </div>
@@ -397,7 +397,7 @@
 
                         <header class="section-header">
                           <h3>¿Necesitas ayuda para usar COPAP?</h3>
-                          <p>Conoce mas sobre </p>
+                          <p>Conoce más sobre </p>
                           <p></p>
                         </header>
                         <br></br>
@@ -419,7 +419,7 @@
                               <h4 class="title"><a
                                   href="Planilla/creacionPlanilla.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Crear
                                   Nueva Planilla</a></h4>
-                              <p class="description">Generar una nueva planilla de pago es mucho mas facil de lo que te
+                              <p class="description">Generar una nueva planilla de pago es mucho más fácil de lo que te
                                 imaginas
                               </p>
                             </div>
@@ -432,7 +432,7 @@
                               <h4 class="title"><a
                                   href="Empleados/tablas.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Empleados</a>
                               </h4>
-                              <p class="description">Accede al registro de tus empleados de forma, facil, rapida y sobre
+                              <p class="description">Accede al registro de tus empleados de forma, fácil, rápida y sobre
                                 todo
                                 eficiente</p>
                             </div>
@@ -443,7 +443,7 @@
                               <h4 class="title"><a
                                   href="Empleados/crearEmpleado.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Agregar
                                   un Nuevo Empleado</a></h4>
-                              <p class="description">¡Tu compañia cada dìa crece màs! ingresa la informaciòn del nuevo
+                              <p class="description">¡Tu compañía cada día crece más! Ingresa la información del nuevo 
                                 integrante de tu grupo de empleados</p>
                             </div>
                           </div>
@@ -455,7 +455,7 @@
                               <h4 class="title"><a
                                   href="Cargos/TablaCargos.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Cargos</a>
                               </h4>
-                              <p class="description">Accede a la informaciòn de los distintos cargos con los que cuenta
+                              <p class="description">Accede a la información de los distintos cargos con los que cuenta
                                 tu
                                 empresa</p>
                             </div>
@@ -466,7 +466,7 @@
                               <h4 class="title"><a
                                   href="Ciudades/TablaCiudades.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">Ciudades</a>
                               </h4>
-                              <p class="description">Tu empresa genera funtes de ingresos para familias de Honduras,
+                              <p class="description">Tu empresa genera fuentes de ingresos para familias de Honduras,
                                 explora las
                                 diferentes ciudades a las que pertenecen tus empleados</p>
                             </div>
@@ -481,7 +481,7 @@
                       <div class="container">
 
                         <header class="section-header">
-                          <h3 class="section-title">Galeria de Infografias</h3>
+                          <h3 class="section-title">Galería de Infografías</h3>
                         </header>
 
                         <div class="row">
@@ -576,7 +576,7 @@
                             <div class="portfolio-wrap">
                               <img src="img/imgi/portfolio/E1.jpeg" class="img-fluid" alt="">
                               <div class="portfolio-info">
-                                <h4>Consejos Utiles</h4>
+                                <h4>Consejos Útiles</h4>
                                 <p>Ver</p>
                                 <div>
                                   <a href="img/imgi/portfolio/Emp1.png" class="link-preview" data-lightbox="portfolio"
@@ -590,7 +590,7 @@
                             <div class="portfolio-wrap">
                               <img src="img/imgi/portfolio/C1.jpeg" class="img-fluid" alt="">
                               <div class="portfolio-info">
-                                <h4>Reestablcer Contraseña 1</h4>
+                                <h4>Reestablecer Contraseña 1</h4>
                                 <p>Ver</p>
                                 <div>
                                   <a href="img/imgi/portfolio/anexo3.jpg" class="link-preview" data-lightbox="portfolio"
@@ -604,7 +604,7 @@
                             <div class="portfolio-wrap">
                               <img src="img/imgi/portfolio/anexo1.jpg" class="img-fluid" alt="">
                               <div class="portfolio-info">
-                                <h4>Reestablcer Contraseña 2</h4>
+                                <h4>Reestablecer Contraseña 2</h4>
                                 <p>Ver</p>
                                 <div>
                                   <a href="img/imgi/portfolio/anexo1.jpg" class="link-preview" data-lightbox="portfolio"
@@ -662,7 +662,7 @@
                     actual.</div>
                   <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="Login/loginForm.php">Cerrar Sesion</a>
+                    <a class="btn btn-primary" href="Login/loginForm.php">Cerrar Sesión</a>
                   </div>
                 </div>
               </div>

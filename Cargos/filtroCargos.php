@@ -36,20 +36,20 @@ if ($table->num_rows > 0) {
         <thead>
         <tr>
         <th>id</th>
-        <th>Descripcion Cargo</th>
+        <th>Descripción Cargo</th>
         <th>Salario</th>
         <th>Departamentos</th>
-        <th scope="col" colspan="3">Accion</th>
+        <th scope="col" colspan="3">Acción</th>
         </tr>
     </thead>
     <tfoot>
         <tr>
         <tr>
         <th>id</th>
-        <th>Descripcion Cargo</th>
+        <th>Descripción Cargo</th>
         <th>Salario</th>
         <th>Departamentos</th>
-        <th scope="col" colspan="3">Accion</th>
+        <th scope="col" colspan="3">Acción</th>
         </tr>
     </tfoot>';
 

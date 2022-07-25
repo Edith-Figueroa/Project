@@ -52,7 +52,7 @@
                 <ul>
                   <li><a href="../menu/Modulos.php">Módulos o Servicios</a></li>
                   <li><a href="menu/about-us.php">Sobre Nosotros</a></li>
-                  <li><a href="menu/contact.php">Contactanos</a></li>
+                  <li><a href="menu/contact.php">Contáctanos</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -123,7 +123,7 @@
               <div class="col-12 col-md-4">
                 <div class="single-top-features d-flex align-items-center justify-content-center">
                   <i class="icon-id-card"></i>
-                  <h5>CONTROL DE PLANLLAS DE PAGO</h5>
+                  <h5>CONTROL DE PLANILLAS DE PAGO</h5>
                 </div>
               </div>
               <!-- Single Top Features -->
@@ -137,7 +137,7 @@
               <div class="col-12 col-md-4">
                 <div class="single-top-features d-flex align-items-center justify-content-center">
                   <i class="icon-worldwide-1"></i>
-                  <h5>UNA CONTABLDAD TRANSPARENTE</h5>
+                  <h5>UNA CONTABILIDAD TRANSPARENTE</h5>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@
             </div>
             <div class="course-content">
               <h4>CREACIÓN DE PLANLLAS</h4>
-              <p>Crea planillas de pago que te proporcionaran un control adecuado de pagos</p>
+              <p>CREA PLANILLAS DE PAGO QUE TE PROPORCIONARAN UN CONTROL ADECUADO DE PAGOS</p>
             </div>
           </div>
         </div>
@@ -196,8 +196,8 @@
             </div>
             <div class="course-content">
 
-              <h4>AACCESO FÁCIL, RÁPIDO PERO TAMBIÉN SEGURO</h4>
-              <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rápida y confiable</p>
+              <h4>ACCESO FÁCIL, RÁPIDO PERO TAMBIÉN SEGURO</h4>
+              <p>PUEDES ACCEDER A TU INFORMACIÓN A CUALQUIER HORA Y EN CUALQUIER LUGAR DE UNA FORMA SEGURA, RÁPIDA Y CONFIABLE</p>
 
 
             </div>
@@ -211,7 +211,7 @@
             </div>
             <div class="course-content">
               <h4>RESPALDAMOS TU INFORMACIÓN</h4>
-              <p>Todos tus registros son debidamente respaldados</p>
+              <p>TODOS TUS REGISTROS SON DEBIDAMENTE RESPALDADOS</p>
             </div>
           </div>
         </div>
@@ -222,8 +222,8 @@
               <i class="icon-customer-service"></i>
             </div>
             <div class="course-content">
-              <h4>Atención las 24 horas</h4>
-              <p>Te ofrecemos atención personalizada las 24 horas del dia</p>
+              <h4>ATENCIÓN LAS 24 HORAS</h4>
+              <p>TE OFRECEMOS ATENCIÓN PERSONALIZADA LAS 24 HORAS DEL DIA</p>
             </div>
           </div>
         </div>
@@ -317,7 +317,7 @@
         <div class="row">
           <div class="col-12">
             <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-              <h3>¿Que esperas para formar parte de COPAP? ¡NO LO PIENSES MAS!</h3>
+              <h3>¿Qué esperas para formar parte de COPAP? ¡NO LO PIENSES MAS!</h3>
               <a href="menu/Modulos.php" class="btn academy-btn">VER MÁS</a>
 
             </div>
@@ -378,7 +378,7 @@
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="footer-widget mb-100">
                 <div class="widget-title">
-                  <h6>Contactanos</h6>
+                  <h6>Contáctanos</h6>
                 </div>
                 <div class="single-contact d-flex mb-30">
                   <i class="icon-placeholder"></i>

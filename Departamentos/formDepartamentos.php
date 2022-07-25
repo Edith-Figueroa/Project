@@ -296,8 +296,8 @@
 
         <!-- Contenido de la página de inicio -->
         <div class="container-fluid">
-          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creacion de Departamento';
-                                            else if ($action == 2) echo 'Modificacion de Departamento';
+          <h1 class="h3 mb-1 text-gray-800"><?php if ($action == 1) echo 'Creación de Departamento';
+                                            else if ($action == 2) echo 'Modificación de Departamento';
                                             else echo 'Lectura de Departamento' ?></h1>
         </div>
         <div class="container">
