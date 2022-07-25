@@ -136,10 +136,21 @@
       <div class="row">
         <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
 
-          <p>Nuestro sistema cuenta con las herramientas necesarias para cubrir las necesidades básicas de tu empresa. Cada día el mundo laboral crece más, te enfrentas a diferentes retos, nosotros hacemos que el manejo de tus empleados sea más fácil, organizado y sobre todo, confiable. El manejo adecuado de tu personal es una pieza clave para el buen funcionamiento de tu empresa. Al contar con un sistema que cubre desde el control de horarios hasta el control de pagos te estás evitando el enfrentamiento a futuros predicamentos entre tu equipo de trabajo e incluso legales.</p>
+          <p>Nuestro sistema cuenta con las herramientas necesarias para cubrir las necesidades básicas de tu empresa.
+            Cada día el mundo laboral crece más, te enfrentas a diferentes retos, nosotros hacemos que el manejo de tus
+            empleados sea más fácil, organizado y sobre todo, confiable. El manejo adecuado de tu personal es una pieza
+            clave para el buen funcionamiento de tu empresa. Al contar con un sistema que cubre desde el control de
+            horarios hasta el control de pagos te estás evitando el enfrentamiento a futuros predicamentos entre tu
+            equipo de trabajo e incluso legales.</p>
         </div>
         <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-          <p>Nuestro sistema cuenta con las herramientas necesarias para cubrir las necesidades básicas de tu empresa. Cada día el mundo laboral crece más, te enfrentas a diferentes retos, nosotros hacemos que el manejo de tus empleados sea más fácil, organizado y sobre todo, confiable. El manejo adecuado de tu personal es una pieza clave para el buen funcionamiento de tu empresa. Al contar con un sistema que cubre desde el control de horarios hasta el control de pagos te estás evitando el enfrentamiento a futuros predicamentos entre tu equipo de trabajo e incluso legales.</div>
+          <p>Nuestro sistema cuenta con las herramientas necesarias para cubrir las necesidades básicas de tu empresa.
+            Cada día el mundo laboral crece más, te enfrentas a diferentes retos, nosotros hacemos que el manejo de tus
+            empleados sea más fácil, organizado y sobre todo, confiable. El manejo adecuado de tu personal es una pieza
+            clave para el buen funcionamiento de tu empresa. Al contar con un sistema que cubre desde el control de
+            horarios hasta el control de pagos te estás evitando el enfrentamiento a futuros predicamentos entre tu
+            equipo de trabajo e incluso legales.
+        </div>
 
 
       </div>
@@ -374,11 +385,14 @@
               </div>
               <nav>
                 <ul class="useful-links">
-                  <li><a href="#">EMERSON ZAPATA</a></li>
-                  <li><a href="#">DENIS GARCIA</a></li>
-                  <li><a href="#">DULCE SANCHEZ</a></li>
-                  <li><a href="#">ONAN AGUILERA</a></li>
-                  <li><a href="#">DIEGO MOLINA</a></li>
+                  <li><a href="#" style="cursor:default;">EMERSON ZAPATA</a></li>
+                  <li><a href="#" style="cursor:default;">DENIS GARCIA</a></li>
+                  <li><a href="#" style="cursor:default;">DULCE SANCHEZ</a></li>
+                  <li><a href="#" style="cursor:default;">ONAN AGUILERA</a></li>
+                  <li><a href="#" style="cursor:default;">DIEGO MOLINA</a></li>
+                  <li><a href="#" style="cursor:default;">JUAN VILLATORO</a></li>
+                  <li><a href="#" style="cursor:default;">EDITH TOLEDO</a></li>
+                  <li><a href="#" style="cursor:default;">JOHNNY DEEP</a></li>
                 </ul>
               </nav>
             </div>
@@ -389,7 +403,6 @@
               <div class="widget-title">
 
               </div>
-
             </div>
           </div>
           <!-- contactos-->
@@ -416,16 +429,31 @@
       </div>
     </div>
     <div class="bottom-footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>
-                document.write(new Date().getFullYear());
-              </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+      <div class="">
+        <div class="">
+          <div class="">
+            <div>
+              <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                  <use xlink:href="#gentle-wave" x="50" y="7" fill="#fff" />
+                  <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                    </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+                      aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  </p>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -445,7 +473,8 @@
   <script src="../js/plugins/plugins.js"></script>
   <!-- Active js -->
   <script src="../js/active.js"></script>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>

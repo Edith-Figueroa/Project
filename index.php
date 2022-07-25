@@ -19,6 +19,7 @@
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="menu/style.css">
   <link rel="stylesheet" href="menu/styleT.css">
+  <link rel="stylesheet" href="css/style2.0.css">
 </head>
 
 <body>
@@ -197,7 +198,8 @@
             <div class="course-content">
 
               <h4>AACCESO FÁCIL, RÁPIDO PERO TAMBIÉN SEGURO</h4>
-              <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rápida y confiable</p>
+              <p>Puedes acceder a tu información a cualquier hora y en cualquier lugar de una forma segura, rápida y
+                confiable</p>
 
 
             </div>
@@ -292,8 +294,6 @@
 
         <div class="col-12 col-md-6">
           <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
-            <div class="testimonial-thumb">
-            </div>
             <div class="row">
               <div class="col-12">
                 <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
@@ -329,7 +329,7 @@
 
     <!-- ##### INFO  ##### -->
     <footer class="footer-area">
-      <div class="main-footer-area section-padding-100-0">
+      <div class="main-footer-area section-padding-100-0" style="height: 500px;">
         <div class="container">
           <div class="row">
             <!-- Footer Widget Area -->
@@ -357,11 +357,14 @@
                 </div>
                 <nav>
                   <ul class="useful-links">
-                    <li><a href="#">EMERSON ZAPATA</a></li>
-                    <li><a href="#">DENIS GARCIA</a></li>
-                    <li><a href="#">DULCE SANCHEZ</a></li>
-                    <li><a href="#">ONAN AGUILERA</a></li>
-                    <li><a href="#">DIEGO MOLINA</a></li>
+                    <li><a href="#" style="cursor:default;">EMERSON ZAPATA</a></li>
+                    <li><a href="#" style="cursor:default;">DENIS GARCIA</a></li>
+                    <li><a href="#" style="cursor:default;">DULCE SANCHEZ</a></li>
+                    <li><a href="#" style="cursor:default;">ONAN AGUILERA</a></li>
+                    <li><a href="#" style="cursor:default;">DIEGO MOLINA</a></li>
+                    <li><a href="#" style="cursor:default;">JUAN VILLATORO</a></li>
+                    <li><a href="#" style="cursor:default;">EDITH TOLEDO</a></li>
+                    <li><a href="#" style="cursor:default;">JOHNNY DEEP</a></li>
                   </ul>
                 </nav>
               </div>
@@ -398,17 +401,32 @@
         </div>
       </div>
       <div class="bottom-footer-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
-                  aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
+        <div class="">
+          <div class="">
+            <div class="">
+              <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                  </defs>
+                  <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="50" y="7" fill="#fff" />
+                  </g>
+                  <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                    </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+                      aria-hidden="true"></i> by <a href="" target="_blank">COPAP</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  </p>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

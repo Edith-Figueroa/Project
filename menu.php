@@ -348,7 +348,7 @@
                         Perfil
                     </a> -->
                 <a class="dropdown-item"
-                  href="/cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
+                  href="Login/cambioContra.php?idUsuario=<?php echo $Usuario ?>&Empresas_idEmpresas=<?php echo $Empresa ?>">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Cambio de contraseña
                 </a>
@@ -380,8 +380,8 @@
               <div class="intro-info">
                 <h2>Bienvenido a <br><span>COPAP</span><br>¿Listo para comenzar?</h2>
                 <div>
-                  <a href="#services" class="btn-services scrollto">Galeria</a>
-                  <a href="#portfolio" class="btn-services scrollto"">Servicios</a>
+                  <a href="#services" class="btn-services scrollto">Servicios</a>
+                  <a href="#portfolio" class="btn-services scrollto"">Galeria</a>
                   <a href=" Manual-del-Usuario.html" target="_blank" class=" btn-services scrollto"">Manual</a>
                 </div>
               </div>
